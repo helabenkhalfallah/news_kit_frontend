@@ -23,7 +23,7 @@ export default class CreateAccount extends React.Component {
         <AuthRegister />
         <hr />
         Already have an account?
-        <Link prefetch href="/signin">
+        <Link prefetch href="/sign-in">
           <a>Sign in</a>
         </Link>
       </React.Fragment>

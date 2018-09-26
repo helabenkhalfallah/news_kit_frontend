@@ -26,7 +26,7 @@ export default class Index extends React.Component {
     const { USER_IS_VALID } = graphqlManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (!profile.UserProfile) {
-      redirect(context, '/signin')
+      redirect(context, '/sign-in')
     }
     return { profile }
   }
@@ -42,7 +42,7 @@ export default class Index extends React.Component {
     // logged in, so we don't accidentally leave any state around.
     apolloClient.cache.reset().then(() => {
       // Redirect to a more useful page when signed out
-      redirect({}, '/signin')
+      redirect({}, '/sign-in')
     })
   }
 
