@@ -1,7 +1,11 @@
-export default ({ children }) => (
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const App = ({ children }) => (
   <main>
     {children}
-    <style jsx global>{`
+    <style jsx global>
+      {`
       * {
         font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
           'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
@@ -37,6 +41,19 @@ export default ({ children }) => (
       button:focus {
         outline: none;
       }
-    `}</style>
+    `}
+    </style>
   </main>
 )
+
+// prop type validation
+App.propTypes = {
+  children: PropTypes.any,
+}
+
+// default prop
+App.defaultProps = {
+  children: null,
+}
+
+export default App

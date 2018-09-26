@@ -1,14 +1,29 @@
 import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
+import PropTypes from 'prop-types'
 
 import CookiesManager from '../lib/cookies/CookiesManager'
 import redirect from '../lib/routes/Redirect'
-import graphqlManager from '../graphql/index'
+import graphqlManager from '../graphql'
 
 
 export default class Index extends React.Component {
-  static async getInitialProps(context, apolloClient) {
-    const USER_IS_VALID = graphqlManager.USER_IS_VALID
+  // default props
+  static defaultProps = {
+    profile: null,
+  }
+
+  // propsType (validation)
+  static propTypes = {
+    profile: PropTypes.any,
+  }
+
+  /**
+   * initial props
+   * @param {*} context
+   */
+  static async getInitialProps(context) {
+    const { USER_IS_VALID } = graphqlManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (!profile.UserProfile) {
       redirect(context, '/signin')
@@ -16,8 +31,10 @@ export default class Index extends React.Component {
     return { profile }
   }
 
+  /**
+   * user logout
+   */
   signout = apolloClient => () => {
-
     // remove cookies
     CookiesManager.remove()
 
@@ -30,20 +47,26 @@ export default class Index extends React.Component {
   }
 
   render() {
-    const user = this.props.profile ? this.props.profile.UserProfile : {}
+    const { profile } = this.props
+    const user = profile ? profile.UserProfile : {}
     return (
       <ApolloConsumer>
         {client => (
           <div>
-            {(user && user.firstName) ?
-              (
+            {(user && user.firstName)
+              ? (
                 <div>
-                  Hello {user.firstName} !
-                  <button onClick={this.signout(client)}>Sign out</button>
+                  Hello
+                  {user.firstName}
+                  !
+                  <button
+                    type="button"
+                    onClick={this.signout(client)}
+                  >
+                    Sign out
+                  </button>
                 </div>
-              )
-              :
-              (
+              ) : (
                 <div>
                   Error getting user !
                 </div>

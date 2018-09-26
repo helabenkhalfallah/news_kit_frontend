@@ -5,7 +5,7 @@ import USER_IS_VALID from './queries/USER_IS_VALID'
 const graphqlManager = {
   USERS_LIST,
   USER_SIGN_IN,
-  USER_IS_VALID
+  USER_IS_VALID,
 }
 
 

@@ -3,12 +3,11 @@ import Link from 'next/link'
 
 import redirect from '../lib/routes/Redirect'
 import AuthRegister from '../components/authentication/AuthRegister'
-import graphqlManager from '../graphql/index'
+import graphqlManager from '../graphql'
 
 export default class CreateAccount extends React.Component {
-
   static async getInitialProps(context) {
-    const USER_IS_VALID = graphqlManager.USER_IS_VALID
+    const { USER_IS_VALID } = graphqlManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (profile.UserProfile) {
       // Already signed in? No need to continue.
@@ -21,10 +20,12 @@ export default class CreateAccount extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* RegisterBox handles all register logic. */}
         <AuthRegister />
         <hr />
-        Already have an account? <Link prefetch href='/signin'><a>Sign in</a></Link>
+        Already have an account?
+        <Link prefetch href="/signin">
+          <a>Sign in</a>
+        </Link>
       </React.Fragment>
     )
   }

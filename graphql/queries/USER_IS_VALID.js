@@ -14,12 +14,12 @@ export default apolloClient => (
           birthday 
         }
       }
-    `
+    `,
   }).then(({ data }) => {
     console.log('USER_IS_VALID data : ', data)
     return { profile: data }
   }).catch((error) => {
-    // Fail gracefully 
+    // Fail gracefully
     console.log('USER_IS_VALID error : ', error)
     return { profile: {} }
   })
