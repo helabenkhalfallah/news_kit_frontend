@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import redirect from '../lib/routes/redirect'
+import redirect from '../lib/routes/Redirect'
 import AuthRegister from '../components/authentication/AuthRegister'
 import graphqlManager from '../graphql/index'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
 
 import CookiesManager from '../lib/cookies/CookiesManager'
-import redirect from '../lib/routes/redirect'
+import redirect from '../lib/routes/Redirect'
 import graphqlManager from '../graphql/index'
 
 

@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import * as Yup from 'yup'
 
 import CookiesManager from '../../lib/cookies/CookiesManager'
-import redirect from '../../lib/routes/redirect'
+import redirect from '../../lib/routes/Redirect'
 import graphqlManager from '../../graphql'
 
 // user schema
@@ -38,13 +38,8 @@ const AuthSignIn = ({ client }) => {
             {(signinUser, { data, error }) => (
                 <Formik
                     initialValues={{
-                        first_name: '',
-                        last_name: '',
                         email: '',
                         password: '',
-                        password_confirmation: '',
-                        birthday: '',
-                        job: '',
                     }}
                     validationSchema={UserSchema}
                     onSubmit={(values) => {
