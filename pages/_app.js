@@ -1,9 +1,10 @@
 import App, { Container } from 'next/app'
-import React from 'react'
 import { ApolloProvider } from 'react-apollo'
-import withApollo from '../lib/withApollo'
+import React from 'react'
 
-class MyApp extends App {
+import withApollo from '../lib/apollo/withApollo'
+
+class NewsApp extends App {
   render() {
     const { Component, pageProps, apolloClient } = this.props
     return <Container>
@@ -14,4 +15,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp)
+export default withApollo(NewsApp)

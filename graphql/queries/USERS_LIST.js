@@ -1,7 +1,6 @@
 import gql from 'graphql-tag'
 
-
-const UsersListQueries = gql`
+const USERS_LIST = gql`
     {
       users{
         id,
@@ -12,4 +11,4 @@ const UsersListQueries = gql`
       }
     }
 `
-export default UsersListQueries
+export default USERS_LIST

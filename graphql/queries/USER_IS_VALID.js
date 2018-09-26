@@ -16,11 +16,11 @@ export default apolloClient => (
       }
     `
   }).then(({ data }) => {
-    console.log('loggedInUser data : ', data)
-    return { loggedInUser: data }
+    console.log('USER_IS_VALID data : ', data)
+    return { profile: data }
   }).catch((error) => {
-    // Fail gracefully
-    console.log('loggedInUser error : ', error)
-    return { loggedInUser: {} }
+    // Fail gracefully 
+    console.log('USER_IS_VALID error : ', error)
+    return { profile: {} }
   })
 )

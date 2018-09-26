@@ -2,8 +2,9 @@ import React, { Fragment } from 'react'
 import ReactTable from 'react-table'
 import { Query } from 'react-apollo'
 import PropTypes from 'prop-types'
-import UsersListQueries from '../graphql/UsersListQueries'
-import ErrorMessage from './ErrorMessage'
+
+import ErrorMessage from '../commons/ErrorMessage'
+import graphqlManager from '../../graphql'
 
 // table columns name
 const usersTableHeaders = [{
@@ -30,15 +31,16 @@ const usersTableHeaders = [{
 
 
 // display list
+const USERS_LIST = graphqlManager.USERS_LIST
 const UsersList = ({ className }) => (
   // query user
   <Query
-    query={UsersListQueries}
+    query={USERS_LIST}
     pollInterval={200}
   >
     {({ loading, error, data }) => {
       // log query status
-      console.log('UserList UsersListQueries : ', UsersListQueries)
+      console.log('UserList USERS_LIST : ', USERS_LIST)
       console.log('UserList error : ', error)
       console.log('UserList loading : ', loading)
       console.log('UserList data : ', data)

@@ -1,32 +1,30 @@
 import React from 'react'
 import Link from 'next/link'
 
-import redirect from '../lib/redirect'
-import checkLoggedIn from '../lib/checkLoggedIn'
-
-import SigninBox from '../components/SigninBox'
+import redirect from '../lib/routes/redirect'
+import AuthSignIn from '../components/authentication/AuthSignIn'
+import graphqlManager from '../graphql/index'
 
 export default class Signin extends React.Component {
   static async getInitialProps(context) {
-    const { loggedInUser } = await checkLoggedIn(context.apolloClient)
-
-    if (loggedInUser.user) {
+    const USER_IS_VALID = graphqlManager.USER_IS_VALID
+    const { profile } = await USER_IS_VALID(context.apolloClient)
+    if (profile.UserProfile) {
       // Already signed in? No need to continue.
       // Throw them back to the main page
       redirect(context, '/')
     }
-
     return {}
   }
 
   render() {
     return (
       <React.Fragment>
-        {/* SigninBox handles all login logic. */}
-        <SigninBox />
+        {/* AuthSignIn handles all login logic. */}
+        <AuthSignIn />
         <hr />
         New? <Link prefetch href='/create-account'><a>Create account</a></Link>
       </React.Fragment>
     )
   }
-};
+}

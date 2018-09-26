@@ -1,26 +1,25 @@
 import React from 'react'
-import cookie from 'cookie'
 import { ApolloConsumer } from 'react-apollo'
 
-import redirect from '../lib/redirect'
-import checkLoggedIn from '../lib/checkLoggedIn'
+import CookiesManager from '../lib/cookies/CookiesManager'
+import redirect from '../lib/routes/redirect'
+import graphqlManager from '../graphql/index'
+
 
 export default class Index extends React.Component {
   static async getInitialProps(context, apolloClient) {
-    const { loggedInUser } = await checkLoggedIn(context.apolloClient)
-
-    if (!loggedInUser.UserProfile) {
-      // If not signed in, send them somewhere more useful
+    const USER_IS_VALID = graphqlManager.USER_IS_VALID
+    const { profile } = await USER_IS_VALID(context.apolloClient)
+    if (!profile.UserProfile) {
       redirect(context, '/signin')
     }
-
-    return { loggedInUser }
+    return { profile }
   }
 
   signout = apolloClient => () => {
-    document.cookie = cookie.serialize('token', '', {
-      maxAge: -1 // Expire the cookie immediately
-    })
+
+    // remove cookies
+    CookiesManager.remove()
 
     // Force a reload of all the current queries now that the user is
     // logged in, so we don't accidentally leave any state around.
@@ -31,12 +30,27 @@ export default class Index extends React.Component {
   }
 
   render() {
+    const user = this.props.profile ? this.props.profile.UserProfile : {}
     return (
       <ApolloConsumer>
         {client => (
           <div>
-            Hello {this.props.loggedInUser.UserProfile.firstName}!<br />
-            <button onClick={this.signout(client)}>Sign out</button>
+            {(user && user.firstName) ?
+              (
+                <div>
+                  Hello {user.firstName} !
+                  <button onClick={this.signout(client)}>Sign out</button>
+                </div>
+              )
+              :
+              (
+                <div>
+                  Error getting user !
+                </div>
+              )
+            }
+            <br />
+
           </div>
         )}
       </ApolloConsumer>
