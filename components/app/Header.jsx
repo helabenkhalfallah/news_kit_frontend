@@ -6,26 +6,11 @@ import PropTypes from 'prop-types'
 const Header = ({ router: { pathname } }) => (
   <header>
     <Link prefetch href="/">
-      <a className={pathname === '/' ? 'is-active' : ''}>Home</a>
+      <a>Home</a>
     </Link>
     <Link prefetch href="/about">
-      <a className={pathname === '/about' ? 'is-active' : ''}>About</a>
+      <a>About</a>
     </Link>
-    <style jsx>
-      {`
-        header {
-          margin-bottom: 25px;
-        }
-        a {
-          font-size: 14px;
-          margin-right: 15px;
-          text-decoration: none;
-        }
-        .is-active {
-          text-decoration: underline;
-        }
-      `}
-    </style>
   </header>
 )
 

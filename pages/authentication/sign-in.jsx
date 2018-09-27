@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link'
 
-import redirect from '../lib/routes/Redirect'
-import AuthSignIn from '../components/authentication/AuthSignIn'
-import graphqlManager from '../graphql'
+import redirect from '../../lib/routes/Redirect'
+import AuthSignIn from '../../components/authentication/AuthSignIn'
+import graphqlManager from '../../graphql'
+import Routes from '../../lib/routes/Routes'
+
+import Header from '../../components/app/Header'
 
 export default class Signin extends React.Component {
   static async getInitialProps(context) {
@@ -12,21 +15,22 @@ export default class Signin extends React.Component {
     if (profile.UserProfile) {
       // Already signed in? No need to continue.
       // Throw them back to the main page
-      redirect(context, '/')
+      redirect(context, Routes.HOME_PATH)
     }
     return {}
   }
 
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
+        <Header />
         <AuthSignIn />
         <hr />
         New?
-        <Link prefetch href="/create-account">
+        <Link prefetch href={Routes.REGISTER_PATH}>
           <a>Create account</a>
         </Link>
-      </React.Fragment>
+      </Fragment>
     )
   }
 }

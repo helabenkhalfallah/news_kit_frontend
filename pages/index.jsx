@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import CookiesManager from '../lib/cookies/CookiesManager'
 import redirect from '../lib/routes/Redirect'
 import graphqlManager from '../graphql'
+import Routes from '../lib/routes/Routes'
 
 
 export default class Index extends React.Component {
@@ -26,7 +27,7 @@ export default class Index extends React.Component {
     const { USER_IS_VALID } = graphqlManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (!profile.UserProfile) {
-      redirect(context, '/sign-in')
+      redirect(context, Routes.SIGN_IN_PATH)
     }
     return { profile }
   }
@@ -42,7 +43,7 @@ export default class Index extends React.Component {
     // logged in, so we don't accidentally leave any state around.
     apolloClient.cache.reset().then(() => {
       // Redirect to a more useful page when signed out
-      redirect({}, '/sign-in')
+      redirect({}, Routes.SIGN_IN_PATH)
     })
   }
 

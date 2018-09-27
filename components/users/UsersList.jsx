@@ -31,7 +31,7 @@ const usersTableHeaders = [{
 
 
 // display list
-const USERS_LIST = graphqlManager.USERS_LIST
+const { USERS_LIST } = graphqlManager
 const UsersList = ({ className }) => (
   // query user
   <Query
@@ -62,7 +62,6 @@ const UsersList = ({ className }) => (
 
       // render only if data
       const { users } = data
-      AppLogger.info('UserList users : ', users)
       return (
         <Fragment>
           <div>
@@ -93,4 +92,3 @@ UsersList.defaultProps = {
 }
 
 export default UsersList
-

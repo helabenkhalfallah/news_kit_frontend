@@ -19,7 +19,21 @@ module.exports = {
     ],
     "rules": {
         "react/forbid-prop-types": 0,
-        "react/jsx-filename-extension": [1, { "extensions": ["withApollo.js", "_app.js", "App.js", "Routes.js", "index.js", ".jsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions":
+                    [
+                        "ProfileCard.js",
+                        "withApollo.js",
+                        "_app.js",
+                        "App.js",
+                        "Routes.js",
+                        "index.js",
+                        ".jsx"
+                    ]
+            }
+        ],
         "max-len": [1, 120, 2, { ignoreComments: true }],
         "indent": [
             2,
@@ -39,6 +53,10 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "jsx-a11y/anchor-is-valid": ["error", {
+            "components": ["Link"],
+            "specialLink": ["to"]
+        }]
     }
 };

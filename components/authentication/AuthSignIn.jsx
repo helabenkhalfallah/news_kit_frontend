@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 import CookiesManager from '../../lib/cookies/CookiesManager'
 import redirect from '../../lib/routes/Redirect'
 import graphqlManager from '../../graphql'
+import Routes from '../../lib/routes/Routes'
 
 // user schema
 const UserSchema = Yup.object().shape({
@@ -31,7 +32,7 @@ const AuthSignIn = ({ client }) => (
       // queries now that the user is
       // logged in
       client.cache.reset().then(() => {
-        redirect({}, '/')
+        redirect({}, Routes.HOME_PATH)
       })
     }}
     onError={(error) => {
