@@ -9,8 +9,8 @@
     "build-storybook": "build-storybook"
   },
   "skpm": {
-    "main": "sketch/news-kit-sketch.sketchplugin",
-    "manifest": "sketch/manifest.json"
+    "main": "ui-api-sketch/news-kit-sketch.sketchplugin",
+    "manifest": "ui-api-sketch/manifest.json"
   },
   "dependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.21",

@@ -56,3 +56,22 @@ import 'storybook-readme/register'
 import '@storybook/addon-options/register'
 import '@storybook/addon-actions/register'
 ```
+
+11. Next JS CSS configuration :
+```js
+const withCSS = require('@zeit/next-css')
+
+module.exports = withCSS({
+  cssModules: true,
+})
+```
+
+12. .babelrc modification :
+```js
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": []
+}
+```
