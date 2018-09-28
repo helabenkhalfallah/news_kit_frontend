@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import ButtonData from '../data/ButtonData'
 
 const Button = ({
   context,
@@ -19,10 +20,6 @@ const Button = ({
     [`${baseClass}--${size}`]: size,
     [`${baseClass}-group__button`]: group,
   })
-  console.log('Button size :', size)
-  console.log('Button type :', type)
-  console.log('Button context :', context)
-  console.log('Button rootClass :', rootClass)
 
   /* eslint-disable react/button-has-type */
   return (
@@ -47,13 +44,13 @@ Button.displayName = 'Button'
  * propType validation
  */
 Button.propTypes = {
-  context: PropTypes.oneOf(['default', 'outline', 'primary', 'secondary', 'success', 'warning', 'info', 'danger']),
+  context: PropTypes.oneOf(ButtonData.contextOptions),
   type: PropTypes.string,
   group: PropTypes.bool,
   onClick: PropTypes.func,
   style: PropTypes.object,
   /* eslint-disable react/require-default-props */
-  size: PropTypes.oneOf(['xs', 'sm', 'lg', '']),
+  size: PropTypes.oneOf(ButtonData.sizeOptions),
   className: PropTypes.string,
   children: PropTypes.node,
 }
