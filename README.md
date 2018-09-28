@@ -49,7 +49,7 @@ stories
 ````
 
 10. addons.js
-What will been diplayed on the right panel :
+What will been diplayed in the right panel :
 ```js
 import '@storybook/addon-knobs/register'
 import 'storybook-readme/register'
