@@ -1,5 +1,6 @@
-## News Kit
-# Settings Storybook :
+# News Kit
+
+## Settings Storybook :
 1. getstorybook
 
 2. .storybook => configure stroy book
@@ -76,7 +77,9 @@ module.exports = withCSS({
 }
 ```
 
-13. using styled component :
+## Styled Component :
+
+1. using styled component :
 ```js 
 {
   "presets": [
@@ -95,7 +98,7 @@ module.exports = withCSS({
 }
 ```
 
-14. ButtonWrapper : styled component to wrap CSS (hover, state..) :
+2. ButtonWrapper : styled component to wrap CSS (hover, state..) :
 ```js
 .news-kit-button--default{ 
     background : #FFFFFF; 
@@ -114,7 +117,7 @@ module.exports = withCSS({
   }
 ````
 
-15. /components/Button.jsx :
+3. /components/Button.jsx :
 ```js
   <ButtonWrapper>
       <button
