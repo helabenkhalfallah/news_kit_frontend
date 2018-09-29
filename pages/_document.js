@@ -21,7 +21,7 @@ export default class NewsDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>My page</title>
+          <title>New Kit Page</title>
           {this.props.styleTags}
         </Head>
         <body>
