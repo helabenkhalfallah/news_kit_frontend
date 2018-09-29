@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import ButtonHelper from '../data/ButtonHelper'
+import ButtonHelper from '../lib/ButtonHelper'
 import ButtonWrapper from '../styles/ButtonWrapper'
 
 // component settings

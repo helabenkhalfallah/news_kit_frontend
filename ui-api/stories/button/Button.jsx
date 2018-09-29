@@ -6,7 +6,7 @@ import {
 import { action } from '@storybook/addon-actions'
 import OptionalSelect from '../../lib/OptionalSelect'
 
-import ButtonHelper from '../../data/ButtonHelper'
+import ButtonHelper from '../../lib/ButtonHelper'
 import Button from '../../components/Button'
 import Readme from './README.md'
 
