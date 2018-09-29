@@ -19,7 +19,7 @@ const ButtonWrapper = styled(Button)`
     background : #FFFFFF; 
     border-color : #A569BD;
     color : #A569BD;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -35,7 +35,7 @@ const ButtonWrapper = styled(Button)`
     background : #FFFFFF;
     border-color : #e6512f;
     color : #e6512f;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -51,7 +51,7 @@ const ButtonWrapper = styled(Button)`
     background : #FFFFFF;
     border-color : #00a7cf;
     color : #00a7cf;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -67,7 +67,7 @@ const ButtonWrapper = styled(Button)`
     background-color:#FFFFFF;
     border-color : #ff0080;
     color : #ff0080;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -83,7 +83,7 @@ const ButtonWrapper = styled(Button)`
     background-color:#FFFFFF;
     border-color : #1cce0c;
     color : #1cce0c;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -99,7 +99,7 @@ const ButtonWrapper = styled(Button)`
     background-color:#FFFFFF;
     border-color : #ff5a34;
     color : #ff5a34;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -115,7 +115,7 @@ const ButtonWrapper = styled(Button)`
     background-color:#FFFFFF;
     border-color : #ff9900;
     color : #ff9900;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
@@ -131,7 +131,7 @@ const ButtonWrapper = styled(Button)`
     background-color:#FFFFFF;
     border-color : #2196F3;
     color : #2196F3;
-    padding : 10px 10px 10px 10px;
+    padding : 15px 15px 15px 15px;
     border-radius: inherit;
     border-width: inherit;
     border-style: inherit;
