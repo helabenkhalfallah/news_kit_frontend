@@ -7,10 +7,11 @@ import { action } from '@storybook/addon-actions'
 import OptionalSelect from '../../lib/OptionalSelect'
 
 import ButtonHelper from '../../lib/ButtonHelper'
-import Button from '../../components/Button'
+import Components from '../../components/index'
 import Readme from './README.md'
 
 // button settings
+const { Button } = Components
 const {
   contextOptions,
   sizeOptions,
