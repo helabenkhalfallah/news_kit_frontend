@@ -79,7 +79,7 @@ module.exports = withCSS({
 
 ## Styled Component :
 
-1. using styled component :
+1. configure .babelrc :
 ```js 
 {
   "presets": [
