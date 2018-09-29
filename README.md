@@ -130,6 +130,3 @@ module.exports = withCSS({
       </button>
   </ButtonWrapper>
 ```
-
-4. Results :
-![Screenshot](./static/StoryBook-1.gif)
