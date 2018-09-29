@@ -1,37 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import ButtonData from '../data/ButtonData'
+import ButtonHelper from '../data/ButtonHelper'
+import ButtonWrapper from '../styles/ButtonWrapper'
 
+// component settings
+const {
+  sizeTypes,
+  contextTypes,
+  rootClass,
+} = ButtonHelper
+
+// component
 const Button = ({
+  className,
   context,
-  type,
   size,
+  type,
+  children,
   group,
   onClick,
-  className,
-  style,
-  children,
   ...otherProps
 }) => {
-  const baseClass = 'gds-button'
-  const rootClass = cx(baseClass, className, {
-    [`${baseClass}--${context}`]: context,
-    [`${baseClass}--${size}`]: size,
-    [`${baseClass}-group__button`]: group,
-  })
-
   /* eslint-disable react/button-has-type */
+  const btRootClass = rootClass(cx, className, context, size, group)
   return (
-    <button
-      className={rootClass}
-      type={type}
-      style={style}
-      onClick={onClick}
-      {...otherProps}
-    >
-      {children}
-    </button>
+    <ButtonWrapper>
+      <button
+        className={btRootClass}
+        type={type}
+        onClick={onClick}
+        {...otherProps}
+      >
+        {children}
+      </button>
+    </ButtonWrapper>
   )
 }
 
@@ -44,15 +47,14 @@ Button.displayName = 'Button'
  * propType validation
  */
 Button.propTypes = {
-  context: PropTypes.oneOf(ButtonData.contextOptions),
+  /* eslint-disable react/require-default-props */
+  className: PropTypes.string,
+  context: PropTypes.oneOf(contextTypes),
+  size: PropTypes.oneOf(sizeTypes),
   type: PropTypes.string,
+  children: PropTypes.node,
   group: PropTypes.bool,
   onClick: PropTypes.func,
-  style: PropTypes.object,
-  /* eslint-disable react/require-default-props */
-  size: PropTypes.oneOf(ButtonData.sizeOptions),
-  className: PropTypes.string,
-  children: PropTypes.node,
 }
 
 /**
@@ -63,7 +65,6 @@ Button.defaultProps = {
   type: 'button',
   group: false,
   onClick: null,
-  style: {},
 }
 
 export default Button

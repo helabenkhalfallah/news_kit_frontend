@@ -2,29 +2,31 @@ import React from 'react'
 import {
   text,
   boolean,
-  object,
 } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import OptionalSelect from '../../lib/OptionalSelect'
 
-import ButtonData from '../../data/ButtonData'
+import ButtonHelper from '../../data/ButtonHelper'
 import Button from '../../components/Button'
 import Readme from './README.md'
 
+// button settings
+const {
+  contextOptions,
+  sizeOptions,
+} = ButtonHelper
 
 const Component = () => (
   <Button
+    className={text('ClassName', '')}
+    context={OptionalSelect('Context', contextOptions, 'default')}
+    size={OptionalSelect('Size', sizeOptions, '')}
     type={text('Type', 'button')}
-    size={OptionalSelect('Size', ButtonData.sizeOptions, '')}
-    context={OptionalSelect('Context', ButtonData.contextOptions, 'default')}
     group={boolean('Group', false)}
     onClick={action('button_clicked')}
-    className={text('ClassName', '')}
-    style={object('Style', {})}
   >
-    Hello Button !
+    I am a Button, test me !
   </Button>
 )
-
 
 export default [Readme, Component]

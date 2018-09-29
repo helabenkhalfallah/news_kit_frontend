@@ -26,6 +26,7 @@ module.exports = {
                     [
                         "ProfileCard.js",
                         "withApollo.js",
+                        "_document.js",
                         "_app.js",
                         "App.js",
                         "Routes.js",

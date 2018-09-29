@@ -21,8 +21,8 @@ a. .jsx => component how it is invoked =
 ```js
   <Button
     type={text('Type', 'button')}
-    size={OptionalSelect('Size', ButtonData.sizeOptions, '')}
-    context={OptionalSelect('Context', ButtonData.contextOptions, 'default')}
+    size={OptionalSelect('Size', ButtonHelper.sizeOptions, '')}
+    context={OptionalSelect('Context', ButtonHelper.contextOptions, 'default')}
     group={boolean('Group', false)}
     onClick={action('button_clicked')}
     className={text('ClassName', '')}
@@ -74,4 +74,56 @@ module.exports = withCSS({
   ],
   "plugins": []
 }
+```
+
+13. using styled component :
+```js 
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ]
+}
+```
+
+14. ButtonWrapper : styled component to wrap CSS (hover, state..) :
+```js
+.news-kit-button--default{ 
+    background : #FFFFFF; 
+    border-color : #A569BD;
+    color : #A569BD;
+    padding : 10px 10px 10px 10px;
+    border-radius: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    outline: inherit;
+  }
+
+  .news-kit-button--default:hover {
+    background-color: #A569BD;
+    color: #FFFFFF;
+  }
+````
+
+15. /components/Button.jsx :
+```js
+  <ButtonWrapper>
+      <button
+        className={btRootClass}
+        type={type}
+        onClick={onClick}
+        {...otherProps}
+      >
+        {children}
+      </button>
+  </ButtonWrapper>
 ```
