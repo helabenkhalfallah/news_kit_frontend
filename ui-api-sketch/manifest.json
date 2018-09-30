@@ -5,7 +5,7 @@
 		{
 			"name": "news-kit-sketch",
 			"identifier": "main",
-			"script": "./my-command.jsx"
+			"script": "./main.jsx"
 		}
 	],
 	"menu": {

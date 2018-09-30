@@ -1,3 +1,8 @@
+
+// spacing
+export const spacing = 16
+
+// colors
 export const colors = {
   Haus: '#F3F4F4',
   Night: '#333',
@@ -9,19 +14,20 @@ export const colors = {
   'Pear a11y': '#2E854B',
 }
 
-const typeSizes = [80, 48, 36, 24, 20, 16]
-export const spacing = 16
-
+// fonts families
 const fontFamilies = {
   display: 'Helvetica',
   body: 'Georgia',
 }
 
+// fonts weights
 const fontWeights = {
   regular: 'regular',
   bold: 'bold',
 }
 
+// fonts
+const typeSizes = [80, 48, 36, 24, 20, 16]
 export const fonts = {
   Headline: {
     color: colors.Night,
@@ -61,6 +67,7 @@ export const fonts = {
   },
 }
 
+// design system
 const DesignSystem = {
   colors,
   fonts,
