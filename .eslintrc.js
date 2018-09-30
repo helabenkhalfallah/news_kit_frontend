@@ -24,7 +24,6 @@ module.exports = {
             {
                 "extensions":
                     [
-                        "/ui-api-sketch/components"
                         "withApollo.js",
                         "_document.js",
                         "_app.js",

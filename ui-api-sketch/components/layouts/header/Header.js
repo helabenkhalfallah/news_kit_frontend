@@ -11,19 +11,29 @@ import {
 } from '../../../designSystem'
 
 
-const Header = ({ title }) => (
-  <View style={{ marginBottom: spacing }}>
+/* eslint-disable react/jsx-filename-extension */
+const Header = ({ title, flex }) => (
+  <View style={
+    {
+      flex,
+      backgroundColor: 'red',
+      width: '100%',
+    }
+  }
+  >
     <Text style={fonts['Title 2']}>{title}</Text>
   </View>
 )
 
 // prop type validation
 Header.propTypes = {
+  flex: PropTypes.number,
   title: PropTypes.string,
 }
 
 // default prop
 Header.defaultProps = {
+  flex: 1,
   title: '',
 }
 

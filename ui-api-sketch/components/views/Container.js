@@ -8,28 +8,33 @@ import {
 import {
   fonts,
   spacing,
-} from '../../../../designSystem'
+} from '../../designSystem'
 
 
 /* eslint-disable react/jsx-filename-extension */
-const FooterInformation = ({ flex }) => (
+const Container = ({ title, flex }) => (
   <View style={
     {
       flex,
+      backgroundColor: 'green',
+      width: '100%',
     }
   }
   >
-    <Text style={fonts['Title 2']}>FooterInformation</Text>
+    <Text style={fonts['Title 2']}>{title}</Text>
   </View>
 )
 
-FooterInformation.propTypes = {
+// prop type validation
+Container.propTypes = {
   flex: PropTypes.number,
+  title: PropTypes.string,
 }
 
 // default prop
-FooterInformation.defaultProps = {
+Container.defaultProps = {
   flex: 1,
+  title: '',
 }
 
-export default FooterInformation
+export default Container

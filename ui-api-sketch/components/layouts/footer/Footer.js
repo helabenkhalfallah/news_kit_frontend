@@ -15,7 +15,8 @@ import Footers from './components/Footers'
 
 
 // footer
-const Footer = () => (
+/* eslint-disable react/jsx-filename-extension */
+const Footer = ({ title, flex }) => (
   <View style={
     {
       backgroundColor: 'hotPink',
@@ -24,31 +25,33 @@ const Footer = () => (
       justifyContent: 'center',
       alignItems: 'center',
       overflow: 'hidden',
+      flex,
+      width: '100%',
     }
   }
   >
+    {title}
     {Footers.map((item) => {
       const { Flex, FooterView } = item
       return (
         <FooterView
           key={FooterView}
-          style={{
-            flex: Flex,
-          }}
+          flex={Flex}
         />
       )
     })}
-  </View >
+  </View>
 )
 
-// prop type validation
 Footer.propTypes = {
-
+  flex: PropTypes.number,
+  title: PropTypes.string,
 }
 
 // default prop
 Footer.defaultProps = {
-
+  flex: 1,
+  title: '',
 }
 
 export default Footer

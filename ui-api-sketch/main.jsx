@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {
+  View,
   Page,
   Artboard,
   render,
@@ -12,11 +13,26 @@ import Components from './components'
 const App = () => (
   <Page name="News Kit">
     <Artboard name="Login">
-      <Components.Header title="Login" />
-      <Components.Container />
-      <Components.Footer />
+      <View
+        style={
+          {
+            backgroundColor: 'yellow',
+            flexDirection: 'column',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            overflow: 'hidden',
+            width: '1280px',
+            height: '1280px',
+          }
+        }
+      >
+        <Components.Header title="Header" flex="1" />
+        <Components.Container title="Container" flex="1" />
+        <Components.Footer title="Footer" flex="1" />
+      </View>
     </Artboard>
-  </Page >
+  </Page>
 )
 
 export default () => {

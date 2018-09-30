@@ -1838,7 +1838,7 @@ exports.default = SketchRenderer;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return spacing; });
+/* unused harmony export spacing */
 /* unused harmony export colors */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return fonts; });
 // spacing
@@ -7458,9 +7458,27 @@ var App = function App() {
     name: "News Kit"
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_sketchapp__["Artboard"], {
     name: "Login"
+  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_sketchapp__["View"], {
+    style: {
+      backgroundColor: 'yellow',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      overflow: 'hidden',
+      width: '1280px',
+      height: '1280px'
+    }
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components__["a" /* default */].Header, {
-    title: "Login"
-  }), __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components__["a" /* default */].Container, null), __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components__["a" /* default */].Footer, null)));
+    title: "Header",
+    flex: "1"
+  }), __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components__["a" /* default */].Container, {
+    title: "Container",
+    flex: "1"
+  }), __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components__["a" /* default */].Footer, {
+    title: "Footer",
+    flex: "1"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
@@ -41129,14 +41147,14 @@ _defineProperty(Use, "propTypes", _objectSpread({
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_header_Header__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_footer_Footer__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_Container__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_Container__ = __webpack_require__(221);
 
 
 
 var Components = {
   Header: __WEBPACK_IMPORTED_MODULE_0__layouts_header_Header__["a" /* default */],
   Footer: __WEBPACK_IMPORTED_MODULE_1__layouts_footer_Footer__["a" /* default */],
-  Container: __WEBPACK_IMPORTED_MODULE_2__layouts_Container__["a" /* default */]
+  Container: __WEBPACK_IMPORTED_MODULE_2__views_Container__["a" /* default */]
 };
 /* harmony default export */ __webpack_exports__["a"] = (Components);
 
@@ -41156,12 +41174,16 @@ var Components = {
 
 
 
+/* eslint-disable react/jsx-filename-extension */
 
 var Header = function Header(_ref) {
-  var title = _ref.title;
+  var title = _ref.title,
+      flex = _ref.flex;
   return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
     style: {
-      marginBottom: __WEBPACK_IMPORTED_MODULE_3__designSystem__["b" /* spacing */]
+      flex: flex,
+      backgroundColor: 'red',
+      width: '100%'
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
     style: __WEBPACK_IMPORTED_MODULE_3__designSystem__["a" /* fonts */]['Title 2']
@@ -41170,10 +41192,12 @@ var Header = function Header(_ref) {
 
 
 Header.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
   title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string // default prop
 
 };
 Header.defaultProps = {
+  flex: 1,
   title: ''
 };
 /* harmony default export */ __webpack_exports__["a"] = (Header);
@@ -41198,7 +41222,11 @@ Header.defaultProps = {
 
  // footer
 
-var Footer = function Footer() {
+/* eslint-disable react/jsx-filename-extension */
+
+var Footer = function Footer(_ref) {
+  var title = _ref.title,
+      flex = _ref.flex;
   return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
     style: {
       backgroundColor: 'hotPink',
@@ -41206,24 +41234,29 @@ var Footer = function Footer() {
       flexWrap: 'wrap',
       justifyContent: 'center',
       alignItems: 'center',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      flex: flex,
+      width: '100%'
     }
-  }, __WEBPACK_IMPORTED_MODULE_4__components_Footers__["a" /* default */].map(function (item) {
+  }, title, __WEBPACK_IMPORTED_MODULE_4__components_Footers__["a" /* default */].map(function (item) {
     var Flex = item.Flex,
         FooterView = item.FooterView;
     return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](FooterView, {
       key: FooterView,
-      style: {
-        flex: Flex
-      }
+      flex: Flex
     });
   }));
-}; // prop type validation
+};
 
+Footer.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string // default prop
 
-Footer.propTypes = {}; // default prop
-
-Footer.defaultProps = {};
+};
+Footer.defaultProps = {
+  flex: 1,
+  title: ''
+};
 /* harmony default export */ __webpack_exports__["a"] = (Footer);
 
 /***/ }),
@@ -41267,17 +41300,26 @@ var Footers = [{
 
 
 
+/* eslint-disable react/jsx-filename-extension */
 
-var FooterCommunity = function FooterCommunity() {
-  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], null, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
+var FooterCommunity = function FooterCommunity(_ref) {
+  var flex = _ref.flex;
+  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
+    style: {
+      flex: flex
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
     style: __WEBPACK_IMPORTED_MODULE_3__designSystem__["a" /* fonts */]['Title 2']
   }, "FooterCommunity"));
-}; // prop type validation
+};
 
+FooterCommunity.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number // default prop
 
-FooterCommunity.propTypes = {}; // default prop
-
-FooterCommunity.defaultProps = {};
+};
+FooterCommunity.defaultProps = {
+  flex: 1
+};
 /* harmony default export */ __webpack_exports__["a"] = (FooterCommunity);
 
 /***/ }),
@@ -41296,17 +41338,26 @@ FooterCommunity.defaultProps = {};
 
 
 
+/* eslint-disable react/jsx-filename-extension */
 
-var FooterInformation = function FooterInformation() {
-  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], null, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
+var FooterInformation = function FooterInformation(_ref) {
+  var flex = _ref.flex;
+  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
+    style: {
+      flex: flex
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
     style: __WEBPACK_IMPORTED_MODULE_3__designSystem__["a" /* fonts */]['Title 2']
   }, "FooterInformation"));
-}; // prop type validation
+};
 
+FooterInformation.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number // default prop
 
-FooterInformation.propTypes = {}; // default prop
-
-FooterInformation.defaultProps = {};
+};
+FooterInformation.defaultProps = {
+  flex: 1
+};
 /* harmony default export */ __webpack_exports__["a"] = (FooterInformation);
 
 /***/ }),
@@ -41325,21 +41376,32 @@ FooterInformation.defaultProps = {};
 
 
 
+/* eslint-disable react/jsx-filename-extension */
 
-var FooterApplication = function FooterApplication() {
-  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], null, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
+var FooterApplication = function FooterApplication(_ref) {
+  var flex = _ref.flex;
+  return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
+    style: {
+      flex: flex
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
     style: __WEBPACK_IMPORTED_MODULE_3__designSystem__["a" /* fonts */]['Title 2']
   }, "FooterApplication"));
 }; // prop type validation
 
 
-FooterApplication.propTypes = {}; // default prop
+FooterApplication.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number // default prop
 
-FooterApplication.defaultProps = {};
+};
+FooterApplication.defaultProps = {
+  flex: 1
+};
 /* harmony default export */ __webpack_exports__["a"] = (FooterApplication);
 
 /***/ }),
-/* 220 */
+/* 220 */,
+/* 221 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41354,21 +41416,32 @@ FooterApplication.defaultProps = {};
 
 
 
+/* eslint-disable react/jsx-filename-extension */
 
-var Container = function Container() {
+var Container = function Container(_ref) {
+  var title = _ref.title,
+      flex = _ref.flex;
   return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
     style: {
-      marginBottom: __WEBPACK_IMPORTED_MODULE_3__designSystem__["b" /* spacing */]
+      flex: flex,
+      backgroundColor: 'green',
+      width: '100%'
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
     style: __WEBPACK_IMPORTED_MODULE_3__designSystem__["a" /* fonts */]['Title 2']
-  }, "Container"));
+  }, title));
 }; // prop type validation
 
 
-Container.propTypes = {}; // default prop
+Container.propTypes = {
+  flex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string // default prop
 
-Container.defaultProps = {};
+};
+Container.defaultProps = {
+  flex: 1,
+  title: ''
+};
 /* harmony default export */ __webpack_exports__["a"] = (Container);
 
 /***/ })
