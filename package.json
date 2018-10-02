@@ -6,7 +6,8 @@
     "start": "next start",
     "render": "skpm-build --watch --run",
     "storybook": "start-storybook -p 9001 -c ./ui-api/.storybook",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "NODE_ENV=test jest"
   },
   "skpm": {
     "main": "ui-api-sketch/news-kit-sketch.sketchplugin",
@@ -50,16 +51,24 @@
     "style-loader": "^0.23.0",
     "styled-components": "^3.4.9",
     "universal-cookie": "^3.0.4",
-    "yup": "^0.26.6"
+    "yup": "^0.26.6",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.3.4",
+    "chai": "^4.2.0",
+    "enzyme-to-json": "^3.3.4"
   },
   "devDependencies": {
     "@skpm/builder": "^0.4.0",
     "babel-eslint": "^10.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-styled-components": "^1.7.1",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "babel-plugin-styled-components": "^1.7.1"
+    "jest": "^23.6.0"
   }
 }

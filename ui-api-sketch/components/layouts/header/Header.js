@@ -16,7 +16,7 @@ const Header = ({ title, flex }) => (
   <View style={
     {
       flex,
-      backgroundColor: 'red',
+      backgroundColor: 'yellow',
       width: '100%',
     }
   }

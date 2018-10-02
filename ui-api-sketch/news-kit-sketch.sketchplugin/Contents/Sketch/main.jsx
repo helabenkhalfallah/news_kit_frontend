@@ -41147,7 +41147,7 @@ _defineProperty(Use, "propTypes", _objectSpread({
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layouts_header_Header__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_footer_Footer__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_Container__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_Container__ = __webpack_require__(220);
 
 
 
@@ -41182,7 +41182,7 @@ var Header = function Header(_ref) {
   return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
     style: {
       flex: flex,
-      backgroundColor: 'red',
+      backgroundColor: 'yellow',
       width: '100%'
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
@@ -41400,8 +41400,7 @@ FooterApplication.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (FooterApplication);
 
 /***/ }),
-/* 220 */,
-/* 221 */
+/* 220 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
