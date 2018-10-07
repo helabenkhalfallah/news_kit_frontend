@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import redirect from '../lib/routes/Redirect'
@@ -8,6 +8,11 @@ import Routes from '../lib/routes/Routes'
 import Header from '../components/app/header/Header'
 import Footer from '../components/app/footer/Footer'
 import Body from '../components/app/body/Body'
+
+import ContentHelper from '../components/app/ContentHelper'
+
+const { contentTypes } = ContentHelper
+
 
 export default class Index extends React.Component {
   // default props
@@ -37,11 +42,11 @@ export default class Index extends React.Component {
     const { profile } = this.props
     console.log('Index profile : ', profile)
     return (
-      <div>
-        <Header />
-        <Body />
-        <Footer />
-      </div>
+      <Fragment>
+        <Header type={contentTypes.home} />
+        <Body type={contentTypes.home} />
+        <Footer type={contentTypes.home} />
+      </Fragment>
     )
   }
 }

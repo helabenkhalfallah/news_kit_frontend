@@ -1,10 +1,16 @@
 import React, { Fragment } from 'react'
-import Link from 'next/link'
 
 import redirect from '../../lib/routes/Redirect'
-import AuthSignIn from '../../components/authentication/AuthSignIn'
 import graphqlManager from '../../graphql'
 import Routes from '../../lib/routes/Routes'
+
+import Header from '../../components/app/header/Header'
+import Footer from '../../components/app/footer/Footer'
+import Body from '../../components/app/body/Body'
+
+import ContentHelper from '../../components/app/ContentHelper'
+
+const { contentTypes } = ContentHelper
 
 export default class Signin extends React.Component {
   static async getInitialProps(context) {
@@ -21,12 +27,9 @@ export default class Signin extends React.Component {
   render() {
     return (
       <Fragment>
-        <AuthSignIn />
-        <hr />
-        New?
-        <Link prefetch href={Routes.REGISTER_PATH}>
-          <a>Create account</a>
-        </Link>
+        <Header type={contentTypes.signin} />
+        <Body type={contentTypes.signin} />
+        <Footer type={contentTypes.signin} />
       </Fragment>
     )
   }

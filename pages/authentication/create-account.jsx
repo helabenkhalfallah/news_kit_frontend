@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react'
-import Link from 'next/link'
 
 import redirect from '../../lib/routes/Redirect'
-import AuthRegister from '../../components/authentication/AuthRegister'
 import graphqlManager from '../../graphql'
 import Routes from '../../lib/routes/Routes'
 
+import Header from '../../components/app/header/Header'
+import Footer from '../../components/app/footer/Footer'
+import Body from '../../components/app/body/Body'
+import ContentHelper from '../../components/app/ContentHelper'
+
+const { contentTypes } = ContentHelper
 
 export default class CreateAccount extends React.Component {
   static async getInitialProps(context) {
@@ -22,12 +26,9 @@ export default class CreateAccount extends React.Component {
   render() {
     return (
       <Fragment>
-        <AuthRegister />
-        <hr />
-        Already have an account?
-        <Link prefetch href={Routes.SIGN_IN_PATH}>
-          <a>Sign in</a>
-        </Link>
+        <Header type={contentTypes.register} />
+        <Body type={contentTypes.register} />
+        <Footer type={contentTypes.register} />
       </Fragment>
     )
   }

@@ -1,22 +1,22 @@
 // import Link from 'next/link'
 import React from 'react'
 import { withRouter } from 'next/router'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
-const Footer = () => (
+const Footer = ({ type }) => (
   <div>
-    Footer
+    {`Footer ${type}`}
   </div>
 )
 
 // prop type validation
 Footer.propTypes = {
-
+  type: PropTypes.string,
 }
 
 // default prop
 Footer.defaultProps = {
-
+  type: 'Home',
 }
 
 export default withRouter(Footer)
