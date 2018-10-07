@@ -1,7 +1,7 @@
 
 
 // content types
-const contentTypes = {
+const ContentTypes = {
   signin: 'sign-in',
   register: 'register',
   home: 'home',
@@ -9,7 +9,7 @@ const contentTypes = {
 
 // content helper
 const ContentHelper = {
-  contentTypes,
+  ContentTypes,
 }
 
 export default ContentHelper

@@ -4,7 +4,7 @@ import { Query } from 'react-apollo'
 import PropTypes from 'prop-types'
 
 import ErrorMessage from '../commons/ErrorMessage'
-import graphqlManager from '../../graphql'
+import RemoteQMManager from '../../graphql/remote-state/RemoteQMManager'
 
 // table columns name
 const usersTableHeaders = [{
@@ -31,7 +31,7 @@ const usersTableHeaders = [{
 
 
 // display list
-const { USERS_LIST } = graphqlManager
+const { USERS_LIST } = RemoteQMManager
 const UsersList = ({ className }) => (
   // query user
   <Query

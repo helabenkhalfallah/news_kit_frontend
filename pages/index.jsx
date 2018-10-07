@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import redirect from '../lib/routes/Redirect'
-import graphqlManager from '../graphql'
+import RemoteQMManager from '../graphql/remote-state/RemoteQMManager'
 import Routes from '../lib/routes/Routes'
 
-import Header from '../components/app/header/Header'
-import Footer from '../components/app/footer/Footer'
-import Body from '../components/app/body/Body'
+import AppLayout from '../components/app/AppLayout'
 
 import ContentHelper from '../components/app/ContentHelper'
 
-const { contentTypes } = ContentHelper
+const { ContentTypes } = ContentHelper
 
 
 export default class Index extends React.Component {
@@ -30,7 +28,7 @@ export default class Index extends React.Component {
    * @param {*} context
    */
   static async getInitialProps(context) {
-    const { USER_IS_VALID } = graphqlManager
+    const { USER_IS_VALID } = RemoteQMManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (!profile.UserProfile) {
       redirect(context, Routes.SIGN_IN_PATH)
@@ -42,11 +40,7 @@ export default class Index extends React.Component {
     const { profile } = this.props
     console.log('Index profile : ', profile)
     return (
-      <Fragment>
-        <Header type={contentTypes.home} />
-        <Body type={contentTypes.home} />
-        <Footer type={contentTypes.home} />
-      </Fragment>
+      <AppLayout type={ContentTypes.home} />
     )
   }
 }

@@ -1,19 +1,17 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import redirect from '../../lib/routes/Redirect'
-import graphqlManager from '../../graphql'
+import RemoteQMManager from '../../graphql/remote-state/RemoteQMManager'
 import Routes from '../../lib/routes/Routes'
 
-import Header from '../../components/app/header/Header'
-import Footer from '../../components/app/footer/Footer'
-import Body from '../../components/app/body/Body'
+import AppLayout from '../../components/app/AppLayout'
 import ContentHelper from '../../components/app/ContentHelper'
 
-const { contentTypes } = ContentHelper
+const { ContentTypes } = ContentHelper
 
 export default class CreateAccount extends React.Component {
   static async getInitialProps(context) {
-    const { USER_IS_VALID } = graphqlManager
+    const { USER_IS_VALID } = RemoteQMManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (profile.UserProfile) {
       // Already signed in? No need to continue.
@@ -25,11 +23,7 @@ export default class CreateAccount extends React.Component {
 
   render() {
     return (
-      <Fragment>
-        <Header type={contentTypes.register} />
-        <Body type={contentTypes.register} />
-        <Footer type={contentTypes.register} />
-      </Fragment>
+      <AppLayout type={ContentTypes.register} />
     )
   }
 }

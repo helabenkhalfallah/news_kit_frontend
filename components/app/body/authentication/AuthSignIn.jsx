@@ -5,10 +5,10 @@ import * as Yup from 'yup'
 import PropTypes from 'prop-types'
 
 
-import CookiesManager from '../../lib/cookies/CookiesManager'
-import redirect from '../../lib/routes/Redirect'
-import graphqlManager from '../../graphql'
-import Routes from '../../lib/routes/Routes'
+import CookiesManager from '../../../../lib/cookies/CookiesManager'
+import redirect from '../../../../lib/routes/Redirect'
+import Routes from '../../../../lib/routes/Routes'
+import RemoteQMManager from '../../../../graphql/remote-state/RemoteQMManager'
 
 // user schema
 const UserSchema = Yup.object().shape({
@@ -20,7 +20,7 @@ const UserSchema = Yup.object().shape({
 })
 
 // user auth sign
-const { USER_SIGN_IN } = graphqlManager
+const { USER_SIGN_IN } = RemoteQMManager
 const AuthSignIn = ({ client }) => (
   <Mutation
     mutation={USER_SIGN_IN}
