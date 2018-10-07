@@ -1,4 +1,7 @@
 {
+  "presets": [
+    "next/babel"
+  ],
   "env": {
     "development": {
       "presets": [

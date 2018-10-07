@@ -1,12 +1,13 @@
 import React from 'react'
-import { ApolloConsumer } from 'react-apollo'
 import PropTypes from 'prop-types'
 
-import CookiesManager from '../lib/cookies/CookiesManager'
 import redirect from '../lib/routes/Redirect'
 import graphqlManager from '../graphql'
 import Routes from '../lib/routes/Routes'
 
+import Header from '../components/app/header/Header'
+import Footer from '../components/app/footer/Footer'
+import Body from '../components/app/body/Body'
 
 export default class Index extends React.Component {
   // default props
@@ -32,52 +33,15 @@ export default class Index extends React.Component {
     return { profile }
   }
 
-  /**
-   * user logout
-   */
-  signout = apolloClient => () => {
-    // remove cookies
-    CookiesManager.remove()
-
-    // Force a reload of all the current queries now that the user is
-    // logged in, so we don't accidentally leave any state around.
-    apolloClient.cache.reset().then(() => {
-      // Redirect to a more useful page when signed out
-      redirect({}, Routes.SIGN_IN_PATH)
-    })
-  }
-
   render() {
     const { profile } = this.props
-    const user = profile ? profile.UserProfile : {}
+    console.log('Index profile : ', profile)
     return (
-      <ApolloConsumer>
-        {client => (
-          <div>
-            {(user && user.firstName)
-              ? (
-                <div>
-                  Hello
-                  {user.firstName}
-                  !
-                  <button
-                    type="button"
-                    onClick={this.signout(client)}
-                  >
-                    Sign out
-                  </button>
-                </div>
-              ) : (
-                <div>
-                  Error getting user !
-                </div>
-              )
-            }
-            <br />
-
-          </div>
-        )}
-      </ApolloConsumer>
+      <div>
+        <Header />
+        <Body />
+        <Footer />
+      </div>
     )
   }
 }

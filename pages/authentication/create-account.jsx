@@ -28,7 +28,7 @@ export default class CreateAccount extends React.Component {
         <Link prefetch href={Routes.SIGN_IN_PATH}>
           <a>Sign in</a>
         </Link>
-      </Fragment >
+      </Fragment>
     )
   }
 }

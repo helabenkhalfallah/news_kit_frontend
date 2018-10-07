@@ -6,8 +6,6 @@ import AuthSignIn from '../../components/authentication/AuthSignIn'
 import graphqlManager from '../../graphql'
 import Routes from '../../lib/routes/Routes'
 
-import Header from '../../components/app/Header'
-
 export default class Signin extends React.Component {
   static async getInitialProps(context) {
     const { USER_IS_VALID } = graphqlManager
@@ -23,7 +21,6 @@ export default class Signin extends React.Component {
   render() {
     return (
       <Fragment>
-        <Header />
         <AuthSignIn />
         <hr />
         New?

@@ -1,4 +1,3 @@
-
 // CSS BEM
 const baseClass = 'news-kit-button'
 const groupClass = 'group__button'

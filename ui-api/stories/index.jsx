@@ -6,11 +6,12 @@ import { withKnobs } from '@storybook/addon-knobs'
 import Components from './index-stories'
 
 // stories
-const stories = storiesOf('News Kit', module)
-const { Button } = Components
+const stories = storiesOf('UI Kit', module)
+const { Button, SideMenu } = Components
 
 // prepare story board
 stories
   .addDecorator((story, context) => (story)(context))
   .addDecorator(withKnobs)
   .add('Button', withReadme(...Button))
+  .add('SideMenu', withReadme(...SideMenu))

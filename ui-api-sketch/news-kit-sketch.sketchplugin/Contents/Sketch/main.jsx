@@ -41182,7 +41182,7 @@ var Header = function Header(_ref) {
   return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["View"], {
     style: {
       flex: flex,
-      backgroundColor: 'yellow',
+      backgroundColor: 'black',
       width: '100%'
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_sketchapp__["Text"], {
