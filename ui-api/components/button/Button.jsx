@@ -17,8 +17,8 @@ const Button = ({
   context,
   size,
   type,
-  children,
   onClick,
+  children,
   ...otherProps
 }) => {
   /* eslint-disable react/button-has-type */
