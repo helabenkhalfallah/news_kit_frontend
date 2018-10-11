@@ -1,11 +1,9 @@
 // CSS BEM
 const baseClass = 'news-kit-button'
-const groupClass = 'group__button'
-const rootClass = (cx, className, context, size, group) => (
+const rootClass = (cx, className, context, size) => (
   cx(baseClass, className, {
     [`${baseClass}--${context}`]: context,
     [`${baseClass}--${size}`]: size,
-    [`${baseClass}-${groupClass}`]: group,
   })
 )
 

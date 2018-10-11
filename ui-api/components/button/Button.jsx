@@ -18,12 +18,11 @@ const Button = ({
   size,
   type,
   children,
-  group,
   onClick,
   ...otherProps
 }) => {
   /* eslint-disable react/button-has-type */
-  const btRootClass = rootClass(cx, className, context, size, group)
+  const btRootClass = rootClass(cx, className, context, size)
   return (
     <ButtonWrapper>
       <button

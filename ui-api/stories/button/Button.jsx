@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   text,
-  boolean,
 } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import OptionalSelect from '../../lib/OptionalSelect'
@@ -23,7 +22,6 @@ const Component = () => (
     context={OptionalSelect('Context', contextOptions, 'default')}
     size={OptionalSelect('Size', sizeOptions, '')}
     type={text('Type', 'button')}
-    group={boolean('Group', false)}
     onClick={action('button_clicked')}
   >
     I am a Button, test me !
