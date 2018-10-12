@@ -3,12 +3,8 @@ import PropTypes from 'prop-types'
 import { getDataFromTree } from 'react-apollo'
 import Head from 'next/head'
 
-import AppCommons from '../index'
 import initApollo from './initApollo'
-
-const {
-  CookiesManager,
-} = AppCommons
+import CookiesManager from '../cookies/CookiesManager'
 
 export default App => (
   class WithData extends React.Component {
