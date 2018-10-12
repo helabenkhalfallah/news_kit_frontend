@@ -1,11 +1,22 @@
 import React from 'react'
 
-import redirect from '../../lib/routes/Redirect'
-import RemoteQMManager from '../../graphql/remote-state/RemoteQMManager'
-import Routes from '../../lib/routes/Routes'
+import AppLayout from '../../app/main/AppLayout'
+import AppService from '../../app-services'
+import AppSettings from '../../app-settings'
+import AppCommons from '../../app-core/commons'
 
-import AppLayout from '../../components/app/AppLayout'
-import ContentHelper from '../../components/app/ContentHelper'
+const {
+  Redirect,
+} = AppCommons
+
+const {
+  Routes,
+  ContentHelper,
+} = AppSettings
+
+const {
+  RemoteQMManager,
+} = AppService
 
 const { ContentTypes } = ContentHelper
 
@@ -16,7 +27,7 @@ export default class Signin extends React.Component {
     if (profile.UserProfile) {
       // Already signed in? No need to continue.
       // Throw them back to the main page
-      redirect(context, Routes.HOME_PATH)
+      Redirect(context, Routes.HOME_PATH)
     }
     return {}
   }

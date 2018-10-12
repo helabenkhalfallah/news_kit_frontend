@@ -1,16 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import redirect from '../lib/routes/Redirect'
-import RemoteQMManager from '../graphql/remote-state/RemoteQMManager'
-import Routes from '../lib/routes/Routes'
+import AppLayout from '../app/main/AppLayout'
+import AppService from '../app-services'
+import AppSettings from '../app-settings'
+import AppCommons from '../app-core/commons'
 
-import AppLayout from '../components/app/AppLayout'
+const {
+  Redirect,
+} = AppCommons
 
-import ContentHelper from '../components/app/ContentHelper'
+const {
+  Routes,
+  ContentHelper,
+} = AppSettings
+
+const {
+  RemoteQMManager,
+} = AppService
 
 const { ContentTypes } = ContentHelper
-
 
 export default class Index extends React.Component {
   // default props
@@ -31,7 +40,7 @@ export default class Index extends React.Component {
     const { USER_IS_VALID } = RemoteQMManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
     if (!profile.UserProfile) {
-      redirect(context, Routes.SIGN_IN_PATH)
+      Redirect(context, Routes.SIGN_IN_PATH)
     }
     return { profile }
   }

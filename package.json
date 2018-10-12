@@ -5,13 +5,13 @@
     "build": "next build",
     "start": "next start",
     "render": "skpm-build --watch --run",
-    "storybook": "start-storybook -p 9001 -c ./ui-api/.storybook",
+    "storybook": "start-storybook -p 9001 -c ./app-core/ui/ui-api-storybook/.storybook",
     "build-storybook": "build-storybook",
     "test": "NODE_ENV=test jest"
   },
   "skpm": {
-    "main": "ui-api-sketch/news-kit-sketch.sketchplugin",
-    "manifest": "ui-api-sketch/manifest.json"
+    "main": "./app-sketch/news-kit-sketch.sketchplugin",
+    "manifest": "./app-sketch/manifest.json"
   },
   "dependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.21",

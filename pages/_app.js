@@ -3,7 +3,11 @@ import App, { Container } from 'next/app'
 import { ApolloProvider } from 'react-apollo'
 import { ThemeProvider } from 'styled-components'
 
-import withApollo from '../lib/apollo/withApollo'
+import AppCore from '../app-core/commons'
+
+const {
+  withApollo,
+} = AppCore
 
 const theme = {
   flexboxgrid: {
