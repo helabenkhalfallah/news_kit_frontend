@@ -3,7 +3,7 @@ import ReactTable from 'react-table'
 import { Query } from 'react-apollo'
 import PropTypes from 'prop-types'
 
-import ErrorMessage from '../commons/ErrorMessage'
+import ErrorPage from '../commons/ErrorPage'
 import AppService from '../../app-services'
 
 const {
@@ -51,7 +51,7 @@ const UsersList = ({ className }) => (
 
       // user list error status
       if (error) {
-        return <ErrorMessage message={error.message} />
+        return <ErrorPage message={error.message} />
       }
 
       // user list emtpy status
