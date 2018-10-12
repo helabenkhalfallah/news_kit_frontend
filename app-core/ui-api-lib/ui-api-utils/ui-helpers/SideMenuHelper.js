@@ -1,22 +1,22 @@
 // CSS BEM
-const baseClass = 'news-kit-side-menu'
-const rootClass = (cx, className, status) => (
+/*eslint-disable*/
+const baseClass = "news-kit-side-menu";
+const rootClass = (cx, className, status) =>
   cx(baseClass, className, {
-    [`${baseClass}--${status}`]: status,
-  })
-)
+    [`${baseClass}--${status}`]: status
+  });
 
 // menu statut
 const SideMenuStatut = {
-  open: 'opened',
-  close: 'closed',
-}
+  open: "opened",
+  close: "closed"
+};
 
 // side menu helper
 const SideMenuHelper = {
   baseClass,
   rootClass,
-  SideMenuStatut,
-}
+  SideMenuStatut
+};
 
-export default SideMenuHelper
+export default SideMenuHelper;

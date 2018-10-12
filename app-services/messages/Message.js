@@ -12,17 +12,17 @@ class Message {
    * @param {*} status
    */
   constructor(key, value, language, status) {
-    this.key = key
-    this.value = value
-    this.language = language
-    this.status = status
+    this.key = key;
+    this.value = value;
+    this.language = language;
+    this.status = status;
   }
 
   /**
    * get Message key
    */
   get key() {
-    return this.key
+    return this.key;
   }
 
   /**
@@ -30,14 +30,14 @@ class Message {
    * @param {*} key
    */
   set key(key) {
-    this.key = key
+    this.key = key;
   }
 
   /**
    * get Message value
    */
   get value() {
-    return this.value
+    return this.value;
   }
 
   /**
@@ -45,37 +45,37 @@ class Message {
    * @param {*} value
    */
   set value(value) {
-    this.value = value
+    this.value = value;
   }
 
   /**
    * get Message language
    */
   get language() {
-    return this.language
+    return this.language;
   }
 
   /**
-  * set Message language
-  * @param {*} language
-  */
+   * set Message language
+   * @param {*} language
+   */
   set language(language) {
-    this.language = language
+    this.language = language;
   }
 
   /**
    * get Message status
    */
   get status() {
-    return this.status
+    return this.status;
   }
 
   /**
-  * set Message status
-  * @param {*} status
-  */
+   * set Message status
+   * @param {*} status
+   */
   set status(status) {
-    this.status = status
+    this.status = status;
   }
 
   /**
@@ -88,8 +88,8 @@ class Message {
       value : ${this.value} , 
       language : ${this.language},
       status : ${this.status}
-    )`
+    )`;
   }
 }
 
-export default Message
+export default Message;

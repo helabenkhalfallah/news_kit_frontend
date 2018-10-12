@@ -1,17 +1,21 @@
-import React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
-export default class NewsDocument extends Document {
+/**
+ * Application Document
+ */
+export default class AppDocument extends Document {
   /**
    * initial propos
    * @param {*} param0
    */
   static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    const sheet = new ServerStyleSheet();
+    /* eslint-disable*/
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   /**
@@ -29,6 +33,6 @@ export default class NewsDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

@@ -1,5 +1,10 @@
 # News Kit
 
+## Project Settings :
+1. NextJS
+2. ESLint
+3. Prettier
+
 ## Settings Storybook :
 1. getstorybook
 

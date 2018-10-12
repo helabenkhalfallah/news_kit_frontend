@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderAccount = () => (
-  <Fragment>
-    HeaderAccount
-  </Fragment>
-)
+const HeaderAccount = () => <Fragment>HeaderAccount</Fragment>;
 
 // prop type validation
-HeaderAccount.propTypes = {
-
-}
+HeaderAccount.propTypes = {};
 
 // default prop
-HeaderAccount.defaultProps = {
+HeaderAccount.defaultProps = {};
 
-}
-
-export default HeaderAccount
+export default HeaderAccount;

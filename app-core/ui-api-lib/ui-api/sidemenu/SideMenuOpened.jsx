@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const SideMenuOpened = () => (
-  <div>
-    SideMenuOpened
-  </div>
-)
+const SideMenuOpened = () => <div>SideMenuOpened</div>;
 
-export default SideMenuOpened
+export default SideMenuOpened;

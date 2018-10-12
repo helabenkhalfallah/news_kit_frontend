@@ -1,14 +1,15 @@
-import { gql } from 'apollo-boost'
+import { gql } from "apollo-boost";
 
 const USERS_LIST = gql`
-    {
-      users{
-        id,
-        firstName,
-        lastName,
-        birthday,
-        job
-      }
+  {
+    users {
+      id
+      firstName
+      lastName
+      birthday
+      job
     }
-`
-export default USERS_LIST
+  }
+`;
+
+export default USERS_LIST;

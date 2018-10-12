@@ -1,24 +1,13 @@
-import React from 'react'
-import { withApollo } from 'react-apollo'
+import React from "react";
+import { withApollo } from "react-apollo";
 // import PropTypes from 'prop-types'
 
-const AuthRegister = () => {
-  return (
-    <div>
-      AuthRegister
-    </div>
-  )
-}
+const AuthRegister = () => <div>AuthRegister</div>;
 
 // prop type validation
-AuthRegister.propTypes = {
-
-}
+AuthRegister.propTypes = {};
 
 // default prop
-AuthRegister.defaultProps = {
+AuthRegister.defaultProps = {};
 
-}
-
-
-export default withApollo(AuthRegister)
+export default withApollo(AuthRegister);

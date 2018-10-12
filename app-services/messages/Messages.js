@@ -2,22 +2,22 @@
 
 // all language keys
 const KEYS = {
-  USER_ALREADY_EXIST: 'USER_ALREADY_EXIST',
-}
+  USER_ALREADY_EXIST: "USER_ALREADY_EXIST"
+};
 
 // all messages
 const DATA = [
   {
     key: KEYS.USER_ALREADY_EXIST,
-    value: 'User already exist.',
-    language: 'en',
-    status: 401,
-  },
-]
+    value: "User already exist.",
+    language: "en",
+    status: 401
+  }
+];
 
 const Messages = {
   KEYS,
-  DATA,
-}
+  DATA
+};
 
-export default Messages
+export default Messages;

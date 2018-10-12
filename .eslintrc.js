@@ -5,7 +5,10 @@ module.exports = {
         "es6": true
     },
     "parser": "babel-eslint",
-    "extends": "airbnb",
+    "extends": [
+        "airbnb",
+        "prettier/react"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -14,10 +17,24 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
+        "prettier",
         "react",
         "jsx-a11y"
     ],
     "rules": {
+        "prettier/prettier": "error",
+        "require-jsdoc": [
+            "error",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "ClassDeclaration": true,
+                    "MethodDefinition": false,
+                    "ArrowFunctionExpression": false,
+                    "FunctionExpression": false
+                }
+            }
+        ],
         "react/forbid-prop-types": 0,
         "react/jsx-filename-extension": [
             1,
@@ -34,6 +51,10 @@ module.exports = {
                     ]
             }
         ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
         "max-len": [1, 120, 2, { ignoreComments: true }],
         "indent": [
             2,
@@ -42,21 +63,38 @@ module.exports = {
                 "SwitchCase": 1
             }
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
         "quotes": [
-            "error",
-            "single"
+            2,
+            "double",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
         ],
-        "semi": [
-            "error",
-            "never"
+        "comma-dangle": [
+            2,
+            {
+                "arrays": "ignore",
+                "objects": "ignore",
+                "imports": "ignore",
+                "exports": "ignore",
+                "functions": "ignore"
+            }
         ],
-        "jsx-a11y/anchor-is-valid": ["error", {
-            "components": ["Link"],
-            "specialLink": ["to"]
-        }]
+        "operator-linebreak": [
+            2,
+            "before",
+            {
+                "overrides": {
+                    "&&": "after",
+                    "?": "after",
+                    ":": "after"
+                }
+            }
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ]
     }
 };

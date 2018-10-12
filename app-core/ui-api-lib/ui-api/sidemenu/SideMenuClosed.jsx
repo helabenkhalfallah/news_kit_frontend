@@ -1,11 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const SideMenuClosed = () => {
-  return (
-    <div>
-      SideMenuClosed
-    </div>
-  )
-}
+const SideMenuClosed = () => <div>SideMenuClosed</div>;
 
-export default SideMenuClosed
+export default SideMenuClosed;

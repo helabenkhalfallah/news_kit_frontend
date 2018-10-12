@@ -1,11 +1,11 @@
-import LocalRDManager from './graphql/local-state/LocalRDManager'
-import LocalQMManager from './graphql/local-state/LocalQMManager'
-import RemoteQMManager from './graphql/remote-state/RemoteQMManager'
+import LocalRDManager from "./graphql/local-state/LocalRDManager";
+import LocalQMManager from "./graphql/local-state/LocalQMManager";
+import RemoteQMManager from "./graphql/remote-state/RemoteQMManager";
 
 const AppService = {
   LocalQMManager,
   LocalRDManager,
-  RemoteQMManager,
-}
+  RemoteQMManager
+};
 
-export default AppService
+export default AppService;

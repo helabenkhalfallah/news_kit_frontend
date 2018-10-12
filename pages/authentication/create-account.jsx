@@ -20,7 +20,10 @@ const {
 
 const { ContentTypes } = ContentHelper
 
-export default class CreateAccount extends React.Component {
+/**
+ * Create account page
+ */
+class CreateAccount extends React.Component {
   static async getInitialProps(context) {
     const { USER_IS_VALID } = RemoteQMManager
     const { profile } = await USER_IS_VALID(context.apolloClient)
@@ -38,3 +41,5 @@ export default class CreateAccount extends React.Component {
     )
   }
 }
+
+export default CreateAccount

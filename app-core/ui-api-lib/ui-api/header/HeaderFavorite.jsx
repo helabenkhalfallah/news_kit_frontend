@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderFavorite = () => (
-  <Fragment>
-    HeaderFavorite
-  </Fragment>
-)
+const HeaderFavorite = () => <Fragment>HeaderFavorite</Fragment>;
 
 // prop type validation
-HeaderFavorite.propTypes = {
-
-}
+HeaderFavorite.propTypes = {};
 
 // default prop
-HeaderFavorite.defaultProps = {
+HeaderFavorite.defaultProps = {};
 
-}
-
-export default HeaderFavorite
+export default HeaderFavorite;

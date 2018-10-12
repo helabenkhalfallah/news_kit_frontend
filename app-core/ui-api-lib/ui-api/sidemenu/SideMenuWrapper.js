@@ -1,10 +1,9 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 const SideMenuWrapper = styled.div`
-  color : #A569BD;
+  color: #a569bd;
   margin: 0;
-  padding : 0;
-`
+  padding: 0;
+`;
 
-export default SideMenuWrapper
+export default SideMenuWrapper;

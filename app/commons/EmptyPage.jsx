@@ -1,8 +1,6 @@
-import React from 'react'
+import React from "react";
 
 // empty page
-const EmptyPage = () => (
-  <div>Empty Result :( </div>
-)
+const EmptyPage = () => <div>Empty Result :( </div>;
 
-export default EmptyPage
+export default EmptyPage;

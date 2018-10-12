@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-  background : #FFFFFF; 
-  border-color : #A569BD;
-`
+  background: #ffffff;
+  border-color: #a569bd;
+`;
 
-export default FooterWrapper
+export default FooterWrapper;

@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderSettings = () => (
-  <Fragment>
-    HeaderSettings
-  </Fragment>
-)
+const HeaderSettings = () => <Fragment>HeaderSettings</Fragment>;
 
 // prop type validation
-HeaderSettings.propTypes = {
-
-}
+HeaderSettings.propTypes = {};
 
 // default prop
-HeaderSettings.defaultProps = {
+HeaderSettings.defaultProps = {};
 
-}
-
-export default HeaderSettings
+export default HeaderSettings;

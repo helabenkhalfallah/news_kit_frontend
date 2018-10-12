@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderSearchBar = () => (
-  <Fragment>
-    HeaderLogoIcon
-  </Fragment>
-)
+const HeaderSearchBar = () => <Fragment>HeaderLogoIcon</Fragment>;
 
 // prop type validation
-HeaderSearchBar.propTypes = {
-
-}
+HeaderSearchBar.propTypes = {};
 
 // default prop
-HeaderSearchBar.defaultProps = {
+HeaderSearchBar.defaultProps = {};
 
-}
-
-export default HeaderSearchBar
+export default HeaderSearchBar;

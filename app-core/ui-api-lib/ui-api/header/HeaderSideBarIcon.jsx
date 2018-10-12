@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderSideBarIcon = () => (
-  <Fragment>
-    HeaderSettings
-  </Fragment>
-)
+const HeaderSideBarIcon = () => <Fragment>HeaderSettings</Fragment>;
 
 // prop type validation
-HeaderSideBarIcon.propTypes = {
-
-}
+HeaderSideBarIcon.propTypes = {};
 
 // default prop
-HeaderSideBarIcon.defaultProps = {
+HeaderSideBarIcon.defaultProps = {};
 
-}
-
-export default HeaderSideBarIcon
+export default HeaderSideBarIcon;

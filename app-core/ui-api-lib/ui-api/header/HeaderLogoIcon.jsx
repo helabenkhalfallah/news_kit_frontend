@@ -1,19 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-const HeaderLogoIcon = () => (
-  <Fragment>
-    HeaderLogoIcon
-  </Fragment>
-)
+const HeaderLogoIcon = () => <Fragment>HeaderLogoIcon</Fragment>;
 
 // prop type validation
-HeaderLogoIcon.propTypes = {
-
-}
+HeaderLogoIcon.propTypes = {};
 
 // default prop
-HeaderLogoIcon.defaultProps = {
+HeaderLogoIcon.defaultProps = {};
 
-}
-
-export default HeaderLogoIcon
+export default HeaderLogoIcon;

@@ -1,17 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
 
-import UIUtils from '../../ui-api-utils'
-import ButtonWrapper from './ButtonWrapper'
+import UIUtils from "../../ui-api-utils";
+import ButtonWrapper from "./ButtonWrapper";
 
 // component settings
-const { ButtonHelper } = UIUtils
-const {
-  sizeTypes,
-  contextTypes,
-  rootClass,
-} = ButtonHelper
+const { ButtonHelper } = UIUtils;
+const { sizeTypes, contextTypes, rootClass } = ButtonHelper;
 
 // component
 const Button = ({
@@ -24,7 +20,7 @@ const Button = ({
   ...otherProps
 }) => {
   /* eslint-disable react/button-has-type */
-  const btRootClass = rootClass(cx, className, context, size)
+  const btRootClass = rootClass(cx, className, context, size);
   return (
     <ButtonWrapper>
       <button
@@ -36,13 +32,13 @@ const Button = ({
         {children}
       </button>
     </ButtonWrapper>
-  )
-}
+  );
+};
 
 /**
  * display name
  */
-Button.displayName = 'Button'
+Button.displayName = "Button";
 
 /**
  * propType validation
@@ -55,17 +51,17 @@ Button.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
   group: PropTypes.bool,
-  onClick: PropTypes.func,
-}
+  onClick: PropTypes.func
+};
 
 /**
  * propType default values
  */
 Button.defaultProps = {
-  context: 'default',
-  type: 'button',
+  context: "default",
+  type: "button",
   group: false,
-  onClick: null,
-}
+  onClick: null
+};
 
-export default Button
+export default Button;

@@ -1,22 +1,16 @@
-import React, { Fragment } from 'react'
-import FooterWrapper from './FooterWrapper'
+import React, { Fragment } from "react";
+import FooterWrapper from "./FooterWrapper";
 
 const Footer = () => (
   <FooterWrapper>
-    <Fragment>
-      Footer
-    </Fragment>
+    <Fragment>Footer</Fragment>
   </FooterWrapper>
-)
+);
 
 // prop type validation
-Footer.propTypes = {
-
-}
+Footer.propTypes = {};
 
 // default prop
-Footer.defaultProps = {
+Footer.defaultProps = {};
 
-}
-
-export default Footer
+export default Footer;

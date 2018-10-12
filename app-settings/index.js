@@ -1,9 +1,9 @@
-import Routes from './Routes'
-import ContentHelper from './ContentHelper'
+import Routes from "./Routes";
+import ContentHelper from "./ContentHelper";
 
 const AppSettings = {
   Routes,
-  ContentHelper,
-}
+  ContentHelper
+};
 
-export default AppSettings
+export default AppSettings;

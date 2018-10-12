@@ -1,0 +1,6 @@
+/app-logs/**
+/app-sketch/**
+next.config.js
+jest.config.js
+jest.setup.js
+.eslintrc.js

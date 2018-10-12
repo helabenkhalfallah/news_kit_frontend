@@ -1,20 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-const App = ({ children }) => (
-  <main>
-    {children}
-  </main>
-)
+const App = ({ children }) => <main>{children}</main>;
 
 // prop type validation
 App.propTypes = {
-  children: PropTypes.any,
-}
+  children: PropTypes.any
+};
 
 // default prop
 App.defaultProps = {
-  children: null,
-}
+  children: null
+};
 
-export default App
+export default App;

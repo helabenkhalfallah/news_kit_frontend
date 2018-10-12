@@ -1,9 +1,9 @@
-import Button from './button/Button'
-import SideMenu from './sidemenu/SideMenu'
+import Button from "./button/Button";
+import SideMenu from "./sidemenu/SideMenu";
 
 const Stories = {
   Button,
-  SideMenu,
-}
+  SideMenu
+};
 
-export default Stories
+export default Stories;

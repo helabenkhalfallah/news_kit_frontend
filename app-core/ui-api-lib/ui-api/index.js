@@ -1,13 +1,13 @@
-import Button from './button/Button'
-import SideMenu from './sidemenu/SideMenu'
-import Header from './header/Header'
-import Footer from './footer/Footer'
+import Button from "./button/Button";
+import SideMenu from "./sidemenu/SideMenu";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 const Components = {
   Button,
   SideMenu,
   Header,
-  Footer,
-}
+  Footer
+};
 
-export default Components
+export default Components;

@@ -1,31 +1,26 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from "react";
+// import PropTypes from "prop-types";
 
+/**
+ * Side Menu Container
+ */
 class SideMenuContainer extends PureComponent {
   // default props
-  static defaultProps = {
-
-  }
+  static defaultProps = {};
 
   // propsType (validation)
-  static propTypes = {
-
-  }
+  static propTypes = {};
 
   // initial state
-  state = {
-
-  }
+  state = {};
 
   // component life cycle
-  componentWillMount() { }
+  // componentWillMount() { }
 
   // render
   render() {
-    return (
-      <div />
-    )
+    return <div />;
   }
 }
 
-export default SideMenuContainer
+export default SideMenuContainer;
