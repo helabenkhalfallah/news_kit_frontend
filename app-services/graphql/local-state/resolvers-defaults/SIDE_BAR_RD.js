@@ -2,7 +2,7 @@
  * Side Bar RD : Resolvers & Defaults
  */
 import LocalQMManager from '../LocalQMManager'
-import UIUtils from '../../../../app-core/ui/ui-api-utils'
+import UIUtils from '../../../../app-core/ui-api-lib/ui-api-utils'
 
 const { SideMenuHelper } = UIUtils
 const {

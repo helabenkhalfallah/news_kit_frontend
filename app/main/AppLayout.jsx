@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 // components
 import Body from './body/Body'
-import Components from '../../app-core/ui/ui-api'
+import Components from '../../app-core/ui-api-lib/ui-api'
 
 const { Header, Footer } = Components
 
