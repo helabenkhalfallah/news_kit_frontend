@@ -1,4 +1,9 @@
 import { gql } from 'apollo-boost'
+import AppCommons from '../../../../app-core/commons'
+
+const {
+  AppLogger,
+} = AppCommons
 
 export default apolloClient => (
   apolloClient.query({
@@ -16,11 +21,11 @@ export default apolloClient => (
       }
     `,
   }).then(({ data }) => {
-    console.log('USER_IS_VALID data : ', data)
+    AppLogger.info('USER_IS_VALID data : ', data)
     return { profile: data }
   }).catch((error) => {
     // Fail gracefully
-    console.log('USER_IS_VALID error : ', error)
+    AppLogger.error('USER_IS_VALID error : ', error)
     return { profile: {} }
   })
 )

@@ -11,6 +11,7 @@ import AppCommons from '../../../../app-core/commons'
 const {
   CookiesManager,
   Redirect,
+  AppLogger,
 } = AppCommons
 
 const {
@@ -48,7 +49,7 @@ const AuthSignIn = ({ client }) => (
     }}
     onError={(error) => {
       // If you want to send error to external service?
-      console.log('Signin error : ', error)
+      AppLogger.info('Signin error : ', error)
     }}
   >
     {(signinUser, { data, error }) => (
@@ -64,7 +65,7 @@ const AuthSignIn = ({ client }) => (
         }
         onSubmit={(values) => {
           // log submit status
-          console.log('Signin values : ', values)
+          AppLogger.info('Signin values : ', values)
           signinUser(
             {
               variables:
@@ -86,8 +87,8 @@ const AuthSignIn = ({ client }) => (
               handleSubmit,
             },
           ) => {
-            console.log(data)
-            console.log(error)
+            AppLogger.info(data)
+            AppLogger.info(error)
             return (
               <form
                 onSubmit={handleSubmit}

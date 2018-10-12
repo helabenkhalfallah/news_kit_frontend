@@ -44,11 +44,6 @@ const UsersList = ({ className }) => (
   >
     {({ loading, error, data }) => {
       // log query status
-      console.log('UserList USERS_LIST : ', USERS_LIST)
-      console.log('UserList error : ', error)
-      console.log('UserList loading : ', loading)
-      console.log('UserList data : ', data)
-
       // user list loading status
       if (loading) {
         return <div>LoadingPage</div>

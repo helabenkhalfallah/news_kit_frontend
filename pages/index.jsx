@@ -8,6 +8,7 @@ import AppCommons from '../app-core/commons'
 
 const {
   Redirect,
+  AppLogger,
 } = AppCommons
 
 const {
@@ -47,7 +48,7 @@ export default class Index extends React.Component {
 
   render() {
     const { profile } = this.props
-    console.log('Index profile : ', profile)
+    AppLogger.info('Index profile : ', profile)
     return (
       <AppLayout type={ContentTypes.home} />
     )

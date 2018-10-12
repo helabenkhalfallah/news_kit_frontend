@@ -3,7 +3,6 @@ import { withApollo } from 'react-apollo'
 // import PropTypes from 'prop-types'
 
 const AuthRegister = () => {
-  console.log('AuthRegister')
   return (
     <div>
       AuthRegister
