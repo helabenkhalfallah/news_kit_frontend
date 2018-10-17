@@ -15,7 +15,6 @@ export default context => {
       <Page name="Home">
         <Home />
       </Page>
-    </Document>,
-    context.document
+    </Document>
   );
 };

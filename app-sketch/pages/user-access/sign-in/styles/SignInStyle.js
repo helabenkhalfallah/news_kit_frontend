@@ -10,7 +10,7 @@ const SignInStyle = StyleSheet.create({
     flexDirection: "row"
   },
   desktop: {
-    backgroundColor: "yellow",
+    backgroundColor: "cyan",
     width: screenSize.desktopWidth,
     height: screenSize.desktopHeight,
     margin: "50px"

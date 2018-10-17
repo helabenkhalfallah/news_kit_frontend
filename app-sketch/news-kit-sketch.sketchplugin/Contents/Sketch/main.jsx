@@ -2441,7 +2441,7 @@ var SignInStyle = __WEBPACK_IMPORTED_MODULE_0_react_sketchapp__["StyleSheet"].cr
     flexDirection: "row"
   },
   desktop: {
-    backgroundColor: "yellow",
+    backgroundColor: "cyan",
     width: screenSize.desktopWidth,
     height: screenSize.desktopHeight,
     margin: "50px"
@@ -7549,7 +7549,7 @@ var Home = __WEBPACK_IMPORTED_MODULE_2__pages__["a" /* default */].Home,
     name: "Signin"
   }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Signin, null)), __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_sketchapp__["Page"], {
     name: "Home"
-  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Home, null))), context.document);
+  }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Home, null))));
 });
 
 /***/ }),
