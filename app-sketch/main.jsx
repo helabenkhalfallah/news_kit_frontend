@@ -1,40 +1,18 @@
-import * as React from 'react'
-import {
-  View,
-  Page,
-  Artboard,
-  render,
-} from 'react-sketchapp'
+import * as React from "react";
+import { render, Page, Document } from "react-sketchapp";
+import Pages from "./pages";
+import designSystem from "./design-system/designSystem";
 
-// components
-import Components from './components'
+const { Home } = Pages;
 
 // app pages
-const App = () => (
-  <Page name="News Kit">
-    <Artboard name="Login">
-      <View
-        style={
-          {
-            backgroundColor: 'yellow',
-            flexDirection: 'column',
-            flexWrap: 'wrap',
-            justifyContent: 'flex-start',
-            alignItems: 'flex-start',
-            overflow: 'hidden',
-            width: '1280px',
-            height: '1280px',
-          }
-        }
-      >
-        <Components.Header title="Header" flex="1" />
-        <Components.Container title="Container" flex="1" />
-        <Components.Footer title="Footer" flex="1" />
-      </View>
-    </Artboard>
-  </Page>
-)
-
-export default () => {
-  render(<App />, context.document.currentPage())
-}
+export default context => {
+  render(
+    <Document system={designSystem}>
+      <Page name="Home">
+        <Home />
+      </Page>
+    </Document>,
+    context.document
+  );
+};

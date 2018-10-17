@@ -1,4 +1,3 @@
-
 // import { ApolloConsumer } from 'react-apollo'
 // import CookiesManager from '../lib/cookies/CookiesManager'
 

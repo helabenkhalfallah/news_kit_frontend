@@ -55,6 +55,7 @@
     "react": "^16.5.2",
     "react-apollo": "^2.1.11",
     "react-dom": "^16.5.2",
+    "react-primitives": "^0.6.1",
     "react-sketchapp": "^2.1.0",
     "react-styled-flexboxgrid": "^2.6.0",
     "react-table": "^6.8.6",
