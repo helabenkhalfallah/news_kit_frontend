@@ -7,7 +7,12 @@ import ButtonWrapper from "./ButtonWrapper";
 
 // component settings
 const { ButtonHelper } = UIUtils;
-const { sizeTypes, contextTypes, rootClass } = ButtonHelper;
+const {
+  sizeTypes,
+  contextTypes,
+  rootClass,
+  baseClass
+} = ButtonHelper; // prettier-ignore
 
 // component
 const Button = ({
@@ -44,14 +49,13 @@ Button.displayName = "Button";
  * propType validation
  */
 Button.propTypes = {
-  /* eslint-disable react/require-default-props */
   className: PropTypes.string,
   context: PropTypes.oneOf(contextTypes),
-  size: PropTypes.oneOf(sizeTypes),
   type: PropTypes.string,
-  children: PropTypes.node,
-  group: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /* eslint-disable react/require-default-props */
+  size: PropTypes.oneOf(sizeTypes),
+  children: PropTypes.node
 };
 
 /**
@@ -60,7 +64,7 @@ Button.propTypes = {
 Button.defaultProps = {
   context: "default",
   type: "button",
-  group: false,
+  className: baseClass,
   onClick: null
 };
 
