@@ -9,6 +9,9 @@ const withCSS = require('@zeit/next-css')
 module.exports = withCSS({
   cssModules: true,
   webpack: (config) => {
+    config.node = { 
+      fs: 'empty' 
+    }
     config.plugins = config.plugins || []
     config.plugins = [
       ...config.plugins,

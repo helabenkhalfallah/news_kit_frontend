@@ -13,7 +13,7 @@ setConsoleOptions({
 addDecorator(
   withInfo({
     maxPropsIntoLine: 1,
-    name: 'Gumdrops',
+    name: 'News Kit',
     url: 'https://storybook.news-kit.com',
     goFullScreen: false,
     showStoriesPanel: true,
@@ -36,7 +36,7 @@ addDecorator(
   })
 )
 
-const req = require.context('../stories', true, /\.jsx$/)
+const req = require.context('..', true, /\.jsx$/)
 const loadStories = () => {
   req.keys().forEach((filename) => req(filename))
 }

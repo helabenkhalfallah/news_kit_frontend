@@ -1,42 +1,70 @@
 import * as winston from "winston";
-import * as fs from "fs";
-import path from "path";
 
-// create log file if not exist
-const logDirectory = path.join(__dirname, process.env.LOG_DIR_NAME);
-if (!fs.existsSync(logDirectory)) {
-  fs.mkdirSync(logDirectory);
-}
+// logger levels and colors
+const config = {
+  levels: {
+    info: 0,
+    error: 1,
+    warn: 2,
+    data: 3
+  },
+  colors: {
+    info: "green",
+    error: "magenta",
+    warn: "yellow",
+    data: "cyan"
+  }
+};
+winston.addColors(config.colors);
 
 // app loger config
-const AppLogger = new winston.Logger({
+const AppLogger = winston.createLogger({
+  level: "AppLogger",
+  levels: config.levels,
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  exitOnError: false,
   transports: [
-    new winston.transports.File({
+    new winston.transports.Console({
+      name: "info",
       level: "info",
-      filename: process.env.LOG_FILE_NAME,
-      dirname: logDirectory,
-      handleExceptions: true,
+      handleExceptions: false,
       json: true,
-      maxsize: process.env.LOG_MAX_SIZE,
-      maxFiles: process.env.LOG_MAX_FILE,
-      colorize: false
+      colorize: true
     }),
     new winston.transports.Console({
       name: "error",
       level: "error",
-      handleExceptions: true,
-      json: false,
+      handleExceptions: false,
+      json: true,
       colorize: true
     }),
     new winston.transports.Console({
-      name: "debug",
-      level: "debug",
-      handleExceptions: true,
-      json: false,
+      name: "warn",
+      level: "warn",
+      handleExceptions: false,
+      json: true,
+      colorize: true
+    }),
+    new winston.transports.Console({
+      name: "data",
+      level: "data",
+      handleExceptions: false,
+      json: true,
       colorize: true
     })
   ],
-  exitOnError: false
+  exceptionHandlers: [
+    new winston.transports.Console({
+      name: "exception",
+      level: "exception",
+      handleExceptions: true,
+      json: true,
+      colorize: true
+    })
+  ]
 });
 
 export default AppLogger;

@@ -1,7 +1,5 @@
 import { gql } from "apollo-boost";
-import AppCommons from "../../../../app-core/commons";
-
-const { AppLogger } = AppCommons;
+import AppLogger from "../../../../app-core/commons/logger/AppLogger";
 
 /*eslint-disable*/
 export default apolloClient =>
@@ -20,7 +18,7 @@ export default apolloClient =>
         }
       `
   }).then(({ data }) => {
-    AppLogger.info("USER_IS_VALID data : ", data);
+    AppLogger.data("USER_IS_VALID data : ", data);
     return { profile: data };
   }).catch(error => {
     // Fail gracefully
