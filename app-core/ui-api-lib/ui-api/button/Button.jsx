@@ -31,6 +31,7 @@ const Button = ({
   fontWeight,
   textTransform,
   textAlign,
+  disabled,
   onClick,
   children
 }) => {
@@ -45,7 +46,8 @@ const Button = ({
     fontStyle,
     fontWeight,
     textTransform,
-    textAlign
+    textAlign,
+    disabled
   );
   return (
     <ButtonWrapper
@@ -56,6 +58,7 @@ const Button = ({
       bSize={buttonSize}
       tTransform={textTransform}
       tAlign={textAlign}
+      disabled={disabled}
     >
       <button type="button" className={btRootClass} onClick={onClick}>
         {children}
@@ -82,6 +85,7 @@ Button.propTypes = {
   fontWeight: PropTypes.oneOf(fontWeights),
   textTransform: PropTypes.oneOf(textTransforms),
   textAlign: PropTypes.oneOf(textAligns),
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
   /* eslint-disable react/require-default-props */
   children: PropTypes.node
@@ -99,6 +103,7 @@ Button.defaultProps = {
   fontWeight: "normal",
   textTransform: "none",
   textAlign: "center",
+  disabled: false,
   className: baseClass,
   onClick: null
 };

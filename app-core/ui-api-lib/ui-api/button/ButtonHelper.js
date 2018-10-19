@@ -11,7 +11,8 @@ const rootClass = (
   fontStyle,
   fontWeight,
   textTransform,
-  textAlign
+  textAlign,
+  disabled
 ) =>
   cx(baseClass, className, {
     [`${baseClass}--bstyle--${buttonStyle}`]: buttonStyle,
@@ -21,7 +22,8 @@ const rootClass = (
     [`${baseClass}--fstyle--${fontStyle}`]: fontStyle,
     [`${baseClass}--fweight--${fontWeight}`]: fontWeight,
     [`${baseClass}--ttransform--${textTransform}`]: textTransform,
-    [`${baseClass}--talign--${textAlign}`]: textAlign
+    [`${baseClass}--talign--${textAlign}`]: textAlign,
+    [`${baseClass}--disabled`]: disabled
   });
 
 // button size options

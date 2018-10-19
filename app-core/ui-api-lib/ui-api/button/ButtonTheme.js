@@ -20,6 +20,7 @@ const btStyleTextBg = "transparent";
 const btStyleTextBorder = "transparent";
 const btStyleTextBgHover = "white";
 const btStyleTextBorderHover = "white";
+const disabledOpacity = "0.4";
 
 const backgrounds = {
   default: "#a569bd",
@@ -124,7 +125,8 @@ const ButtonTheme = {
   btStyleTextBg,
   btStyleTextBorder,
   btStyleTextBgHover,
-  btStyleTextBorderHover
+  btStyleTextBorderHover,
+  disabledOpacity
 };
 
 export default ButtonTheme;

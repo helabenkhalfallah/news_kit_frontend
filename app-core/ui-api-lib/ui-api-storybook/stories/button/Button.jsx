@@ -1,5 +1,5 @@
 import React from "react";
-import { text } from "@storybook/addon-knobs";
+import { text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
 import Components from "../../../ui-api";
@@ -35,6 +35,7 @@ const Component = () => (
       "none"
     )}
     textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
+    disabled={boolean("Disabled", false)}
     onClick={action("button_clicked")}
   >
     I am a Button, test meeeeeee !

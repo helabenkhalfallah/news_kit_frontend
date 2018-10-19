@@ -18,6 +18,7 @@ const {
   defaulTxtTransform,
   defaulTxtAlign,
   defaulColorType,
+  disabledOpacity,
   transitionDuration,
   backgrounds,
   borders,
@@ -139,6 +140,12 @@ const ButtonWrapper = styled(Button)`
     background-color: ${btStyleTextBgHover};
     border-color: ${btStyleTextBorderHover};
   }
+
+  .ui-api-kit-button--disabled{
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: ${disabledOpacity};
+  } 
 `;
 
 export default ButtonWrapper;
