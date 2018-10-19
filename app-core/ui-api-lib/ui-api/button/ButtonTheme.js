@@ -1,5 +1,6 @@
 // button design system
 const shadow = "1px 1px 1px 1px #ccc";
+const shadowHover = "1px 1px 1px 1px #ccc";
 const defaultPadding = "12px";
 const defaultRadius = "2px";
 const defaultBorderWidth = "2px";
@@ -14,6 +15,11 @@ const defaultBSize = "normal";
 const defaulTxtTransform = "none";
 const defaulTxtAlign = "left";
 const defaulColorType = "default";
+const transitionDuration = "0.4s";
+const btStyleTextBg = "transparent";
+const btStyleTextBorder = "transparent";
+const btStyleTextBgHover = "white";
+const btStyleTextBorderHover = "white";
 
 const backgrounds = {
   default: "#a569bd",
@@ -90,6 +96,7 @@ const textAligns = {
 
 const ButtonTheme = {
   shadow,
+  shadowHover,
   defaultPadding,
   defaultRadius,
   defaultBorderWidth,
@@ -104,6 +111,7 @@ const ButtonTheme = {
   defaulTxtTransform,
   defaulTxtAlign,
   defaulColorType,
+  transitionDuration,
   backgrounds,
   borders,
   textColors,
@@ -112,7 +120,11 @@ const ButtonTheme = {
   fWeights,
   bSizes,
   textTransforms,
-  textAligns
+  textAligns,
+  btStyleTextBg,
+  btStyleTextBorder,
+  btStyleTextBgHover,
+  btStyleTextBorderHover
 };
 
 export default ButtonTheme;
