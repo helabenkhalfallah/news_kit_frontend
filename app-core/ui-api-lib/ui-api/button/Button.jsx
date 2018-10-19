@@ -8,8 +8,14 @@ import ButtonWrapper from "./ButtonWrapper";
 // component settings
 const { ButtonHelper } = UIUtils;
 const {
-  sizeTypes,
-  contextTypes,
+  sizes,
+  colors,
+  styles,
+  shapes,
+  fontStyles,
+  fontWeights,
+  textTransforms,
+  textAligns,
   rootClass,
   baseClass
 } = ButtonHelper; // prettier-ignore
@@ -17,23 +23,41 @@ const {
 // component
 const Button = ({
   className,
-  context,
-  size,
-  type,
+  buttonColor,
+  buttonSize,
+  buttonStyle,
+  buttonShape,
+  fontStyle,
+  fontWeight,
+  textTransform,
+  textAlign,
   onClick,
-  children,
-  ...otherProps
+  children
 }) => {
   /* eslint-disable react/button-has-type */
-  const btRootClass = rootClass(cx, className, context, size);
+  const btRootClass = rootClass(
+    cx,
+    className,
+    buttonStyle,
+    buttonShape,
+    buttonColor,
+    buttonSize,
+    fontStyle,
+    fontWeight,
+    textTransform,
+    textAlign
+  );
   return (
-    <ButtonWrapper>
-      <button
-        className={btRootClass}
-        type={type}
-        onClick={onClick}
-        {...otherProps}
-      >
+    <ButtonWrapper
+      color={buttonColor}
+      shape={buttonShape}
+      fStyle={fontStyle}
+      fWeight={fontWeight}
+      bSize={buttonSize}
+      tTransform={textTransform}
+      tAlign={textAlign}
+    >
+      <button type="button" className={btRootClass} onClick={onClick}>
         {children}
       </button>
     </ButtonWrapper>
@@ -50,11 +74,16 @@ Button.displayName = "Button";
  */
 Button.propTypes = {
   className: PropTypes.string,
-  context: PropTypes.oneOf(contextTypes),
-  type: PropTypes.string,
+  buttonColor: PropTypes.oneOf(colors),
+  buttonSize: PropTypes.oneOf(sizes),
+  buttonStyle: PropTypes.oneOf(styles),
+  buttonShape: PropTypes.oneOf(shapes),
+  fontStyle: PropTypes.oneOf(fontStyles),
+  fontWeight: PropTypes.oneOf(fontWeights),
+  textTransform: PropTypes.oneOf(textTransforms),
+  textAlign: PropTypes.oneOf(textAligns),
   onClick: PropTypes.func,
   /* eslint-disable react/require-default-props */
-  size: PropTypes.oneOf(sizeTypes),
   children: PropTypes.node
 };
 
@@ -62,8 +91,14 @@ Button.propTypes = {
  * propType default values
  */
 Button.defaultProps = {
-  context: "default",
-  type: "button",
+  buttonColor: "default",
+  buttonSize: "default",
+  buttonStyle: "container",
+  buttonShape: "rectangle",
+  fontStyle: "normal",
+  fontWeight: "normal",
+  textTransform: "none",
+  textAlign: "center",
   className: baseClass,
   onClick: null
 };

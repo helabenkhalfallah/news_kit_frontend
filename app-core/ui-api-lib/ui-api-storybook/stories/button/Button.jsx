@@ -9,17 +9,35 @@ import Readme from "./README.md";
 // button settings
 const { ButtonHelper, OptionalSelect } = UIUtils;
 const { Button } = Components;
-const { contextOptions, sizeOptions } = ButtonHelper;
+const {
+  colorsOptions,
+  sizeOptions,
+  stylesOptions,
+  shapesOptions,
+  fontStylesOptions,
+  fontWeightsOptions,
+  textTransformsOptions,
+  textAlignsOptions
+} = ButtonHelper;
 
 const Component = () => (
   <Button
     className={text("ClassName", "")}
-    context={OptionalSelect("Context", contextOptions, "default")}
-    size={OptionalSelect("Size", sizeOptions, "")}
-    type={text("Type", "button")}
+    buttonStyle={OptionalSelect("Button Style", stylesOptions, "container")}
+    buttonShape={OptionalSelect("Button Shape", shapesOptions, "rectangle")}
+    buttonColor={OptionalSelect("Button Color", colorsOptions, "default")}
+    buttonSize={OptionalSelect("Button Size", sizeOptions, "normal")}
+    fontStyle={OptionalSelect("Font Style", fontStylesOptions, "normal")}
+    fontWeight={OptionalSelect("Font Weight", fontWeightsOptions, "normal")}
+    textTransform={OptionalSelect(
+      "Text Transform",
+      textTransformsOptions,
+      "none"
+    )}
+    textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
     onClick={action("button_clicked")}
   >
-    I am a Button, test me !
+    I am a Button, test meeeeeee !
   </Button>
 );
 

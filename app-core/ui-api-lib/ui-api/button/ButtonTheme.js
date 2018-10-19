@@ -1,0 +1,118 @@
+// button design system
+const shadow = "1px 1px 1px 1px #ccc";
+const defaultPadding = "12px";
+const defaultRadius = "2px";
+const defaultBorderWidth = "2px";
+const defaultFontSize = "normal";
+const defaultBgColor = "white";
+const defaulBorderColor = "transparent";
+const defaulTxtColor = "white";
+const defaultShape = "rectangle";
+const defaultFStyle = "normal";
+const defaultFWeight = "normal";
+const defaultBSize = "normal";
+const defaulTxtTransform = "none";
+const defaulTxtAlign = "left";
+const defaulColorType = "default";
+
+const backgrounds = {
+  default: "#a569bd",
+  primary: "#00a7cf",
+  secondary: "#ff0080",
+  success: "#1cce0c",
+  warning: "#ff9900",
+  info: "#2196f3",
+  danger: "#ff5a34"
+};
+
+const borders = {
+  default: "#a569bd",
+  primary: "#00a7cf",
+  secondary: "#ff0080",
+  success: "#1cce0c",
+  warning: "#ff9900",
+  info: "#2196f3",
+  danger: "#ff5a34"
+};
+
+const textColors = {
+  default: "white",
+  primary: "white",
+  secondary: "white",
+  success: "white",
+  warning: "white",
+  info: "white",
+  danger: "white"
+};
+
+const shapes = {
+  rectangle: "2px",
+  rounded: "6px",
+  oval: "50%"
+};
+
+const fStyles = {
+  normal: "normal",
+  italic: "italic",
+  oblique: "oblique"
+};
+
+const fWeights = {
+  normal: "normal",
+  bold: "bold",
+  lighter: "lighter"
+};
+
+const bSizes = {
+  normal: "normal",
+  medium: "medium",
+  xxsmall: "xx-small",
+  xsmall: "x-small",
+  small: "small",
+  xxlarge: "xx-large",
+  xlarge: "x-large",
+  large: "large"
+};
+
+const textTransforms = {
+  none: "none",
+  capitalize: "capitalize",
+  uppercase: "uppercase",
+  lowercase: "lowercase"
+};
+
+const textAligns = {
+  left: "left",
+  right: "right",
+  center: "center",
+  justify: "justify"
+};
+
+const ButtonTheme = {
+  shadow,
+  defaultPadding,
+  defaultRadius,
+  defaultBorderWidth,
+  defaultFontSize,
+  defaultBgColor,
+  defaulBorderColor,
+  defaulTxtColor,
+  defaultShape,
+  defaultFStyle,
+  defaultFWeight,
+  defaultBSize,
+  defaulTxtTransform,
+  defaulTxtAlign,
+  defaulColorType,
+  backgrounds,
+  borders,
+  textColors,
+  shapes,
+  fStyles,
+  fWeights,
+  bSizes,
+  textTransforms,
+  textAligns
+};
+
+export default ButtonTheme;
