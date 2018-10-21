@@ -2,12 +2,11 @@ import React from "react";
 import { text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import Components from "../../../ui-api";
-import UIUtils from "../../../ui-api-utils";
+import UIUtils from "../../..";
 import Readme from "./README.md";
 
 // button settings
-const { ButtonHelper, OptionalSelect } = UIUtils;
+const { ButtonOptions, OptionalSelect, Components } = UIUtils;
 const { Button } = Components;
 const {
   colorsOptions,
@@ -18,7 +17,7 @@ const {
   fontWeightsOptions,
   textTransformsOptions,
   textAlignsOptions
-} = ButtonHelper;
+} = ButtonOptions;
 
 const Component = () => (
   <Button

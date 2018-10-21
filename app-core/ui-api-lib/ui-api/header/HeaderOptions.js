@@ -7,9 +7,9 @@ const rootClass = (cx, className, section) =>
   });
 
 // header helper
-const HeaderHelper = {
+const HeaderOptions = {
   baseClass,
   rootClass
 };
 
-export default HeaderHelper;
+export default HeaderOptions;

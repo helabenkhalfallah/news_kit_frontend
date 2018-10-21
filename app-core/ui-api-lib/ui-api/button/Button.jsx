@@ -2,11 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-import UIUtils from "../../ui-api-utils";
-import ButtonWrapper from "./ButtonWrapper";
+import ButtonOptions from "./ButtonOptions";
+import ButtonStyle from "./ButtonStyle";
 
 // component settings
-const { ButtonHelper } = UIUtils;
 const {
   sizes,
   colors,
@@ -18,7 +17,7 @@ const {
   textAligns,
   rootClass,
   baseClass
-} = ButtonHelper; // prettier-ignore
+} = ButtonOptions; // prettier-ignore
 
 // component
 const Button = ({
@@ -50,7 +49,7 @@ const Button = ({
     disabled
   );
   return (
-    <ButtonWrapper
+    <ButtonStyle
       color={buttonColor}
       shape={buttonShape}
       fStyle={fontStyle}
@@ -63,7 +62,7 @@ const Button = ({
       <button type="button" className={btRootClass} onClick={onClick}>
         {children}
       </button>
-    </ButtonWrapper>
+    </ButtonStyle>
   );
 };
 

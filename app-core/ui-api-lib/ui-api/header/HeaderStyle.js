@@ -6,6 +6,6 @@ const Header = styled.div`
   border-color: #000000;
 `;
 
-const HeaderWrapper = styled(Header)``;
+const HeaderStyle = styled(Header)``;
 
-export default HeaderWrapper;
+export default HeaderStyle;

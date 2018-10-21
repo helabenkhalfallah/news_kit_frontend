@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import FooterWrapper from "./FooterWrapper";
+import FooterStyle from "./FooterStyle";
 
 const Footer = () => (
-  <FooterWrapper>
+  <FooterStyle>
     <Fragment>Footer</Fragment>
-  </FooterWrapper>
+  </FooterStyle>
 );
 
 // prop type validation

@@ -46,10 +46,13 @@ const Button = styled.div`
   border-width: ${defaultBorderWidth};
   border-style: solid;
   transition-duration: ${transitionDuration};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 /* eslint-disable */
-const ButtonWrapper = styled(Button)`
+const ButtonStyle = styled(Button)`
   .ui-api-kit-button--bshape--${props => (props.shape ? props.shape : defaultShape)} {
     box-shadow: ${shadow};
     padding: ${defaultPadding};
@@ -148,4 +151,4 @@ const ButtonWrapper = styled(Button)`
   } 
 `;
 
-export default ButtonWrapper;
+export default ButtonStyle;

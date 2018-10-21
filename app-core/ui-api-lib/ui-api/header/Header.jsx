@@ -10,19 +10,18 @@ import HeaderLogoIcon from "./HeaderLogoIcon";
 import HeaderSearchBar from "./HeaderSearchBar";
 import HeaderSideBarIcon from "./HeaderSideBarIcon";
 
-import UIUtils from "../../ui-api-utils";
-import HeaderWrapper from "./HeaderWrapper";
+import HeaderOptions from "./HeaderOptions";
+import HeaderStyle from "./HeaderStyle";
 
 // component settings
-const { HeaderHelper } = UIUtils;
-const { rootClass, baseClass } = HeaderHelper;
+const { rootClass, baseClass } = HeaderOptions;
 
 // header layout disposition :
 // <HeaderSideBarIcon / HeaderLogoIcon / HeaderSearchBar / HeaderFavorite / HeaderAccount / HeaderSettings>
 const Header = ({ className }) => {
   const headerRootClass = rootClass(cx, className, "");
   return (
-    <HeaderWrapper>
+    <HeaderStyle>
       <Grid fluid>
         <Row center="xs" xs={12}>
           <Col xs>
@@ -36,7 +35,7 @@ const Header = ({ className }) => {
           </Col>
         </Row>
       </Grid>
-    </HeaderWrapper>
+    </HeaderStyle>
   );
 };
 

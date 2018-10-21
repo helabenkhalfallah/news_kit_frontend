@@ -101,8 +101,8 @@ const textAlignsOptions = {
 }
 const textAligns = textAlignsOptions ? Object.values(textAlignsOptions) : [];
 
-// button helper
-const ButtonHelper = {
+// button options
+const ButtonOptions = {
   baseClass,
   rootClass,
   colorsOptions,
@@ -123,4 +123,4 @@ const ButtonHelper = {
   textAligns
 };
 
-export default ButtonHelper;
+export default ButtonOptions;

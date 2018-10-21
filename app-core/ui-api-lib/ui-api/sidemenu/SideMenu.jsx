@@ -2,22 +2,21 @@ import React, { Fragment } from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
 
-import SideMenuWrapper from "./SideMenuWrapper";
+import SideMenuStyle from "./SideMenuStyle";
 
-import UIUtils from "../../ui-api-utils";
+import SideMenuOptions from "./SideMenuOptions";
 import SideMenuClosed from "./SideMenuClosed";
 import SideMenuOpened from "./SideMenuOpened";
 
 // component settings
-const { SideMenuHelper } = UIUtils;
-const { rootClass, baseClass, SideMenuStatut } = SideMenuHelper;
+const { rootClass, baseClass, SideMenuStatut } = SideMenuOptions;
 
 // component
 const SideMenu = ({ className, open, ...otherProps }) => {
   const status = open ? SideMenuStatut.open : SideMenuStatut.close;
   const sideMenuRootClass = rootClass(cx, className, status);
   return (
-    <SideMenuWrapper>
+    <SideMenuStyle>
       <Fragment>
         <div className={sideMenuRootClass} {...otherProps}>
           {open ? (
@@ -27,7 +26,7 @@ const SideMenu = ({ className, open, ...otherProps }) => {
             )}
         </div>
       </Fragment>
-    </SideMenuWrapper>
+    </SideMenuStyle>
   );
 };
 

@@ -13,10 +13,10 @@ const SideMenuStatut = {
 };
 
 // side menu helper
-const SideMenuHelper = {
+const SideMenuOptions = {
   baseClass,
   rootClass,
   SideMenuStatut
 };
 
-export default SideMenuHelper;
+export default SideMenuOptions;
