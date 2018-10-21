@@ -12,7 +12,7 @@
 
 3. index.css => globale css file (imported inside config.js)
 
-4. preview-head => css file that contains all style (reconized defaultly by stroybook)
+4. preview-head (optional) => css file that contains all style (reconized defaultly by stroybook)
 
 ```js
 https://storybook.js.org/configurations/add-custom-head-tags/
@@ -20,26 +20,32 @@ https://storybook.js.org/configurations/add-custom-head-tags/
 
 5.knob : lets dynamically change component on story.
 
-6. /components => react component (define proptype)
+6. /components => react component (define proptypes).
 
 7. /stories => story components documentation
 a. .jsx => component how it is invoked =
 ```js
   <Button
-    type={text('Type', 'button')}
-    size={OptionalSelect('Size', ButtonHelper.sizeOptions, '')}
-    context={OptionalSelect('Context', ButtonHelper.contextOptions, 'default')}
-    group={boolean('Group', false)}
-    onClick={action('button_clicked')}
-    className={text('ClassName', '')}
-    style={object('Style', {})}
-  >
-    Hello Button !
-  </Button>
+    title={text("Title", "Click me !")}
+    buttonStyle={OptionalSelect("Style", stylesOptions, "fill")}
+    buttonShape={OptionalSelect("Shape", shapesOptions, "rectangle")}
+    buttonIntent={OptionalSelect("Intent", intentsOptions, "default")}
+    buttonSize={OptionalSelect("Size", sizeOptions, "normal")}
+    fontStyle={OptionalSelect("Font Style", fontStylesOptions, "normal")}
+    fontWeight={OptionalSelect("Font Weight", fontWeightsOptions, "normal")}
+    textTransform={OptionalSelect(
+      "Text Transform",
+      textTransformsOptions,
+      "none"
+    )}
+    textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
+    disabled={boolean("Disabled", false)}
+    onClick={action("button_clicked")}
+  />
 ```
 b. readme of the component :
 ```js
-The `<Button>` component wraps any arbitrary components or JSX markup into a clickable button. The component also accepts any other props you would like to pass in, for example, `title="my button"`.
+The `<Button>` class support only text display.
 ```
 
 8. /stories/Button.jsx => export component and documentation.
