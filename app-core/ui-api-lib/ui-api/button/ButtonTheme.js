@@ -23,6 +23,7 @@ const btStyleTextBorderHover = "transparent";
 const btStyleTextOpacityHover = "0.4";
 const disabledOpacity = "0.4";
 
+// intent option => CSS color value
 const backgrounds = {
   default: "#a569bd",
   primary: "#00a7cf",
@@ -53,24 +54,28 @@ const textColors = {
   danger: "white"
 };
 
+// shape option => CSS shape value
 const shapes = {
   rectangle: "2px",
   rounded: "6px",
   oval: "50%"
 };
 
+// font style option => CSS font-style value
 const fStyles = {
   normal: "normal",
   italic: "italic",
   oblique: "oblique"
 };
 
+// font weight option => CSS font-weight value
 const fWeights = {
   normal: "normal",
   bold: "bold",
   lighter: "lighter"
 };
 
+// button size option => CSS size value
 const bSizes = {
   normal: "medium",
   xxsmall: "xx-small",
@@ -81,6 +86,7 @@ const bSizes = {
   large: "large"
 };
 
+// text transform option => CSS text-transform value
 const textTransforms = {
   none: "none",
   capitalize: "capitalize",
@@ -88,6 +94,7 @@ const textTransforms = {
   lowercase: "lowercase"
 };
 
+// text align option => CSS text-align value
 const textAligns = {
   left: "left",
   right: "right",
