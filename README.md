@@ -58,7 +58,7 @@ d. preview-head (optional) => css file that contains all style (reconized defaul
 https://storybook.js.org/configurations/add-custom-head-tags/
 ```
 
-e.knobs : lets dynamically change component on story.
+e. knobs : lets dynamically change component on story.
 
 3. /components => react component (define proptypes) :
 
