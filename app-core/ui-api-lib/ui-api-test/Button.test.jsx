@@ -1,5 +1,5 @@
 import React from "react";
-import Components from "../ui-api";
+import Components from "../ui-api-components";
 
 const { Button } = Components;
 /* eslint-disable */

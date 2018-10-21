@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 
 // components
 import Body from "./body/Body";
-import Components from "../../app-core/ui-api-lib/ui-api";
+import UIUtils from "../../app-core/ui-api-lib";
 
+const { Components } = UIUtils;
 const { Header, Footer } = Components;
 
 const AppLayout = ({ type }) => (
