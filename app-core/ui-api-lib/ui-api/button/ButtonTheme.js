@@ -1,6 +1,6 @@
 // button design system
-const shadow = "1px 1px 1px 1px #ccc";
-const shadowHover = "1px 1px 1px 1px #ccc";
+const shadow = "none";
+const shadowHover = "none";
 const defaultPadding = "12px";
 const defaultRadius = "2px";
 const defaultBorderWidth = "2px";
@@ -15,11 +15,12 @@ const defaultBSize = "normal";
 const defaulTxtTransform = "none";
 const defaulTxtAlign = "left";
 const defaulColorType = "default";
-const transitionDuration = "0.4s";
+const transitionDuration = "0.3s";
 const btStyleTextBg = "transparent";
 const btStyleTextBorder = "transparent";
-const btStyleTextBgHover = "white";
-const btStyleTextBorderHover = "white";
+const btStyleTextBgHover = "transparent";
+const btStyleTextBorderHover = "transparent";
+const btStyleTextOpacityHover = "0.4";
 const disabledOpacity = "0.4";
 
 const backgrounds = {
@@ -71,8 +72,7 @@ const fWeights = {
 };
 
 const bSizes = {
-  normal: "normal",
-  medium: "medium",
+  normal: "medium",
   xxsmall: "xx-small",
   xsmall: "x-small",
   small: "small",
@@ -126,6 +126,7 @@ const ButtonTheme = {
   btStyleTextBorder,
   btStyleTextBgHover,
   btStyleTextBorderHover,
+  btStyleTextOpacityHover,
   disabledOpacity
 };
 

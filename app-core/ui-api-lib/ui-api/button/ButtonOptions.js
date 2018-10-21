@@ -28,19 +28,18 @@ const rootClass = (
 
 // button size options
 const sizeOptions = {
-  normal: "normal",
-  medium: "medium",
   "extra-extra-small": "xxsmall",
   "extra-small": "xsmall",
   small: "small",
+  normal: "normal",
   large: "large",
-  "extra-extra-large": "xxlarge",
-  "extra-large": "xlarge"
+  "extra-large": "xlarge",
+  "extra-extra-large": "xxlarge"
 };
 const sizes = sizeOptions ? Object.values(sizeOptions) : [];
 
 // button colors options
-const colorsOptions = {
+const intentsOptions = {
   default: "default",
   primary: "primary",
   secondary: "secondary",
@@ -49,13 +48,13 @@ const colorsOptions = {
   info: "info",
   danger: "danger"
 };
-const colors = colorsOptions ? Object.values(colorsOptions) : [];
+const intents = intentsOptions ? Object.values(intentsOptions) : [];
 
 // button styles options
 const stylesOptions = {
-  container: "container",
-  text: "text",
-  outline: "outline"
+  fill: "fill",
+  outline: "outline",
+  text: "text"
 }
 const styles = stylesOptions ? Object.values(stylesOptions) : [];
 
@@ -101,12 +100,18 @@ const textAlignsOptions = {
 }
 const textAligns = textAlignsOptions ? Object.values(textAlignsOptions) : [];
 
+// button with prepared icon
+const iconsOptions = {
+
+}
+const icons = iconsOptions ? Object.values(iconsOptions) : [];
+
 // button options
 const ButtonOptions = {
   baseClass,
   rootClass,
-  colorsOptions,
-  colors,
+  intentsOptions,
+  intents,
   sizeOptions,
   sizes,
   stylesOptions,
@@ -120,7 +125,9 @@ const ButtonOptions = {
   textTransformsOptions,
   textTransforms,
   textAlignsOptions,
-  textAligns
+  textAligns,
+  iconsOptions,
+  icons
 };
 
 export default ButtonOptions;

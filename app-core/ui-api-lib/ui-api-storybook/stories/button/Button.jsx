@@ -9,7 +9,7 @@ import Readme from "./README.md";
 const { ButtonOptions, OptionalSelect, Components } = UIUtils;
 const { Button } = Components;
 const {
-  colorsOptions,
+  intentsOptions,
   sizeOptions,
   stylesOptions,
   shapesOptions,
@@ -21,11 +21,11 @@ const {
 
 const Component = () => (
   <Button
-    className={text("ClassName", "")}
-    buttonStyle={OptionalSelect("Button Style", stylesOptions, "container")}
-    buttonShape={OptionalSelect("Button Shape", shapesOptions, "rectangle")}
-    buttonColor={OptionalSelect("Button Color", colorsOptions, "default")}
-    buttonSize={OptionalSelect("Button Size", sizeOptions, "normal")}
+    title={text("Title", "Click me !")}
+    buttonStyle={OptionalSelect("Style", stylesOptions, "fill")}
+    buttonShape={OptionalSelect("Shape", shapesOptions, "rectangle")}
+    buttonIntent={OptionalSelect("Intent", intentsOptions, "default")}
+    buttonSize={OptionalSelect("Size", sizeOptions, "normal")}
     fontStyle={OptionalSelect("Font Style", fontStylesOptions, "normal")}
     fontWeight={OptionalSelect("Font Weight", fontWeightsOptions, "normal")}
     textTransform={OptionalSelect(
@@ -36,9 +36,7 @@ const Component = () => (
     textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
     disabled={boolean("Disabled", false)}
     onClick={action("button_clicked")}
-  >
-    I am a Button, test meeeeeee !
-  </Button>
+  />
 );
 
 export default [Readme, Component];

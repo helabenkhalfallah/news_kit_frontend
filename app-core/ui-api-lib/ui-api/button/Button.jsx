@@ -8,7 +8,7 @@ import ButtonStyle from "./ButtonStyle";
 // component settings
 const {
   sizes,
-  colors,
+  intents,
   styles,
   shapes,
   fontStyles,
@@ -22,7 +22,8 @@ const {
 // component
 const Button = ({
   className,
-  buttonColor,
+  title,
+  buttonIntent,
   buttonSize,
   buttonStyle,
   buttonShape,
@@ -31,8 +32,7 @@ const Button = ({
   textTransform,
   textAlign,
   disabled,
-  onClick,
-  children
+  onClick
 }) => {
   /* eslint-disable react/button-has-type */
   const btRootClass = rootClass(
@@ -40,7 +40,7 @@ const Button = ({
     className,
     buttonStyle,
     buttonShape,
-    buttonColor,
+    buttonIntent,
     buttonSize,
     fontStyle,
     fontWeight,
@@ -50,7 +50,7 @@ const Button = ({
   );
   return (
     <ButtonStyle
-      color={buttonColor}
+      intent={buttonIntent}
       shape={buttonShape}
       fStyle={fontStyle}
       fWeight={fontWeight}
@@ -60,7 +60,7 @@ const Button = ({
       disabled={disabled}
     >
       <button type="button" className={btRootClass} onClick={onClick}>
-        {children}
+        {title}
       </button>
     </ButtonStyle>
   );
@@ -76,7 +76,8 @@ Button.displayName = "Button";
  */
 Button.propTypes = {
   className: PropTypes.string,
-  buttonColor: PropTypes.oneOf(colors),
+  title: PropTypes.string,
+  buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),
   buttonStyle: PropTypes.oneOf(styles),
   buttonShape: PropTypes.oneOf(shapes),
@@ -85,25 +86,24 @@ Button.propTypes = {
   textTransform: PropTypes.oneOf(textTransforms),
   textAlign: PropTypes.oneOf(textAligns),
   disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  /* eslint-disable react/require-default-props */
-  children: PropTypes.node
+  onClick: PropTypes.func
 };
 
 /**
  * propType default values
  */
 Button.defaultProps = {
-  buttonColor: "default",
+  className: baseClass,
+  title: "",
+  buttonIntent: "default",
   buttonSize: "default",
-  buttonStyle: "container",
+  buttonStyle: "fill",
   buttonShape: "rectangle",
   fontStyle: "normal",
   fontWeight: "normal",
   textTransform: "none",
   textAlign: "center",
   disabled: false,
-  className: baseClass,
   onClick: null
 };
 
