@@ -8,22 +8,84 @@
 ## Settings Storybook :
 1. getstorybook
 
-2. .storybook => configure stroy book
+2. .storybook => configure story book :
 
-3. index.css => globale css file (imported inside config.js)
+a. addons.js
+What will been diplayed in the right panel :
 
-4. preview-head (optional) => css file that contains all style (reconized defaultly by stroybook)
+```js
+import '@storybook/addon-knobs/register'
+import 'storybook-readme/register'
+import '@storybook/addon-options/register'
+import '@storybook/addon-actions/register'
+```
+
+b. config.js : storybook configure :
+
+```js
+addDecorator(
+  withInfo({
+    maxPropsIntoLine: 1,
+    name: 'News Kit',
+    url: 'https://storybook.news-kit.com',
+    goFullScreen: false,
+    showStoriesPanel: true,
+    showAddonPanel: true,
+    showSearchBox: false,
+    addonPanelInRight: true,
+    sortStoriesByKind: true,
+    inline: true,
+    header: false,
+    source: true,
+    styles: (stylesheet) => {
+      const style = {
+        ...stylesheet,
+        infoBody: {
+          padding: '10px',
+        },
+      }
+      return style
+    }
+  })
+)
+```
+
+c. index.css => storybook globale css file (imported inside config.js).
+
+d. preview-head (optional) => css file that contains all style (reconized defaultly by storybook).
 
 ```js
 https://storybook.js.org/configurations/add-custom-head-tags/
 ```
 
-5.knob : lets dynamically change component on story.
+e.knobs : lets dynamically change component on story.
 
-6. /components => react component (define proptypes).
+3. /components => react component (define proptypes) :
 
-7. /stories => story components documentation
-a. .jsx => component how it is invoked =
+```js
+/**
+ * propType validation
+ */
+Button.propTypes = {
+  className: PropTypes.string,
+  title: PropTypes.string,
+  buttonIntent: PropTypes.oneOf(intents),
+  buttonSize: PropTypes.oneOf(sizes),
+  buttonStyle: PropTypes.oneOf(styles),
+  buttonShape: PropTypes.oneOf(shapes),
+  fontStyle: PropTypes.oneOf(fontStyles),
+  fontWeight: PropTypes.oneOf(fontWeights),
+  textTransform: PropTypes.oneOf(textTransforms),
+  textAlign: PropTypes.oneOf(textAligns),
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func
+};
+```
+
+4. /stories => story components documentation :
+
+a. .jsx => specify how the component can be invoked :
+
 ```js
   <Button
     title={text("Title", "Click me !")}
@@ -43,33 +105,28 @@ a. .jsx => component how it is invoked =
     onClick={action("button_clicked")}
   />
 ```
-b. readme of the component :
+
+b. Component readme  :
+
 ```js
 The `<Button>` class support only text display.
 ```
 
-8. /stories/Button.jsx => export component and documentation.
+5. /stories/Button.jsx => export component and documentation.
 
-9. ArtBoard : /stories/index.jsx 
+6. ArtBoard : /stories/index.jsx 
 This file will contain all our story components :
+
 ```js
 stories
   .addDecorator((story, context) => (story)(context))
   .addDecorator(storyWrapper)
   .addDecorator(withKnobs)
   .add('Button', withReadme(...Button))
-````
-
-10. addons.js
-What will been diplayed in the right panel :
-```js
-import '@storybook/addon-knobs/register'
-import 'storybook-readme/register'
-import '@storybook/addon-options/register'
-import '@storybook/addon-actions/register'
 ```
 
-11. Next JS CSS configuration :
+7. Next JS CSS configuration :
+
 ```js
 const withCSS = require('@zeit/next-css')
 
@@ -78,7 +135,7 @@ module.exports = withCSS({
 })
 ```
 
-12. .babelrc modification :
+8. .babelrc modification :
 ```js
 {
   "presets": [
