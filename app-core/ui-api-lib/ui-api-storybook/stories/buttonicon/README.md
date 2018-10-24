@@ -8,7 +8,7 @@ The `<ButtonIcon>` class extends `<Button>` class to add icon :
 const ButtonIconStyle = styled(ButtonStyle)`
 ```
 
-1. Predefined icons `<ButtonIconOptions>` :
+1. Predefined icons `ButtonIconOptions` :
 
 ```js
 // button with predefined icons
@@ -20,7 +20,7 @@ const iconsOptions = {
 }
 ```
 
-2. Icons align options `<ButtonIconOptions>` :
+2. Icons align options `ButtonIconOptions` :
 
 ```js
 // button text aligns options
@@ -42,7 +42,7 @@ const IconSVG = ({ path, fillPath }) => (
 );
 ```
 
-4. SVG icons provider `<ButtonIconSVGs>`:
+4. SVG icons provider `SVGIconProvider`:
 
 ```js
 // svg icons provider

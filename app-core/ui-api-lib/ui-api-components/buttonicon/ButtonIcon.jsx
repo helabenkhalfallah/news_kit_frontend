@@ -6,7 +6,7 @@ import IconSVG from "../../ui-api-utils/IconSVG";
 import ButtonOptions from "../button/ButtonOptions";
 import ButtonIconOptions from "./ButtonIconOptions";
 import ButtonIconStyle from "./ButtonIconStyle";
-import ButtonIconSVGs from "./ButtonIconSVGs";
+import SVGIconProvider from "./SVGIconProvider";
 
 // button settings
 const {
@@ -26,9 +26,6 @@ const {
   rootClass,
   baseClass
 } = ButtonIconOptions; // prettier-ignore
-
-// icon svgs
-const { svgIcons } = ButtonIconSVGs;
 
 // component
 const ButtonIcon = ({
@@ -61,7 +58,7 @@ const ButtonIcon = ({
     disabled,
     loading
   );
-  const { path, fillPath } = svgIcons[icon];
+  const { path, fillPath } = SVGIconProvider[icon];
   return (
     <ButtonIconStyle
       intent={buttonIntent}
@@ -98,8 +95,8 @@ ButtonIcon.displayName = "ButtonIcon";
  */
 ButtonIcon.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string,
-  icon: PropTypes.oneOf(icons),
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.oneOf(icons).isRequired,
   buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),
   buttonStyle: PropTypes.oneOf(styles),
@@ -118,8 +115,6 @@ ButtonIcon.propTypes = {
  */
 ButtonIcon.defaultProps = {
   className: baseClass,
-  label: "edit",
-  icon: "edit",
   buttonIntent: "default",
   buttonSize: "default",
   buttonStyle: "fill",

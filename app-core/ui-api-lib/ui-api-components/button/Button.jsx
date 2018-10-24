@@ -77,7 +77,7 @@ Button.displayName = "Button";
  */
 Button.propTypes = {
   className: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),
   buttonStyle: PropTypes.oneOf(styles),
@@ -95,7 +95,6 @@ Button.propTypes = {
  */
 Button.defaultProps = {
   className: baseClass,
-  title: "",
   buttonIntent: "default",
   buttonSize: "default",
   buttonStyle: "fill",
