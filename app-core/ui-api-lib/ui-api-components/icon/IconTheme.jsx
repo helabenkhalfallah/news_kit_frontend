@@ -4,7 +4,7 @@ import Theme from "../Theme";
 const defaultIconWidth = "24px";
 const defaultIconHeight = "24px";
 const defaultBackground = "transparent";
-const defaultTint = "black";
+const defaultIntent = "black";
 const disableOpacity = "0.4";
 
 // icon backgrounds
@@ -19,8 +19,8 @@ const backgrounds = {
   danger: Theme.danger
 };
 
-// icon tints
-const tints = {
+// icon intents
+const intents = {
   default: "black",
   white: "white",
   primary: Theme.primary,
@@ -58,10 +58,10 @@ const IconTheme = {
   defaultIconWidth,
   defaultIconHeight,
   defaultBackground,
-  defaultTint,
+  defaultIntent,
   disableOpacity,
   backgrounds,
-  tints,
+  intents,
   iconWSizes,
   iconHSizes
 };

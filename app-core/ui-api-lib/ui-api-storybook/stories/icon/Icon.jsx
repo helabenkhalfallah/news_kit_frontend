@@ -9,7 +9,7 @@ const { IconOptions, OptionalSelect, Components } = UIUtils;
 const { Icon } = Components;
 const {
   iconsOptions,
-  tintOptions,
+  intentOptions,
   backgroundOptions,
   sizeOptions
 } = IconOptions;
@@ -17,7 +17,7 @@ const {
 const Component = () => (
   <Icon
     icon={OptionalSelect("Icon", iconsOptions, "edit")}
-    tint={OptionalSelect("Tint", tintOptions, "default")}
+    intent={OptionalSelect("Intent", intentOptions, "default")}
     background={OptionalSelect("Background", backgroundOptions, "default")}
     size={OptionalSelect("Size", sizeOptions, "normal")}
     disabled={boolean("Disabled", false)}

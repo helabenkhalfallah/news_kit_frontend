@@ -11,7 +11,7 @@ const {
   rootClass,
   baseClass,
   icons,
-  tints,
+  intents,
   backgrounds,
   sizes,
   svgIcons
@@ -21,7 +21,7 @@ const {
 const Icon = ({
   className,
   icon,
-  tint,
+  intent,
   background,
   size,
   disabled // prettier-ignore
@@ -29,7 +29,7 @@ const Icon = ({
   const btRootClass = rootClass(
     cx,
     className,
-    tint,
+    intent,
     background,
     size,
     disabled
@@ -37,7 +37,7 @@ const Icon = ({
   const { path, fillPath } = svgIcons[icon];
   return (
     <IconStyle
-      tint={tint}
+      intent={intent}
       background={background}
       size={size}
       disabled={disabled}
@@ -60,7 +60,7 @@ Icon.displayName = "ButtonIcon";
 Icon.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOf(icons).isRequired,
-  tint: PropTypes.oneOf(tints).isRequired,
+  intent: PropTypes.oneOf(intents).isRequired,
   background: PropTypes.oneOf(backgrounds).isRequired,
   size: PropTypes.oneOf(sizes).isRequired,
   disabled: PropTypes.bool

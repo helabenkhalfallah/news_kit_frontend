@@ -5,10 +5,10 @@ const {
   defaultIconWidth,
   defaultIconHeight,
   defaultBackground,
-  defaultTint,
+  defaultIntent,
   disableOpacity,
   backgrounds,
-  tints,
+  intents,
   iconWSizes,
   iconHSizes
 } = IconTheme; // prettier-ignore
@@ -31,7 +31,7 @@ const IconStyle = styled(Icon)`
     width: ${props => (props.background ? iconWSizes[props.size] : defaultIconWidth)};
     height: ${props => (props.background ? iconHSizes[props.size] : defaultIconHeight)};
     background-color: ${props => (props.background ? backgrounds[props.background] : defaultBackground)};
-    fill: ${props => (props.tint ? tints[props.tint] : defaultTint)};
+    fill: ${props => (props.intent ? intents[props.intent] : defaultIntent)};
   }
 
   .ui-api-kit-icon--disabled{

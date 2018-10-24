@@ -5,12 +5,12 @@ const baseClass = "ui-api-kit-icon";
 const rootClass = (
   cx,
   className,
-  tint,
+  intent,
   background,
   size,
   disabled
 ) => cx(baseClass, className, {
-  [`${baseClass}--tint--${tint}`]: tint,
+  [`${baseClass}--intent--${intent}`]: intent,
   [`${baseClass}--background--${background}`]: background,
   [`${baseClass}--size--${size}`]: size,
   [`${baseClass}--disabled`]: disabled
@@ -40,8 +40,8 @@ const sizeOptions = {
 };
 const sizes = sizeOptions ? Object.values(sizeOptions) : [];
 
-// icon tint
-const tintOptions = {
+// icon intent
+const intentOptions = {
   default: "default",
   white: "white",
   primary: "primary",
@@ -51,7 +51,7 @@ const tintOptions = {
   info: "info",
   danger: "danger"
 };
-const tints = tintOptions ? Object.values(tintOptions) : [];
+const intents = intentOptions ? Object.values(intentOptions) : [];
 
 // icon background
 const backgroundOptions = {
@@ -72,8 +72,8 @@ const IconOptions = {
   svgIcons,
   iconsOptions,
   icons,
-  tintOptions,
-  tints,
+  intentOptions,
+  intents,
   backgroundOptions,
   backgrounds,
   sizeOptions,
