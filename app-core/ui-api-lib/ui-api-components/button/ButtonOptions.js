@@ -1,5 +1,3 @@
-// CSS BEM
-/*eslint-disable*/
 const baseClass = "ui-api-kit-button";
 const rootClass = (
   cx,
@@ -13,18 +11,17 @@ const rootClass = (
   textTransform,
   textAlign,
   disabled
-) =>
-  cx(baseClass, className, {
-    [`${baseClass}--bstyle--${buttonStyle}`]: buttonStyle,
-    [`${baseClass}--bshape--${buttonShape}`]: buttonShape,
-    [`${baseClass}--bcolor--${buttonIntent}`]: buttonIntent,
-    [`${baseClass}--bsize--${buttonSize}`]: buttonSize,
-    [`${baseClass}--fstyle--${fontStyle}`]: fontStyle,
-    [`${baseClass}--fweight--${fontWeight}`]: fontWeight,
-    [`${baseClass}--ttransform--${textTransform}`]: textTransform,
-    [`${baseClass}--talign--${textAlign}`]: textAlign,
-    [`${baseClass}--disabled`]: disabled
-  });
+) => cx(baseClass, className, {
+  [`${baseClass}--bstyle--${buttonStyle}`]: buttonStyle,
+  [`${baseClass}--bshape--${buttonShape}`]: buttonShape,
+  [`${baseClass}--bcolor--${buttonIntent}`]: buttonIntent,
+  [`${baseClass}--bsize--${buttonSize}`]: buttonSize,
+  [`${baseClass}--fstyle--${fontStyle}`]: fontStyle,
+  [`${baseClass}--fweight--${fontWeight}`]: fontWeight,
+  [`${baseClass}--ttransform--${textTransform}`]: textTransform,
+  [`${baseClass}--talign--${textAlign}`]: textAlign,
+  [`${baseClass}--disabled`]: disabled
+}); // prettier-ignore
 
 // button size options
 const sizeOptions = {
@@ -55,7 +52,7 @@ const stylesOptions = {
   fill: "fill",
   outline: "outline",
   text: "text"
-}
+};
 const styles = stylesOptions ? Object.values(stylesOptions) : [];
 
 // button shapes options
@@ -63,7 +60,7 @@ const shapesOptions = {
   rectangle: "rectangle",
   rounded: "rounded",
   oval: "oval"
-}
+};
 const shapes = shapesOptions ? Object.values(shapesOptions) : [];
 
 // button font styles options
@@ -71,15 +68,15 @@ const fontStylesOptions = {
   normal: "normal",
   italic: "italic",
   oblique: "oblique"
-}
+};
 const fontStyles = fontStylesOptions ? Object.values(fontStylesOptions) : [];
 
 // button font weight options
 const fontWeightsOptions = {
   normal: "normal",
   bold: "bold",
-  light: "lighter",
-}
+  light: "lighter"
+};
 const fontWeights = fontWeightsOptions ? Object.values(fontWeightsOptions) : [];
 
 // button text transforms options
@@ -88,7 +85,8 @@ const textTransformsOptions = {
   capitalize: "capitalize",
   uppercase: "uppercase",
   lowercase: "lowercase"
-}
+};
+// prettier-ignore
 const textTransforms = textTransformsOptions ? Object.values(textTransformsOptions) : [];
 
 // button text aligns options
@@ -97,7 +95,7 @@ const textAlignsOptions = {
   right: "right",
   center: "center",
   justify: "justify"
-}
+};
 const textAligns = textAlignsOptions ? Object.values(textAlignsOptions) : [];
 
 // button options

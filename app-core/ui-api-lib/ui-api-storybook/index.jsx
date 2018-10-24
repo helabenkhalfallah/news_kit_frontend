@@ -7,7 +7,7 @@ import Components from "./stories";
 
 // stories
 const stories = storiesOf("UI Kit", module);
-const { Button, ButtonIcon, SideMenu } = Components;
+const { Button, ButtonIcon, Icon } = Components;
 
 // prepare story board
 stories
@@ -15,4 +15,4 @@ stories
   .addDecorator(withKnobs)
   .add("Button", withReadme(...Button))
   .add("Button Icon", withReadme(...ButtonIcon))
-  .add("SideMenu", withReadme(...SideMenu));
+  .add("Icon", withReadme(...Icon));

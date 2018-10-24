@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// icon svg components
-const IconSVG = ({ path, fillPath }) => (
+// svg icon components
+const SVGIcon = ({ path, fillPath }) => (
   <svg viewBox="0 0 24 24">
     <path d={path} />
     <path d={fillPath} fill="none" />
@@ -12,7 +12,7 @@ const IconSVG = ({ path, fillPath }) => (
 /**
  * propType validation
  */
-IconSVG.propTypes = {
+SVGIcon.propTypes = {
   path: PropTypes.string,
   fillPath: PropTypes.string
 };
@@ -20,9 +20,9 @@ IconSVG.propTypes = {
 /**
  * propType default values
  */
-IconSVG.defaultProps = {
+SVGIcon.defaultProps = {
   path: "",
   fillPath: ""
 };
 
-export default IconSVG;
+export default SVGIcon;

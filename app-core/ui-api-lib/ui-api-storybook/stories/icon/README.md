@@ -1,0 +1,3 @@
+## `<Icon>` class
+
+The `<Icon>` class ...

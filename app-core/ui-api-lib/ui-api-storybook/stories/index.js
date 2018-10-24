@@ -1,11 +1,11 @@
 import Button from "./button/Button";
 import ButtonIcon from "./buttonicon/ButtonIcon";
-import SideMenu from "./sidemenu/SideMenu";
+import Icon from "./icon/Icon";
 
 const Stories = {
   Button,
   ButtonIcon,
-  SideMenu
+  Icon
 };
 
 export default Stories;

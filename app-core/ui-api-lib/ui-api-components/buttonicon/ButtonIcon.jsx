@@ -2,11 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-import IconSVG from "../../ui-api-utils/IconSVG";
+import SVGIcon from "../svg/SVGIcon";
 import ButtonOptions from "../button/ButtonOptions";
 import ButtonIconOptions from "./ButtonIconOptions";
 import ButtonIconStyle from "./ButtonIconStyle";
-import SVGIconProvider from "./SVGIconProvider";
 
 // button settings
 const {
@@ -21,10 +20,11 @@ const {
 
 // button icon settings
 const {
-  icons,
-  iconAligns,
   rootClass,
-  baseClass
+  baseClass,
+  icons,
+  svgIcons,
+  iconAligns
 } = ButtonIconOptions; // prettier-ignore
 
 // component
@@ -58,7 +58,7 @@ const ButtonIcon = ({
     disabled,
     loading
   );
-  const { path, fillPath } = SVGIconProvider[icon];
+  const { path, fillPath } = svgIcons[icon];
   return (
     <ButtonIconStyle
       intent={buttonIntent}
@@ -74,7 +74,7 @@ const ButtonIcon = ({
       <button type="button" className={btRootClass} onClick={onClick}>
         <div className="ui-api-kit-icon-button--content">
           <div className="ui-api-kit-icon-button--icon">
-            <IconSVG path={path} fillPath={fillPath} />
+            <SVGIcon path={path} fillPath={fillPath} />
           </div>
           <div className="ui-api-kit-button--text">
             <span>{label}</span>

@@ -1,3 +1,5 @@
+import Theme from "../Theme";
+
 // button design system
 const shadow = "none";
 const shadowHover = "none";
@@ -34,23 +36,23 @@ const disabledOpacity = "0.4";
 
 // intent option => CSS color value
 const backgrounds = {
-  default: "#a569bd",
-  primary: "#00a7cf",
-  secondary: "#ff0080",
-  success: "#1cce0c",
-  warning: "#ff9900",
-  info: "#2196f3",
-  danger: "#ff5a34"
+  default: Theme.base,
+  primary: Theme.primary,
+  secondary: Theme.secondary,
+  success: Theme.success,
+  warning: Theme.warning,
+  info: Theme.info,
+  danger: Theme.danger
 };
 
 const borders = {
-  default: "#a569bd",
-  primary: "#00a7cf",
-  secondary: "#ff0080",
-  success: "#1cce0c",
-  warning: "#ff9900",
-  info: "#2196f3",
-  danger: "#ff5a34"
+  default: Theme.base,
+  primary: Theme.primary,
+  secondary: Theme.secondary,
+  success: Theme.success,
+  warning: Theme.warning,
+  info: Theme.info,
+  danger: Theme.danger
 };
 
 const textColors = {
