@@ -34,7 +34,6 @@ const Button = ({
   disabled,
   onClick
 }) => {
-  /* eslint-disable react/button-has-type */
   const btRootClass = rootClass(
     cx,
     className,
@@ -60,7 +59,9 @@ const Button = ({
       disabled={disabled}
     >
       <button type="button" className={btRootClass} onClick={onClick}>
-        {title}
+        <div className="ui-api-kit-button--text">
+          <span>{title}</span>
+        </div>
       </button>
     </ButtonStyle>
   );

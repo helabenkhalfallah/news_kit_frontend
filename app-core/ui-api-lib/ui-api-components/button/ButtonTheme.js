@@ -1,19 +1,25 @@
 // button design system
 const shadow = "none";
 const shadowHover = "none";
-const defaultPadding = "12px";
+const paddingTop = "2px";
+const paddingBottom = "2px";
+const paddingLeft = "5px";
+const paddingRight = "5px";
+const defaultPadding = `${paddingTop} ${paddingRight} ${paddingBottom} ${paddingLeft}`;
 const defaultRadius = "2px";
 const defaultBorderWidth = "2px";
 const defaultFontSize = "normal";
 const defaultBgColor = "white";
 const defaulBorderColor = "transparent";
 const defaulTxtColor = "white";
+const defaulTxtTransform = "none";
+const defaulTxtAlign = "left";
+const defaulTxtLigneHeight = "1.2em";
+const defaulTxtMaxHeight = "3.58em";
 const defaultShape = "rectangle";
 const defaultFStyle = "normal";
 const defaultFWeight = "normal";
 const defaultBSize = "normal";
-const defaulTxtTransform = "none";
-const defaulTxtAlign = "left";
 const defaulColorType = "default";
 const transitionDuration = "0.3s";
 const btStyleTextBg = "transparent";
@@ -21,6 +27,8 @@ const btStyleTextBorder = "transparent";
 const btStyleTextBgHover = "transparent";
 const btStyleTextBorderHover = "transparent";
 const btStyleTextOpacityHover = "0.4";
+const btMaxWidth = "250px";
+const btMaxHeight = "150px";
 const disabledOpacity = "0.4";
 
 // intent option => CSS color value
@@ -134,6 +142,10 @@ const ButtonTheme = {
   btStyleTextBgHover,
   btStyleTextBorderHover,
   btStyleTextOpacityHover,
+  btMaxWidth,
+  btMaxHeight,
+  defaulTxtLigneHeight,
+  defaulTxtMaxHeight,
   disabledOpacity
 };
 

@@ -1,0 +1,3 @@
+## `<ButtonIcon>` class
+
+The `<ButtonIcon>` class ...
