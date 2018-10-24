@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ButtonTheme from "../button/ButtonTheme";
 import ButtonStyle from "../button/ButtonStyle";
+import ButtonTheme from "../button/ButtonTheme";
 import ButtonIconTheme from "./ButtonIconTheme";
 
 // button settings
@@ -9,37 +9,37 @@ const {
   defaulTxtColor,
   backgrounds,
   textColors,
-  defaulTxtLigneHeight,
-  defaulTxtMaxHeight,
-  btMaxWidth
+  btMaxWidth,
+  defaultTxtMarginLeft,
+  defaultTxtMarginRight
 } = ButtonTheme; // prettier-ignore
 
 // button icon settings
 const {
   defaultIconWidth,
   defaultIconHeight,
+  defaultIconMarginRight,
   defaultIconMarginLeft,
   defaultTxtWidth,
-  defaultTxtMarginTop,
-  defaultTxtMarginBottom,
-  defaultTxtMarginLeft,
-  defaultTxtMarginRight,
+  defaultDirection,
+  textMLLSizes,
+  textMLRSizes,
+  textMRLSizes,
+  textMRRSizes,
+  iconAligns,
   iconWSizes,
   iconHSizes,
-  textWSizes,
-  textMLSizes,
-  textMRSizes
+  iconMRLSizes,
+  iconMRRSizes,
+  iconMLLSizes,
+  iconMLRSizes,
+  textWSizes
 } = ButtonIconTheme;
 
 /* eslint-disable */
 // button icon style
 // extends button style
 const ButtonIconStyle = styled(ButtonStyle)`
-  
-  .ui-api-kit-button--talign--${props => (props.tAlign ? props.tAlign : defaulTxtAlign)} {
-    text-align: left; 
-  }
-
   .ui-api-kit-button--bstyle--fill {
     fill: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
   }
@@ -67,30 +67,26 @@ const ButtonIconStyle = styled(ButtonStyle)`
   .ui-api-kit-icon-button--content{
     background-color: transparent;
     max-width: ${btMaxWidth};
+    padding: 0;
     display: flex;
     align-items : center;
-    flex-direction: row;
-    padding: 0;
+    flex-direction: ${props => (props.iconAlign ? iconAligns[props.iconAlign] : defaultDirection)};
   }
 
   .ui-api-kit-icon-button--icon{ 
+    background-color: transparent;
     width: ${props => (props.bSize ? iconWSizes[props.bSize] : defaultIconWidth)};
     height: ${props => (props.bSize ? iconHSizes[props.bSize] : defaultIconHeight)};
-    background-color: transparent;
-    margin-left: ${defaultIconMarginLeft};
-  } 
+    margin-left: ${props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? iconMLLSizes[props.bSize] : iconMLRSizes[props.bSize]) : defaultIconMarginLeft)};
+    margin-right: ${props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? iconMRLSizes[props.bSize] : iconMRRSizes[props.bSize]) : defaultIconMarginRight)};
+   } 
 
-  .ui-api-kit-icon-button--text{ 
+   .ui-api-kit-button--text{  
+    text-align: left;
     background-color: transparent;
     max-width: ${props => (props.bSize ? textWSizes[props.bSize] : defaultTxtWidth)};
-    margin-left: ${props => (props.bSize ? textMLSizes[props.bSize] : defaultTxtMarginLeft)};
-    margin-right: ${props => (props.bSize ? textMRSizes[props.bSize] : defaultTxtMarginRight)};
-    margin-top: ${defaultTxtMarginTop};
-    margin-bottom: ${defaultTxtMarginBottom}; 
-    line-height: ${defaulTxtLigneHeight};
-    max-height: ${defaulTxtMaxHeight};
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-left: ${props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? textMLLSizes[props.bSize] : textMLRSizes[props.bSize]) : defaultTxtMarginLeft)};
+    margin-right: ${ props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? textMRLSizes[props.bSize] : textMRRSizes[props.bSize]) : defaultTxtMarginRight)};
   }
 `;
 

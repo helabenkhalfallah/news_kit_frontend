@@ -1,4 +1,5 @@
 import OptionalSelect from "./ui-api-utils/OptionalSelect";
+import IconSVG from "./ui-api-utils/IconSVG";
 import ButtonOptions from "./ui-api-components/button/ButtonOptions";
 import ButtonIconOptions from "./ui-api-components/buttonicon/ButtonIconOptions";
 import HeaderOptions from "./ui-api-components/header/HeaderOptions";
@@ -11,7 +12,8 @@ const UIUtils = {
   ButtonIconOptions,
   HeaderOptions,
   SideMenuOptions,
-  OptionalSelect
+  OptionalSelect,
+  IconSVG
 };
 
 export default UIUtils;

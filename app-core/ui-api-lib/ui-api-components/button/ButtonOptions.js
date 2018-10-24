@@ -6,7 +6,7 @@ const rootClass = (
   className,
   buttonStyle,
   buttonShape,
-  buttonColor,
+  buttonIntent,
   buttonSize,
   fontStyle,
   fontWeight,
@@ -17,7 +17,7 @@ const rootClass = (
   cx(baseClass, className, {
     [`${baseClass}--bstyle--${buttonStyle}`]: buttonStyle,
     [`${baseClass}--bshape--${buttonShape}`]: buttonShape,
-    [`${baseClass}--bcolor--${buttonColor}`]: buttonColor,
+    [`${baseClass}--bcolor--${buttonIntent}`]: buttonIntent,
     [`${baseClass}--bsize--${buttonSize}`]: buttonSize,
     [`${baseClass}--fstyle--${fontStyle}`]: fontStyle,
     [`${baseClass}--fweight--${fontWeight}`]: fontWeight,
@@ -100,12 +100,6 @@ const textAlignsOptions = {
 }
 const textAligns = textAlignsOptions ? Object.values(textAlignsOptions) : [];
 
-// button with prepared icon
-const iconsOptions = {
-
-}
-const icons = iconsOptions ? Object.values(iconsOptions) : [];
-
 // button options
 const ButtonOptions = {
   baseClass,
@@ -125,9 +119,7 @@ const ButtonOptions = {
   textTransformsOptions,
   textTransforms,
   textAlignsOptions,
-  textAligns,
-  iconsOptions,
-  icons
+  textAligns
 };
 
 export default ButtonOptions;

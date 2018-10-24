@@ -22,17 +22,17 @@ const {
   shapesOptions,
   fontStylesOptions,
   fontWeightsOptions,
-  textTransformsOptions,
-  textAlignsOptions
+  textTransformsOptions
 } = ButtonOptions;
 
 // button icon settings
-const { iconsOptions } = ButtonIconOptions;
+const { iconsOptions, iconAlignsOptions } = ButtonIconOptions;
 
 const Component = () => (
   <ButtonIcon
     label={text("Label", "Click me !")}
     icon={OptionalSelect("Icon", iconsOptions, "edit")}
+    iconAlign={OptionalSelect("Icon Align", iconAlignsOptions, "left")}
     buttonStyle={OptionalSelect("Style", stylesOptions, "fill")}
     buttonShape={OptionalSelect("Shape", shapesOptions, "rectangle")}
     buttonIntent={OptionalSelect("Intent", intentsOptions, "default")}
@@ -44,7 +44,6 @@ const Component = () => (
       textTransformsOptions,
       "none"
     )}
-    textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
     disabled={boolean("Disabled", false)}
     loading={boolean("Loading", false)}
     onClick={action("button_clicked")}

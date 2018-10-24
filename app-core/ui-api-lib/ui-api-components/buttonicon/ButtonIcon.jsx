@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
+import IconSVG from "../../ui-api-utils/IconSVG";
 import ButtonOptions from "../button/ButtonOptions";
 import ButtonIconOptions from "./ButtonIconOptions";
 import ButtonIconStyle from "./ButtonIconStyle";
-import ButtonIconsSVG from "./ButtonIconsSVG";
+import ButtonIconSVGs from "./ButtonIconSVGs";
 
 // button settings
 const {
@@ -16,24 +17,25 @@ const {
   fontStyles,
   fontWeights,
   textTransforms,
-  textAligns,
 } = ButtonOptions; // prettier-ignore
 
 // button icon settings
 const {
   icons,
+  iconAligns,
   rootClass,
   baseClass
 } = ButtonIconOptions; // prettier-ignore
 
 // icon svgs
-const { svgIcons } = ButtonIconsSVG;
+const { svgIcons } = ButtonIconSVGs;
 
 // component
 const ButtonIcon = ({
   className,
   label,
   icon,
+  iconAlign,
   buttonIntent,
   buttonSize,
   buttonStyle,
@@ -41,7 +43,6 @@ const ButtonIcon = ({
   fontStyle,
   fontWeight,
   textTransform,
-  textAlign,
   disabled,
   loading,
   onClick
@@ -49,6 +50,7 @@ const ButtonIcon = ({
   const btRootClass = rootClass(
     cx,
     className,
+    iconAlign,
     buttonStyle,
     buttonShape,
     buttonIntent,
@@ -56,7 +58,6 @@ const ButtonIcon = ({
     fontStyle,
     fontWeight,
     textTransform,
-    textAlign,
     disabled,
     loading
   );
@@ -64,24 +65,21 @@ const ButtonIcon = ({
   return (
     <ButtonIconStyle
       intent={buttonIntent}
+      iconAlign={iconAlign}
       shape={buttonShape}
       fStyle={fontStyle}
       fWeight={fontWeight}
       bSize={buttonSize}
       tTransform={textTransform}
-      tAlign={textAlign}
       disabled={disabled}
       loading={loading}
     >
       <button type="button" className={btRootClass} onClick={onClick}>
         <div className="ui-api-kit-icon-button--content">
           <div className="ui-api-kit-icon-button--icon">
-            <svg viewBox="0 0 24 24">
-              <path d={path} />
-              <path d={fillPath} fill="none" />
-            </svg>
+            <IconSVG path={path} fillPath={fillPath} />
           </div>
-          <div className="ui-api-kit-icon-button--text">
+          <div className="ui-api-kit-button--text">
             <span>{label}</span>
           </div>
         </div>
@@ -109,7 +107,7 @@ ButtonIcon.propTypes = {
   fontStyle: PropTypes.oneOf(fontStyles),
   fontWeight: PropTypes.oneOf(fontWeights),
   textTransform: PropTypes.oneOf(textTransforms),
-  textAlign: PropTypes.oneOf(textAligns),
+  iconAlign: PropTypes.oneOf(iconAligns),
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   onClick: PropTypes.func
@@ -129,7 +127,7 @@ ButtonIcon.defaultProps = {
   fontStyle: "normal",
   fontWeight: "normal",
   textTransform: "none",
-  textAlign: "center",
+  iconAlign: "left",
   disabled: false,
   loading: false,
   onClick: null

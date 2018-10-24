@@ -33,7 +33,7 @@ const Component = () => (
       textTransformsOptions,
       "none"
     )}
-    textAlign={OptionalSelect("Text Align", textAlignsOptions, "center")}
+    textAlign={OptionalSelect("Text Align", textAlignsOptions, "left")}
     disabled={boolean("Disabled", false)}
     onClick={action("button_clicked")}
   />

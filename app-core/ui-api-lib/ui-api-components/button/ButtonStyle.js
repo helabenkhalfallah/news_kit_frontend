@@ -4,7 +4,6 @@ import ButtonTheme from "./ButtonTheme";
 const {
   shadow,
   shadowHover,
-  defaultPadding,
   defaultRadius,
   defaultBorderWidth,
   defaultFontSize,
@@ -17,6 +16,12 @@ const {
   defaultBSize,
   defaulTxtTransform,
   defaulTxtAlign,
+  defaultTxtMarginLeft,
+  defaultTxtMarginRight,
+  defaultTxtMarginTop,
+  defaultTxtMarginBottom,
+  defaultTxtPaddingTop,
+  defaultTxtPaddingBottom,
   defaulColorType,
   disabledOpacity,
   transitionDuration,
@@ -29,6 +34,12 @@ const {
   textColors,
   textTransforms,
   textAligns,
+  textLineHeightSizes,
+  textMaxHeightSizes,
+  textMLSizes,
+  textMRSizes,
+  textMTSizes,
+  textMBSizes,
   btStyleTextBg,
   btStyleTextBorder,
   btStyleTextBgHover,
@@ -156,13 +167,19 @@ const ButtonStyle = styled(Button)`
   }
 
   .ui-api-kit-button--text{
-    padding: ${defaultPadding};
+    background-color: transparent;
+    margin-left: ${props => (props.bSize ? textMLSizes[props.bSize] : defaultTxtMarginLeft)};
+    margin-right: ${props => (props.bSize ? textMRSizes[props.bSize] : defaultTxtMarginRight)};
+    margin-top: ${props => (props.bSize ? textMTSizes[props.bSize] : defaultTxtMarginTop)};
+    margin-bottom: ${props => (props.bSize ? textMBSizes[props.bSize] : defaultTxtMarginBottom)}; 
+    line-height: ${props => (props.bSize ? textLineHeightSizes[props.bSize] : defaulTxtLigneHeight)};
+    max-height: ${props => (props.bSize ? textMaxHeightSizes[props.bSize] : defaulTxtMaxHeight)};
+    padding-top: ${defaultTxtPaddingTop};
+    padding-bottom: ${defaultTxtPaddingBottom};
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: ${defaulTxtLigneHeight};
-    max-height: ${defaulTxtMaxHeight};
   }
-
+  
   .ui-api-kit-button:active {
     border: 1px solid ${btStyleTextBorderHover};
   }
