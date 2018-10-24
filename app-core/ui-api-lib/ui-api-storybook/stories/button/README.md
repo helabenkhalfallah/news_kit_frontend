@@ -5,7 +5,7 @@ The `<Button>` class support only text display.
 - For only `icon` you can use `Icon` class
 
 # Props :
-- title : text to place in the button.
+- title : text to place in the button (required).
 - buttonIntent : visual intent color to apply to button (`primary`, `warning`, `danger`, `info`, `success`, ...).
 - buttonSize : can be set to `extra-extra-small`, `extra-small`, `small`, `normal`, `large`, `extra-large` or  `extra-extra-large`.
 - buttonStyle : can be set to `fill`, `outline` or `text` style.

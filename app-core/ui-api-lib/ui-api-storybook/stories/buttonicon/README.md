@@ -71,7 +71,7 @@ const svgIcons = {
 - onClick : click event handler.
 
 # Button Icon Props :
-- label : button label.
-- icon : button predefined svg icon.
+- label : button label (required).
+- icon : button predefined svg icon (required).
 - iconAlign : icon align left or right.
 - loading : showing loading statut (icon).
