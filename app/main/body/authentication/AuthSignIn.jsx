@@ -27,7 +27,7 @@ const { USER_SIGN_IN } = RemoteQMManager;
 const AuthSignIn = ({ client }) => (
   <Mutation
     mutation={USER_SIGN_IN}
-    onCompleted={(data) => {
+    onCompleted={data => {
       // Store the token in cookie
       CookiesManager.save(data.AuthLogin.token);
 
@@ -38,7 +38,7 @@ const AuthSignIn = ({ client }) => (
         Redirect({}, Routes.HOME_PATH);
       });
     }}
-    onError={(error) => {
+    onError={error => {
       // If you want to send error to external service?
       AppLogger.info("Signin error : ", error);
     }}
@@ -50,7 +50,7 @@ const AuthSignIn = ({ client }) => (
           password: ""
         }}
         validationSchema={UserSchema}
-        onSubmit={(values) => {
+        onSubmit={values => {
           // log submit status
           AppLogger.info("Signin values : ", values);
           signinUser({
