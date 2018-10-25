@@ -137,6 +137,28 @@ const iconAligns = {
   right: "row-reverse"
 };
 
+// loader width (size option) => CSS size value
+const loaderWSizes = {
+  xxsmall: "14px",
+  xsmall: "16px",
+  small: "18px",
+  normal: "20px",
+  large: "22px",
+  xlarge: "26px",
+  xxlarge: "30px"
+};
+
+// loader height (size option) => CSS size value
+const loaderHSizes = {
+  xxsmall: "14px",
+  xsmall: "16px",
+  small: "18px",
+  normal: "20px",
+  large: "22px",
+  xlarge: "26px",
+  xxlarge: "30px"
+};
+
 // button icon theme
 const ButtonIconTheme = {
   defaultDirection,
@@ -156,7 +178,9 @@ const ButtonIconTheme = {
   iconMRRSizes,
   iconMLLSizes,
   iconMLRSizes,
-  textWSizes
+  textWSizes,
+  loaderWSizes,
+  loaderHSizes
 };
 
 export default ButtonIconTheme;

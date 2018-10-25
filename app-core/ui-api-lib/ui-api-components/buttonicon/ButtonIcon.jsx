@@ -41,7 +41,6 @@ const ButtonIcon = ({
   fontWeight,
   textTransform,
   disabled,
-  loading,
   onClick
 }) => {
   const btRootClass = rootClass(
@@ -55,8 +54,7 @@ const ButtonIcon = ({
     fontStyle,
     fontWeight,
     textTransform,
-    disabled,
-    loading
+    disabled
   );
   const { path, fillPath } = svgIcons[icon];
   return (
@@ -69,7 +67,6 @@ const ButtonIcon = ({
       bSize={buttonSize}
       tTransform={textTransform}
       disabled={disabled}
-      loading={loading}
     >
       <button type="button" className={btRootClass} onClick={onClick}>
         <div className="ui-api-kit-icon-button--content">
@@ -106,7 +103,6 @@ ButtonIcon.propTypes = {
   textTransform: PropTypes.oneOf(textTransforms),
   iconAlign: PropTypes.oneOf(iconAligns),
   disabled: PropTypes.bool,
-  loading: PropTypes.bool,
   onClick: PropTypes.func
 };
 
@@ -124,7 +120,6 @@ ButtonIcon.defaultProps = {
   textTransform: "none",
   iconAlign: "left",
   disabled: false,
-  loading: false,
   onClick: null
 };
 

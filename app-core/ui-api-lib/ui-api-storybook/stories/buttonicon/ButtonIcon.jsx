@@ -45,7 +45,6 @@ const Component = () => (
       "none"
     )}
     disabled={boolean("Disabled", false)}
-    loading={boolean("Loading", false)}
     onClick={action("button_clicked")}
   />
 );

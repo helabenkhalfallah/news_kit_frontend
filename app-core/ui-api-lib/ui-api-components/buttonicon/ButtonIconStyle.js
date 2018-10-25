@@ -79,9 +79,9 @@ const ButtonIconStyle = styled(ButtonStyle)`
     height: ${props => (props.bSize ? iconHSizes[props.bSize] : defaultIconHeight)};
     margin-left: ${props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? iconMLLSizes[props.bSize] : iconMLRSizes[props.bSize]) : defaultIconMarginLeft)};
     margin-right: ${props => ((props.bSize && props.iconAlign) ? (iconAligns[props.iconAlign] === defaultDirection ? iconMRLSizes[props.bSize] : iconMRRSizes[props.bSize]) : defaultIconMarginRight)};
-   } 
+  } 
 
-   .ui-api-kit-button--text{  
+  .ui-api-kit-button--text{  
     text-align: left;
     background-color: transparent;
     max-width: ${props => (props.bSize ? textWSizes[props.bSize] : defaultTxtWidth)};
