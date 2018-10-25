@@ -19,11 +19,9 @@ const defaultTxtPaddingTop = "2px";
 const defaultTxtPaddingBottom = "2px";
 const defaulTxtLigneHeight = "1.2em";
 const defaulTxtMaxHeight = "3.58em";
-const defaultShape = "rectangle";
 const defaultFStyle = "normal";
 const defaultFWeight = "normal";
 const defaultBSize = "normal";
-const defaulColorType = "default";
 const transitionDuration = "0.3s";
 const btStyleTextBg = "transparent";
 const btStyleTextBorder = "transparent";
@@ -189,7 +187,6 @@ const ButtonTheme = {
   defaultBgColor,
   defaulBorderColor,
   defaulTxtColor,
-  defaultShape,
   defaultFStyle,
   defaultFWeight,
   defaultBSize,
@@ -201,7 +198,6 @@ const ButtonTheme = {
   defaultTxtMarginBottom,
   defaultTxtPaddingTop,
   defaultTxtPaddingBottom,
-  defaulColorType,
   transitionDuration,
   backgrounds,
   borders,

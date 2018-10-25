@@ -10,7 +10,6 @@ const {
   defaultBgColor,
   defaulBorderColor,
   defaulTxtColor,
-  defaultShape,
   defaultFStyle,
   defaultFWeight,
   defaultBSize,
@@ -22,7 +21,6 @@ const {
   defaultTxtMarginBottom,
   defaultTxtPaddingTop,
   defaultTxtPaddingBottom,
-  defaulColorType,
   disabledOpacity,
   transitionDuration,
   backgrounds,
@@ -66,60 +64,27 @@ const Button = styled.div`
 
 /* eslint-disable */
 const ButtonStyle = styled(Button)`
-  .ui-api-kit-button--bshape--${props => (props.shape ? props.shape : defaultShape)} {
-    box-shadow: ${shadow};
-    border-radius: ${props => (props.shape ? shapes[props.shape] : defaultRadius)};
-  }
-
-  .ui-api-kit-button--fstyle--${props => (props.fStyle ? props.fStyle : defaultFStyle)} {
-    box-shadow: ${shadow};
-    font-style: ${props => (props.fStyle ? fStyles[props.fStyle] : defaultFStyle)};
-  }
-  
-  .ui-api-kit-button--fweight--${props => (props.fWeight ? props.fWeight : defaultFWeight)} {
-    box-shadow: ${shadow};
-    font-weight: ${props => (props.fWeight ? fWeights[props.fWeight] : defaultFWeight)};
-  }
-
-  .ui-api-kit-button--bsize--${props => (props.bSize ? props.bSize : defaultBSize)} {
-    box-shadow: ${shadow};
-    font-size: ${props => (props.bSize ? bSizes[props.bSize] : defaultBSize)};
-  }
-
-  .ui-api-kit-button--ttransform--${props => (props.tTransform ? props.tTransform : defaulTxtTransform)} {
-    box-shadow: ${shadow};
-    text-transform: ${props => (props.tTransform ? textTransforms[props.tTransform] : defaulTxtTransform)};
-  }
-
-  .ui-api-kit-button--talign--${props => (props.tAlign ? props.tAlign : defaulTxtAlign)} {
-    box-shadow: ${shadow};
-    text-align: ${props => (props.tAlign ? textAligns[props.tAlign] : defaulTxtAlign)};
+  .ui-api-kit-button {
+    cursor: pointer;
+    padding: 0;
     margin: auto;
+    transition-duration: inherit;
+    outline: inherit;
+    max-width: ${btMaxWidth};
+    max-height: ${btMaxHeight};
+    border-radius: ${props => (props.shape ? shapes[props.shape] : defaultRadius)};
+    font-style: ${props => (props.fStyle ? fStyles[props.fStyle] : defaultFStyle)};
+    font-weight: ${props => (props.fWeight ? fWeights[props.fWeight] : defaultFWeight)};
+    font-size: ${props => (props.bSize ? bSizes[props.bSize] : defaultBSize)};
+    text-transform: ${props => (props.tTransform ? textTransforms[props.tTransform] : defaulTxtTransform)};
+    text-align: ${props => (props.tAlign ? textAligns[props.tAlign] : defaulTxtAlign)}; 
   }
 
-  .ui-api-kit-button--bcolor--${props => (props.intent ? props.intent : defaulColorType)} {
-    box-shadow: ${shadow};
-    color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
-    background-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    border-color: ${props => (props.intent ? borders[props.intent] : defaulBorderColor)};
-  }
-  
   .ui-api-kit-button--bstyle--fill {
     box-shadow: ${shadow};
     color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
     background-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
     border-color: ${props => (props.intent ? borders[props.intent] : defaulBorderColor)};
-    transition-duration: inherit;
-    outline: inherit;
-  }
-
-  .ui-api-kit-button--bstyle--text {
-    box-shadow: none;
-    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    background-color: ${btStyleTextBg};
-    border-color: ${btStyleTextBorder};
-    transition-duration: inherit;
-    outline: inherit; 
   }
 
   .ui-api-kit-button--bstyle--outline {
@@ -127,8 +92,13 @@ const ButtonStyle = styled(Button)`
     background-color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
     color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
     border-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    transition-duration: inherit;
-    outline: inherit;  
+  }
+
+  .ui-api-kit-button--bstyle--text {
+    box-shadow: none;
+    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    background-color: ${btStyleTextBg};
+    border-color: ${btStyleTextBorder};
   }
 
   .ui-api-kit-button--bstyle--fill:hover {
@@ -150,24 +120,13 @@ const ButtonStyle = styled(Button)`
     color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
     background-color: ${btStyleTextBgHover};
     border-color: ${btStyleTextBorderHover};
-    opacity : ${btStyleTextOpacityHover};
+    opacity: ${btStyleTextOpacityHover};
   }
 
-  .ui-api-kit-button--disabled{
-    pointer-events: none;
-    cursor: not-allowed;
-    opacity: ${disabledOpacity};
-  } 
-
-  .ui-api-kit-button{
-    max-width: ${btMaxWidth};
-    max-height: ${btMaxHeight};
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .ui-api-kit-button--text{
+  .ui-api-kit-button--text {
     background-color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-left: ${props => (props.bSize ? textMLSizes[props.bSize] : defaultTxtMarginLeft)};
     margin-right: ${props => (props.bSize ? textMRSizes[props.bSize] : defaultTxtMarginRight)};
     margin-top: ${props => (props.bSize ? textMTSizes[props.bSize] : defaultTxtMarginTop)};
@@ -176,10 +135,14 @@ const ButtonStyle = styled(Button)`
     max-height: ${props => (props.bSize ? textMaxHeightSizes[props.bSize] : defaulTxtMaxHeight)};
     padding-top: ${defaultTxtPaddingTop};
     padding-bottom: ${defaultTxtPaddingBottom};
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
-  
+
+  .ui-api-kit-button--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: ${disabledOpacity};
+  }
+
   .ui-api-kit-button:active {
     border: 1px solid ${btStyleTextBorderHover};
   }
