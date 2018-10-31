@@ -1,4 +1,8 @@
-import Theme from "../Theme";
+import AppSettings from "../../../../app-settings";
+
+// load app theme
+const { ThemeManager } = AppSettings;
+const { Theme } = ThemeManager;
 
 // icon default values
 const defaultIconWidth = "24px";
@@ -8,28 +12,23 @@ const defaultIntent = "black";
 const disableOpacity = "0.4";
 
 // icon backgrounds
-const backgrounds = {
-  default: "transparent",
-  black: "black",
-  primary: Theme.primary,
-  secondary: Theme.secondary,
-  success: Theme.success,
-  warning: Theme.warning,
-  info: Theme.info,
-  danger: Theme.danger
-};
+const backgrounds = theme => ({
+  default: theme ? theme.iconDefault : Theme.default.iconDefault,
+  dark: theme ? theme.iconDark : Theme.default.iconDark,
+  light: theme ? theme.iconLight : Theme.default.iconLight
+});
 
 // icon intents
-const intents = {
-  default: "black",
-  white: "white",
-  primary: Theme.primary,
-  secondary: Theme.secondary,
-  success: Theme.success,
-  warning: Theme.warning,
-  info: Theme.info,
-  danger: Theme.danger
-};
+const intents = theme => ({
+  default: theme ? theme.iconTintBlack : Theme.default.iconTintBlack,
+  white: theme ? theme.iconTintWhite : Theme.default.iconTintWhite,
+  primary: theme ? theme.iconTintPrimary : Theme.default.iconTintPrimary,
+  secondary: theme ? theme.iconTintSecondary : Theme.default.iconTintSecondary,
+  success: theme ? theme.iconTintSuccess : Theme.default.iconTintSuccess,
+  warning: theme ? theme.iconTintWarning : Theme.default.iconTintWarning,
+  info: theme ? theme.iconTintInfo : Theme.default.iconTintInfo,
+  danger: theme ? theme.iconTintDanger : Theme.default.iconTintDanger
+});
 
 // icons width (size option) => CSS size value
 const iconWSizes = {

@@ -20,6 +20,7 @@ const {
 // component
 const Icon = ({
   className,
+  theme,
   icon,
   intent,
   background,
@@ -37,6 +38,7 @@ const Icon = ({
   const { path, fillPath } = svgIcons[icon];
   return (
     <IconStyle
+      theme={theme}
       intent={intent}
       background={background}
       size={size}
@@ -59,6 +61,7 @@ Icon.displayName = "ButtonIcon";
  */
 Icon.propTypes = {
   className: PropTypes.string,
+  theme: PropTypes.object.isRequired,
   icon: PropTypes.oneOf(icons).isRequired,
   intent: PropTypes.oneOf(intents).isRequired,
   background: PropTypes.oneOf(backgrounds).isRequired,

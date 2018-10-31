@@ -4,14 +4,15 @@ import AppLayout from "../../app/main/AppLayout";
 import AppService from "../../app-services";
 import AppSettings from "../../app-settings";
 import AppCommons from "../../app-core/commons";
+import UIAPI from "../../app-core/ui-api-lib";
 
+const { Routes, BodyProvider, ThemeManager } = AppSettings;
+const { ThemeConsumer } = ThemeManager;
 const { Redirect } = AppCommons;
-
-const { Routes, BodyProvider } = AppSettings;
-
 const { RemoteQMManager } = AppService;
-
 const { BodyTypes } = BodyProvider;
+const { Components } = UIAPI;
+const { Button, ButtonIcon, Icon } = Components;
 
 /**
  * Signin page
@@ -29,7 +30,33 @@ class Signin extends React.Component {
   }
 
   render() {
-    return <AppLayout type={BodyTypes.signin} />;
+    return (
+      <ThemeConsumer>
+        {theme => (
+          <div>
+            <Button
+              theme={theme}
+              buttonIntent="primary"
+              title="Look At me here"
+            />
+            <ButtonIcon
+              theme={theme}
+              buttonIntent="secondary"
+              label="Look At me here"
+              icon="edit"
+            />
+            <Icon
+              theme={theme}
+              icon="edit"
+              intent="secondary"
+              background="light"
+              size="normal"
+            />
+            <AppLayout type={BodyTypes.signin} />
+          </div>
+        )}
+      </ThemeConsumer>
+    );
   }
 }
 

@@ -1,11 +1,11 @@
 import Routes from "./routes/Routes";
 import BodyProvider from "./body/BodyProvider";
-import ThemeProvider from "./theme/ThemeProvider";
 import LanguageProvider from "./language/LanguageProvider";
+import ThemeManager from "./theme/ThemeManager";
 
 const AppSettings = {
   LanguageProvider,
-  ThemeProvider,
+  ThemeManager,
   BodyProvider,
   Routes
 };

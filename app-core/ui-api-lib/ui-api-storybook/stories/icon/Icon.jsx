@@ -1,11 +1,11 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import UIUtils from "../../..";
+import UIAPI from "../../..";
 import Readme from "./README.md";
 
 // Icon settings
-const { IconOptions, OptionalSelect, Components } = UIUtils;
+const { IconOptions, OptionalSelect, Components } = UIAPI;
 const { Icon } = Components;
 const {
   iconsOptions,
@@ -18,7 +18,7 @@ const Component = () => (
   <Icon
     icon={OptionalSelect("Icon", iconsOptions, "edit")}
     intent={OptionalSelect("Intent", intentOptions, "default")}
-    background={OptionalSelect("Background", backgroundOptions, "default")}
+    background={OptionalSelect("Background", backgroundOptions, "dark")}
     size={OptionalSelect("Size", sizeOptions, "normal")}
     disabled={boolean("Disabled", false)}
   />

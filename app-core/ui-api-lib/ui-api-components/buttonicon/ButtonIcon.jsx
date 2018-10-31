@@ -30,6 +30,7 @@ const {
 // component
 const ButtonIcon = ({
   className,
+  theme,
   label,
   icon,
   iconAlign,
@@ -59,6 +60,7 @@ const ButtonIcon = ({
   const { path, fillPath } = svgIcons[icon];
   return (
     <ButtonIconStyle
+      theme={theme}
       intent={buttonIntent}
       iconAlign={iconAlign}
       shape={buttonShape}
@@ -92,6 +94,7 @@ ButtonIcon.displayName = "ButtonIcon";
  */
 ButtonIcon.propTypes = {
   className: PropTypes.string,
+  theme: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(icons).isRequired,
   buttonIntent: PropTypes.oneOf(intents),
@@ -112,9 +115,9 @@ ButtonIcon.propTypes = {
 ButtonIcon.defaultProps = {
   className: baseClass,
   buttonIntent: "default",
-  buttonSize: "default",
-  buttonStyle: "fill",
   buttonShape: "rectangle",
+  buttonSize: "normal",
+  buttonStyle: "fill",
   fontStyle: "normal",
   fontWeight: "normal",
   textTransform: "none",

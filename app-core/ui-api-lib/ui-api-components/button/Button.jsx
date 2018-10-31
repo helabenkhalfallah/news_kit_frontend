@@ -22,6 +22,7 @@ const {
 // component
 const Button = ({
   className,
+  theme,
   title,
   buttonIntent,
   buttonSize,
@@ -49,6 +50,7 @@ const Button = ({
   );
   return (
     <ButtonStyle
+      theme={theme}
       intent={buttonIntent}
       shape={buttonShape}
       fStyle={fontStyle}
@@ -77,6 +79,7 @@ Button.displayName = "Button";
  */
 Button.propTypes = {
   className: PropTypes.string,
+  theme: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),
@@ -96,13 +99,13 @@ Button.propTypes = {
 Button.defaultProps = {
   className: baseClass,
   buttonIntent: "default",
-  buttonSize: "default",
-  buttonStyle: "fill",
   buttonShape: "rectangle",
+  buttonSize: "normal",
+  buttonStyle: "fill",
   fontStyle: "normal",
   fontWeight: "normal",
   textTransform: "none",
-  textAlign: "center",
+  textAlign: "left",
   disabled: false,
   onClick: null
 };

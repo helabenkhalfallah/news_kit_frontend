@@ -41,27 +41,27 @@ const {
 // extends button style
 const ButtonIconStyle = styled(ButtonStyle)`
   .ui-api-kit-button--bstyle--fill {
-    fill: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
+    fill: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
   }
 
   .ui-api-kit-button--bstyle--text {
-    fill: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    fill: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
   }
 
   .ui-api-kit-button--bstyle--outline {
-    fill: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    fill: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
   }
 
   .ui-api-kit-button--bstyle--fill:hover {
-    fill: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    fill: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
   }
 
   .ui-api-kit-button--bstyle--outline:hover {
-    fill: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
+    fill: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
   }
 
   .ui-api-kit-button--bstyle--text:hover {
-    fill: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    fill: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
   }
   
   .ui-api-kit-icon-button--content{

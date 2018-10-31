@@ -82,42 +82,42 @@ const ButtonStyle = styled(Button)`
 
   .ui-api-kit-button--bstyle--fill {
     box-shadow: ${shadow};
-    color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
-    background-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    border-color: ${props => (props.intent ? borders[props.intent] : defaulBorderColor)};
+    color: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
+    background-color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
+    border-color: ${props => (props.intent ? borders(props.theme)[props.intent] : defaulBorderColor)};
   }
 
   .ui-api-kit-button--bstyle--outline {
     box-shadow: ${shadow};
-    background-color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
-    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    border-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
+    background-color: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
+    border-color: ${props => (props.intent ? borders(props.theme)[props.intent] : defaultBgColor)};
   }
 
   .ui-api-kit-button--bstyle--text {
     box-shadow: none;
-    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
     background-color: ${btStyleTextBg};
     border-color: ${btStyleTextBorder};
   }
 
   .ui-api-kit-button--bstyle--fill:hover {
     box-shadow: ${shadow};
-    background-color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
-    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    border-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
+    background-color: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
+    border-color: ${props => (props.intent ? borders(props.theme)[props.intent] : defaultBgColor)};
   }
 
   .ui-api-kit-button--bstyle--outline:hover {
     box-shadow: ${shadow};
-    color: ${props => (props.intent ? textColors[props.intent] : defaulTxtColor)};
-    background-color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
-    border-color: ${props => (props.intent ? borders[props.intent] : defaulBorderColor)};
+    color: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
+    background-color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
+    border-color: ${props => (props.intent ? borders(props.theme)[props.intent] : defaulBorderColor)};
   }
 
   .ui-api-kit-button--bstyle--text:hover {
     box-shadow: ${shadowHover};
-    color: ${props => (props.intent ? backgrounds[props.intent] : defaultBgColor)};
+    color: ${props => (props.intent ? backgrounds(props.theme)[props.intent] : defaultBgColor)};
     background-color: ${btStyleTextBgHover};
     border-color: ${btStyleTextBorderHover};
     opacity: ${btStyleTextOpacityHover};

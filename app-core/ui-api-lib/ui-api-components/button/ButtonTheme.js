@@ -1,67 +1,89 @@
-import Theme from "../Theme";
+import AppSettings from "../../../../app-settings";
+
+// load app theme
+const { ThemeManager } = AppSettings;
+const { Theme } = ThemeManager;
 
 // button design system
-const shadow = "none";
-const shadowHover = "none";
-const defaultRadius = "2px";
-const defaultBorderWidth = "2px";
-const defaultFontSize = "normal";
+
+// colors
 const defaultBgColor = "white";
-const defaulBorderColor = "transparent";
 const defaulTxtColor = "white";
+const defaulBorderColor = "transparent";
+const btStyleTextBg = "transparent";
+const btStyleTextBorder = "transparent";
+const btStyleTextBgHover = "transparent";
+const btStyleTextBorderHover = "transparent";
+
+// font styles
+const defaultFStyle = "normal";
+const defaultFWeight = "normal";
+const defaultFontSize = "normal";
+
+// text styles
 const defaulTxtTransform = "none";
 const defaulTxtAlign = "left";
+const defaulTxtLigneHeight = "1.2em";
+const defaulTxtMaxHeight = "3.58em";
+
+// border styles
+const defaultRadius = "2px";
+const defaultBorderWidth = "2px";
+
+// sizes
+const defaultBSize = "large";
+const btMaxWidth = "250px";
+const btMaxHeight = "150px";
+
+// margins & paddings
 const defaultTxtMarginLeft = "5px";
 const defaultTxtMarginRight = "5px";
 const defaultTxtMarginTop = "5px";
 const defaultTxtMarginBottom = "5px";
 const defaultTxtPaddingTop = "2px";
 const defaultTxtPaddingBottom = "2px";
-const defaulTxtLigneHeight = "1.2em";
-const defaulTxtMaxHeight = "3.58em";
-const defaultFStyle = "normal";
-const defaultFWeight = "normal";
-const defaultBSize = "normal";
+
+// shadow
+const shadow = "none";
+const shadowHover = "none";
+
+// transition animation
 const transitionDuration = "0.3s";
-const btStyleTextBg = "transparent";
-const btStyleTextBorder = "transparent";
-const btStyleTextBgHover = "transparent";
-const btStyleTextBorderHover = "transparent";
+
+// opacity
 const btStyleTextOpacityHover = "0.4";
-const btMaxWidth = "250px";
-const btMaxHeight = "150px";
 const disabledOpacity = "0.4";
 
 // intent option => CSS color value
-const backgrounds = {
-  default: Theme.base,
-  primary: Theme.primary,
-  secondary: Theme.secondary,
-  success: Theme.success,
-  warning: Theme.warning,
-  info: Theme.info,
-  danger: Theme.danger
-};
+const backgrounds = theme => ({
+  default: theme ? theme.default : Theme.default.default,
+  primary: theme ? theme.primary : Theme.default.primary,
+  secondary: theme ? theme.secondary : Theme.default.secondary,
+  success: theme ? theme.success : Theme.default.success,
+  warning: theme ? theme.warning : Theme.default.warning,
+  info: theme ? theme.info : Theme.default.info,
+  danger: theme ? theme.danger : Theme.default.danger
+});
 
-const borders = {
-  default: Theme.base,
-  primary: Theme.primary,
-  secondary: Theme.secondary,
-  success: Theme.success,
-  warning: Theme.warning,
-  info: Theme.info,
-  danger: Theme.danger
-};
+const borders = theme => ({
+  default: theme ? theme.borderDefault : Theme.default.borderDefault,
+  primary: theme ? theme.borderPrimary : Theme.default.borderPrimary,
+  secondary: theme ? theme.borderSecondary : Theme.default.borderSecondary,
+  success: theme ? theme.borderSuccess : Theme.default.borderSuccess,
+  warning: theme ? theme.borderWarning : Theme.default.borderWarning,
+  info: theme ? theme.borderInfo : Theme.default.borderInfo,
+  danger: theme ? theme.boarderDanger : Theme.default.boarderDanger
+});
 
-const textColors = {
-  default: "white",
-  primary: "white",
-  secondary: "white",
-  success: "white",
-  warning: "white",
-  info: "white",
-  danger: "white"
-};
+const textColors = theme => ({
+  default: theme ? theme.txtColorDefault : Theme.default.txtColorDefault,
+  primary: theme ? theme.txtColorPrimary : Theme.default.txtColorPrimary,
+  secondary: theme ? theme.txtColorSecondary : Theme.default.txtColorSecondary,
+  success: theme ? theme.txtColorSuccess : Theme.default.txtColorSuccess,
+  warning: theme ? theme.txtColorWarning : Theme.default.txtColorWarning,
+  info: theme ? theme.txtColorInfo : Theme.default.txtColorInfo,
+  danger: theme ? theme.txtColorDanger : Theme.default.txtColorDanger
+});
 
 // shape option => CSS shape value
 const shapes = {

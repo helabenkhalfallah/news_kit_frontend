@@ -30,8 +30,8 @@ const IconStyle = styled(Icon)`
     overflow: hidden;
     width: ${props => (props.background ? iconWSizes[props.size] : defaultIconWidth)};
     height: ${props => (props.background ? iconHSizes[props.size] : defaultIconHeight)};
-    background-color: ${props => (props.background ? backgrounds[props.background] : defaultBackground)};
-    fill: ${props => (props.intent ? intents[props.intent] : defaultIntent)};
+    background-color: ${props => (props.background ? backgrounds(props.theme)[props.background] : defaultBackground)};
+    fill: ${props => (props.intent ? intents(props.theme)[props.intent] : defaultIntent)};
   }
 
   .ui-api-kit-icon--disabled{

@@ -40,6 +40,14 @@ const sizeOptions = {
 };
 const sizes = sizeOptions ? Object.values(sizeOptions) : [];
 
+// icon background
+const backgroundOptions = {
+  default: "default",
+  dark: "dark",
+  light: "light"
+};
+const backgrounds = backgroundOptions ? Object.values(backgroundOptions) : [];
+
 // icon intent
 const intentOptions = {
   default: "default",
@@ -52,19 +60,6 @@ const intentOptions = {
   danger: "danger"
 };
 const intents = intentOptions ? Object.values(intentOptions) : [];
-
-// icon background
-const backgroundOptions = {
-  default: "default",
-  black: "black",
-  primary: "primary",
-  secondary: "secondary",
-  success: "success",
-  warning: "warning",
-  info: "info",
-  danger: "danger"
-};
-const backgrounds = backgroundOptions ? Object.values(backgroundOptions) : [];
 
 const IconOptions = {
   baseClass,
