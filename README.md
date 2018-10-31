@@ -206,3 +206,15 @@ module.exports = withCSS({
 npm i --save-dev enzyme enzyme-adapter-react-16
 npm i --save-dev mocha chai sinon enzyme-to-json
 ```
+
+## Theme Manager :
+
+1. ThemeManager :
+https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/app-settings/theme/ThemeManager.jsx
+
+2. ThemeProvider :
+https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/pages/_app.js
+
+3. ThemeConsumer :
+https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/pages/user-access/sign-in.jsx
+
