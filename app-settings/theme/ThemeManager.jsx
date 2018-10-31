@@ -107,7 +107,7 @@ const Theme = {
 };
 
 // app theme
-const AppTheme = Theme.dark;
+const AppTheme = Theme.default;
 
 // theme context
 const ThemeContext = React.createContext({
