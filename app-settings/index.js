@@ -1,11 +1,13 @@
-import Routes from "./Routes";
-import ContentHelper from "./ContentHelper";
-import AppTheme from "./AppTheme";
+import Routes from "./routes/Routes";
+import BodyProvider from "./body/BodyProvider";
+import ThemeProvider from "./theme/ThemeProvider";
+import LanguageProvider from "./language/LanguageProvider";
 
 const AppSettings = {
-  AppTheme,
-  Routes,
-  ContentHelper
+  LanguageProvider,
+  ThemeProvider,
+  BodyProvider,
+  Routes
 };
 
 export default AppSettings;

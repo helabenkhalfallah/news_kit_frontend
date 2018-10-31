@@ -8,11 +8,11 @@ import AppCommons from "../app-core/commons";
 
 const { Redirect, AppLogger } = AppCommons;
 
-const { Routes, ContentHelper } = AppSettings;
+const { Routes, BodyProvider } = AppSettings;
 
 const { RemoteQMManager } = AppService;
 
-const { ContentTypes } = ContentHelper;
+const { BodyTypes } = BodyProvider;
 
 /**
  * Index page
@@ -44,6 +44,6 @@ export default class Index extends React.Component {
   render() {
     const { profile } = this.props;
     AppLogger.info("Index profile : ", profile);
-    return <AppLayout type={ContentTypes.home} />;
+    return <AppLayout type={BodyTypes.home} />;
   }
 }

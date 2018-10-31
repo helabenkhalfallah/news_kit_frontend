@@ -7,11 +7,11 @@ import AppCommons from "../../app-core/commons";
 
 const { Redirect } = AppCommons;
 
-const { Routes, ContentHelper } = AppSettings;
+const { Routes, BodyProvider } = AppSettings;
 
 const { RemoteQMManager } = AppService;
 
-const { ContentTypes } = ContentHelper;
+const { BodyTypes } = BodyProvider;
 
 /**
  * Create account page
@@ -29,7 +29,7 @@ class CreateAccount extends React.Component {
   }
 
   render() {
-    return <AppLayout type={ContentTypes.register} />;
+    return <AppLayout type={BodyTypes.register} />;
   }
 }
 

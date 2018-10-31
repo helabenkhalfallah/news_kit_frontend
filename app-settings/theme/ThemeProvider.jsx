@@ -1,5 +1,4 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
 
 const theme = {
   flexboxgrid: {
@@ -22,6 +21,6 @@ const theme = {
   }
 };
 
-const AppTheme = () => <ThemeProvider theme={theme} />;
+const ThemeProvider = () => <ThemeProvider theme={theme} />;
 
-export default AppTheme;
+export default ThemeProvider;
