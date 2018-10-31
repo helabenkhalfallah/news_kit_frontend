@@ -1,32 +1,12 @@
 import React from "react";
 import App, { Container } from "next/app";
 import { ApolloProvider } from "react-apollo";
-import { ThemeProvider } from "styled-components";
 
+import AppSettings from "../app-settings";
 import AppCore from "../app-core/commons";
 
+const { AppTheme } = AppSettings;
 const { withApollo } = AppCore;
-
-const theme = {
-  flexboxgrid: {
-    // Defaults
-    gridSize: 12, // columns
-    gutterWidth: 1, // rem
-    outerMargin: 2, // rem
-    mediaQuery: "only screen",
-    container: {
-      sm: 46, // rem
-      md: 61, // rem
-      lg: 76 // rem
-    },
-    breakpoints: {
-      xs: 0, // em
-      sm: 48, // em
-      md: 64, // em
-      lg: 75 // em
-    }
-  }
-};
 
 /**
  * App
@@ -35,13 +15,13 @@ class NewsApp extends App {
   render() {
     const { Component, pageProps, apolloClient } = this.props;
     return (
-      <ThemeProvider theme={theme}>
+      <AppTheme>
         <Container>
           <ApolloProvider client={apolloClient}>
             <Component {...pageProps} />
           </ApolloProvider>
         </Container>
-      </ThemeProvider>
+      </AppTheme>
     );
   }
 }
