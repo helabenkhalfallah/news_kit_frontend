@@ -211,15 +211,15 @@ npm i --save-dev mocha chai sinon enzyme-to-json
 
 1. ThemeManager :
 ```js
-https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/app-settings/theme/ThemeManager.jsx
+app-settings/theme/ThemeManager.jsx
 ```
 
 2. ThemeProvider :
 ```js
-https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/pages/_app.js
+pages/_app.js
 ```
 
 3. ThemeConsumer :
 ```js
-https://github.com/helabenkhalfallah/news_kit_frontend/blob/master/pages/user-access/sign-in.jsx
+pages/user-access/sign-in.jsx
 ```
