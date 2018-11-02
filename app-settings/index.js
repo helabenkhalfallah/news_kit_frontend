@@ -1,10 +1,10 @@
 import Routes from "./routes/Routes";
 import BodyProvider from "./body/BodyProvider";
-import LanguageProvider from "./language/LanguageProvider";
+import LanguageManager from "./language/LanguageManager";
 import ThemeManager from "./theme/ThemeManager";
 
 const AppSettings = {
-  LanguageProvider,
+  LanguageManager,
   ThemeManager,
   BodyProvider,
   Routes

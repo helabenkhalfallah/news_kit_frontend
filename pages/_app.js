@@ -6,8 +6,9 @@ import AppCore from "../app-core/commons";
 import AppSettings from "../app-settings";
 
 const { withApollo } = AppCore;
-const { ThemeManager } = AppSettings;
+const { ThemeManager, LanguageManager } = AppSettings;
 const { AppTheme, ThemeProvider } = ThemeManager;
+const { AppLanguage, LanguageProvider } = LanguageManager;
 
 /**
  * App
@@ -16,13 +17,15 @@ class NewsApp extends App {
   render() {
     const { Component, pageProps, apolloClient } = this.props;
     return (
-      <ThemeProvider value={AppTheme}>
-        <Container>
-          <ApolloProvider client={apolloClient}>
-            <Component {...pageProps} />
-          </ApolloProvider>
-        </Container>
-      </ThemeProvider>
+      <LanguageProvider value={AppLanguage}>
+        <ThemeProvider value={AppTheme}>
+          <Container>
+            <ApolloProvider client={apolloClient}>
+              <Component {...pageProps} />
+            </ApolloProvider>
+          </Container>
+        </ThemeProvider>
+      </LanguageProvider>
     );
   }
 }

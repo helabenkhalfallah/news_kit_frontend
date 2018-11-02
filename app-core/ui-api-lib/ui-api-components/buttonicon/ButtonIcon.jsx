@@ -31,6 +31,7 @@ const {
 const ButtonIcon = ({
   className,
   theme,
+  language,
   label,
   icon,
   iconAlign,
@@ -58,6 +59,7 @@ const ButtonIcon = ({
     disabled
   );
   const { path, fillPath } = svgIcons[icon];
+  console.log("ButtonIcon language : ", language);
   return (
     <ButtonIconStyle
       theme={theme}
@@ -95,6 +97,7 @@ ButtonIcon.displayName = "ButtonIcon";
 ButtonIcon.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.object.isRequired,
+  language: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(icons).isRequired,
   buttonIntent: PropTypes.oneOf(intents),

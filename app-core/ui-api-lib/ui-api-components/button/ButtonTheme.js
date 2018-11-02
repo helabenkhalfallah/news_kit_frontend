@@ -3,7 +3,7 @@ import AppSettings from "../../../../app-settings";
 
 // load app theme
 const { ThemeManager } = AppSettings;
-const { Theme } = ThemeManager;
+const { Themes } = ThemeManager;
 
 // button design system
 
@@ -57,33 +57,33 @@ const disabledOpacity = "0.4";
 
 // intent option => CSS color value
 const backgrounds = theme => ({
-  default: !ObjectUtils.isEmpty(theme) ? theme.default : Theme.default.default,
-  primary: !ObjectUtils.isEmpty(theme) ? theme.primary : Theme.default.primary,
-  secondary: !ObjectUtils.isEmpty(theme) ? theme.secondary : Theme.default.secondary,
-  success: !ObjectUtils.isEmpty(theme) ? theme.success : Theme.default.success,
-  warning: !ObjectUtils.isEmpty(theme) ? theme.warning : Theme.default.warning,
-  info: !ObjectUtils.isEmpty(theme) ? theme.info : Theme.default.info,
-  danger: !ObjectUtils.isEmpty(theme) ? theme.danger : Theme.default.danger
+  default: !ObjectUtils.isEmpty(theme) ? theme.default : Themes.default.default,
+  primary: !ObjectUtils.isEmpty(theme) ? theme.primary : Themes.default.primary,
+  secondary: !ObjectUtils.isEmpty(theme) ? theme.secondary : Themes.default.secondary,
+  success: !ObjectUtils.isEmpty(theme) ? theme.success : Themes.default.success,
+  warning: !ObjectUtils.isEmpty(theme) ? theme.warning : Themes.default.warning,
+  info: !ObjectUtils.isEmpty(theme) ? theme.info : Themes.default.info,
+  danger: !ObjectUtils.isEmpty(theme) ? theme.danger : Themes.default.danger
 }); // prettier-ignore
 
 const borders = theme => ({
-  default: !ObjectUtils.isEmpty(theme) ? theme.borderDefault : Theme.default.borderDefault,
-  primary: !ObjectUtils.isEmpty(theme) ? theme.borderPrimary : Theme.default.borderPrimary,
-  secondary: !ObjectUtils.isEmpty(theme) ? theme.borderSecondary : Theme.default.borderSecondary,
-  success: !ObjectUtils.isEmpty(theme) ? theme.borderSuccess : Theme.default.borderSuccess,
-  warning: !ObjectUtils.isEmpty(theme) ? theme.borderWarning : Theme.default.borderWarning,
-  info: !ObjectUtils.isEmpty(theme) ? theme.borderInfo : Theme.default.borderInfo,
-  danger: !ObjectUtils.isEmpty(theme) ? theme.boarderDanger : Theme.default.boarderDanger
+  default: !ObjectUtils.isEmpty(theme) ? theme.borderDefault : Themes.default.borderDefault,
+  primary: !ObjectUtils.isEmpty(theme) ? theme.borderPrimary : Themes.default.borderPrimary,
+  secondary: !ObjectUtils.isEmpty(theme) ? theme.borderSecondary : Themes.default.borderSecondary,
+  success: !ObjectUtils.isEmpty(theme) ? theme.borderSuccess : Themes.default.borderSuccess,
+  warning: !ObjectUtils.isEmpty(theme) ? theme.borderWarning : Themes.default.borderWarning,
+  info: !ObjectUtils.isEmpty(theme) ? theme.borderInfo : Themes.default.borderInfo,
+  danger: !ObjectUtils.isEmpty(theme) ? theme.boarderDanger : Themes.default.boarderDanger
 }); // prettier-ignore
 
 const textColors = theme => ({
-  default: !ObjectUtils.isEmpty(theme) ? theme.txtColorDefault : Theme.default.txtColorDefault,
-  primary: !ObjectUtils.isEmpty(theme) ? theme.txtColorPrimary : Theme.default.txtColorPrimary,
-  secondary: !ObjectUtils.isEmpty(theme) ? theme.txtColorSecondary : Theme.default.txtColorSecondary,
-  success: !ObjectUtils.isEmpty(theme) ? theme.txtColorSuccess : Theme.default.txtColorSuccess,
-  warning: !ObjectUtils.isEmpty(theme) ? theme.txtColorWarning : Theme.default.txtColorWarning,
-  info: !ObjectUtils.isEmpty(theme) ? theme.txtColorInfo : Theme.default.txtColorInfo,
-  danger: !ObjectUtils.isEmpty(theme) ? theme.txtColorDanger : Theme.default.txtColorDanger
+  default: !ObjectUtils.isEmpty(theme) ? theme.txtColorDefault : Themes.default.txtColorDefault,
+  primary: !ObjectUtils.isEmpty(theme) ? theme.txtColorPrimary : Themes.default.txtColorPrimary,
+  secondary: !ObjectUtils.isEmpty(theme) ? theme.txtColorSecondary : Themes.default.txtColorSecondary,
+  success: !ObjectUtils.isEmpty(theme) ? theme.txtColorSuccess : Themes.default.txtColorSuccess,
+  warning: !ObjectUtils.isEmpty(theme) ? theme.txtColorWarning : Themes.default.txtColorWarning,
+  info: !ObjectUtils.isEmpty(theme) ? theme.txtColorInfo : Themes.default.txtColorInfo,
+  danger: !ObjectUtils.isEmpty(theme) ? theme.txtColorDanger : Themes.default.txtColorDanger
 }); // prettier-ignore
 
 // shape option => CSS shape value

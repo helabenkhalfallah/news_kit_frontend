@@ -1,7 +1,7 @@
 import React from "react";
 
 // themes
-const Theme = {
+const Themes = {
   default: {
     default: "#a569bd",
     primary: "#00a7cf",
@@ -107,11 +107,11 @@ const Theme = {
 };
 
 // app theme
-const AppTheme = Theme.default;
+const AppTheme = Themes.default;
 
 // theme context
 const ThemeContext = React.createContext({
-  theme: Theme.default // default
+  theme: Themes.default // default
 });
 
 const ThemeProvider = ThemeContext.Provider;
@@ -119,7 +119,7 @@ const ThemeConsumer = ThemeContext.Consumer;
 
 const ThemeManager = {
   AppTheme,
-  Theme,
+  Themes,
   ThemeContext,
   ThemeProvider,
   ThemeConsumer

@@ -23,6 +23,7 @@ const {
 const Button = ({
   className,
   theme,
+  language,
   title,
   buttonIntent,
   buttonSize,
@@ -48,6 +49,7 @@ const Button = ({
     textAlign,
     disabled
   );
+  console.log("Button language : ", language);
   return (
     <ButtonStyle
       theme={theme}
@@ -80,6 +82,7 @@ Button.displayName = "Button";
 Button.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.object.isRequired,
+  language: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),

@@ -3,7 +3,7 @@ import AppSettings from "../../../../app-settings";
 
 // load app theme
 const { ThemeManager } = AppSettings;
-const { Theme } = ThemeManager;
+const { Themes } = ThemeManager;
 
 // icon default values
 const defaultIconWidth = "24px";
@@ -14,21 +14,21 @@ const disableOpacity = "0.4";
 
 // icon backgrounds
 const backgrounds = theme => ({
-  default: !ObjectUtils.isEmpty(theme) ? theme.iconDefault : Theme.default.iconDefault,
-  dark: !ObjectUtils.isEmpty(theme) ? theme.iconDark : Theme.default.iconDark,
-  light: !ObjectUtils.isEmpty(theme) ? theme.iconLight : Theme.default.iconLight
+  default: !ObjectUtils.isEmpty(theme) ? theme.iconDefault : Themes.default.iconDefault,
+  dark: !ObjectUtils.isEmpty(theme) ? theme.iconDark : Themes.default.iconDark,
+  light: !ObjectUtils.isEmpty(theme) ? theme.iconLight : Themes.default.iconLight
 }); // prettier-ignore
 
 // icon intents
 const intents = theme => ({
-  default: !ObjectUtils.isEmpty(theme) ? theme.iconTintBlack : Theme.default.iconTintBlack,
-  white: !ObjectUtils.isEmpty(theme) ? theme.iconTintWhite : Theme.default.iconTintWhite,
-  primary: !ObjectUtils.isEmpty(theme) ? theme.iconTintPrimary : Theme.default.iconTintPrimary,
-  secondary: !ObjectUtils.isEmpty(theme) ? theme.iconTintSecondary : Theme.default.iconTintSecondary,
-  success: !ObjectUtils.isEmpty(theme) ? theme.iconTintSuccess : Theme.default.iconTintSuccess,
-  warning: !ObjectUtils.isEmpty(theme) ? theme.iconTintWarning : Theme.default.iconTintWarning,
-  info: !ObjectUtils.isEmpty(theme) ? theme.iconTintInfo : Theme.default.iconTintInfo,
-  danger: !ObjectUtils.isEmpty(theme) ? theme.iconTintDanger : Theme.default.iconTintDanger
+  default: !ObjectUtils.isEmpty(theme) ? theme.iconTintBlack : Themes.default.iconTintBlack,
+  white: !ObjectUtils.isEmpty(theme) ? theme.iconTintWhite : Themes.default.iconTintWhite,
+  primary: !ObjectUtils.isEmpty(theme) ? theme.iconTintPrimary : Themes.default.iconTintPrimary,
+  secondary: !ObjectUtils.isEmpty(theme) ? theme.iconTintSecondary : Themes.default.iconTintSecondary,
+  success: !ObjectUtils.isEmpty(theme) ? theme.iconTintSuccess : Themes.default.iconTintSuccess,
+  warning: !ObjectUtils.isEmpty(theme) ? theme.iconTintWarning : Themes.default.iconTintWarning,
+  info: !ObjectUtils.isEmpty(theme) ? theme.iconTintInfo : Themes.default.iconTintInfo,
+  danger: !ObjectUtils.isEmpty(theme) ? theme.iconTintDanger : Themes.default.iconTintDanger
 }); // prettier-ignore
 
 // icons width (size option) => CSS size value
