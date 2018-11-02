@@ -238,13 +238,13 @@ This class provides : Context, Provider and Consumer for language changes observ
 app-settings/localized-strings
 ```
 
-a. Dico.js => contains all used strings inside application in different languages localization.
+a. Dico.js => contains used strings inside application in the different supported localization.
 
-b. Localizations.js => contains all supported languages.
+b. Localizations.js => contains supported localizations.
 
 c. LocalizedString.js => a localized string object : { key, language, value }. We access to a string value by (key, language).
 
-d. LocalizedStringUtils.js => contains utils methods for localized string :
+d. LocalizedStringUtils.js => contains utils methods for localized strings :
 ```js
 // check if key exist
 const isKeyExist = key => (Dico.KEYS && key ? key in Dico.KEYS : false);
