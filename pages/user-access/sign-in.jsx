@@ -10,13 +10,15 @@ const {
   Routes,
   BodyProvider,
   ThemeManager,
-  LanguageManager
+  LanguageManager,
+  LocalizedStringUtils,
+  Dico
 } = AppSettings; // prettier-ignore
 
 const { ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { Redirect } = AppCommons;
-const { RemoteQMManager, Messages } = AppService;
+const { RemoteQMManager } = AppService;
 const { BodyTypes } = BodyProvider;
 const { Components } = UIAPI;
 const { Button, ButtonIcon, Icon } = Components;
@@ -45,15 +47,19 @@ class Signin extends React.Component {
               <div>
                 <Button
                   theme={theme}
-                  language={language}
                   buttonIntent="primary"
-                  title={Messages.KEYS.USER_SIGN_BT}
+                  title={LocalizedStringUtils.localizedString(
+                    Dico.KEYS.USER_SIGN_BT,
+                    language
+                  )}
                 />
                 <ButtonIcon
                   theme={theme}
-                  language={language}
                   buttonIntent="secondary"
-                  label={Messages.KEYS.USER_REGISTER_BT}
+                  label={LocalizedStringUtils.localizedString(
+                    Dico.KEYS.USER_REGISTER_BT,
+                    language
+                  )}
                   icon="edit"
                 />
                 <Icon

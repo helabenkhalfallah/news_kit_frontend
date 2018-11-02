@@ -1,4 +1,4 @@
-// all used messages
+// all used strings
 
 // all language keys
 const KEYS = {
@@ -6,7 +6,7 @@ const KEYS = {
   USER_REGISTER_BT: "USER_REGISTER_BT"
 };
 
-// all messages
+// all dico strings
 const DATA = {
   en: [
     {
@@ -30,9 +30,9 @@ const DATA = {
   ]
 };
 
-const Messages = {
+const Dico = {
   KEYS,
   DATA
 };
 
-export default Messages;
+export default Dico;

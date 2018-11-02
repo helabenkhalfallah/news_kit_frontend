@@ -6,10 +6,6 @@ import SVGIcon from "../svg/SVGIcon";
 import ButtonOptions from "../button/ButtonOptions";
 import ButtonIconOptions from "./ButtonIconOptions";
 import ButtonIconStyle from "./ButtonIconStyle";
-import AppService from "../../../../app-services";
-
-// language settings
-const { MesssagesProvider } = AppService;
 
 // button settings
 const {
@@ -35,7 +31,6 @@ const {
 const ButtonIcon = ({
   className,
   theme,
-  language,
   label,
   icon,
   iconAlign,
@@ -63,7 +58,6 @@ const ButtonIcon = ({
     disabled
   );
   const { path, fillPath } = svgIcons[icon];
-  const message = MesssagesProvider.localizedMessage(language, label);
   return (
     <ButtonIconStyle
       theme={theme}
@@ -82,7 +76,7 @@ const ButtonIcon = ({
             <SVGIcon path={path} fillPath={fillPath} />
           </div>
           <div className="ui-api-kit-button--text">
-            <span>{message}</span>
+            <span>{label}</span>
           </div>
         </div>
       </button>
@@ -101,7 +95,6 @@ ButtonIcon.displayName = "ButtonIcon";
 ButtonIcon.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.object.isRequired,
-  language: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(icons).isRequired,
   buttonIntent: PropTypes.oneOf(intents),

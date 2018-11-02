@@ -1,11 +1,11 @@
 /**
- * Message Class
- * Message to be displayed
+ * LocalizedString Class
+ * String to be displayed
  * By key and current language
  */
-class Message {
+class LocalizedString {
   /**
-   * Message from attributes
+   * LocalizedString from attributes
    * @param {*} key
    * @param {*} value
    * @param {*} language
@@ -17,14 +17,14 @@ class Message {
   }
 
   /**
-   * get Message key
+   * get LocalizedString key
    */
   get key() {
     return this.key;
   }
 
   /**
-   * set Message key
+   * set LocalizedString key
    * @param {*} key
    */
   set key(key) {
@@ -32,14 +32,14 @@ class Message {
   }
 
   /**
-   * get Message value
+   * get LocalizedString value
    */
   get value() {
     return this.value;
   }
 
   /**
-   * set Message value
+   * set LocalizedString value
    * @param {*} value
    */
   set value(value) {
@@ -47,14 +47,14 @@ class Message {
   }
 
   /**
-   * get Message language
+   * get LocalizedString language
    */
   get language() {
     return this.language;
   }
 
   /**
-   * set Message language
+   * set LocalizedString language
    * @param {*} language
    */
   set language(language) {
@@ -62,8 +62,8 @@ class Message {
   }
 
   /**
-   * convert Message to string
-   * @return {String} Message toString()
+   * convert LocalizedString to string
+   * @return {String} LocalizedString toString()
    */
   toString() {
     return `(
@@ -74,4 +74,4 @@ class Message {
   }
 }
 
-export default Message;
+export default LocalizedString;

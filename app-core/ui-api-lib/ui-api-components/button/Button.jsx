@@ -4,10 +4,6 @@ import cx from "classnames";
 
 import ButtonOptions from "./ButtonOptions";
 import ButtonStyle from "./ButtonStyle";
-import AppService from "../../../../app-services";
-
-// language settings
-const { MesssagesProvider } = AppService;
 
 // component settings
 const {
@@ -27,7 +23,6 @@ const {
 const Button = ({
   className,
   theme,
-  language,
   title,
   buttonIntent,
   buttonSize,
@@ -53,7 +48,6 @@ const Button = ({
     textAlign,
     disabled
   );
-  const message = MesssagesProvider.localizedMessage(language, title);
   return (
     <ButtonStyle
       theme={theme}
@@ -68,7 +62,7 @@ const Button = ({
     >
       <button type="button" className={btRootClass} onClick={onClick}>
         <div className="ui-api-kit-button--text">
-          <span>{message}</span>
+          <span>{title}</span>
         </div>
       </button>
     </ButtonStyle>
@@ -86,7 +80,6 @@ Button.displayName = "Button";
 Button.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.object.isRequired,
-  language: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   buttonIntent: PropTypes.oneOf(intents),
   buttonSize: PropTypes.oneOf(sizes),
