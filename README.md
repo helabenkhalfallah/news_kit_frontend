@@ -223,3 +223,30 @@ pages/_app.js
 ```js
 pages/user-access/sign-in.jsx
 ```
+
+## Language & Localization :
+
+1. LanguageManager :
+```js
+app-settings/language/LanguageManager.jsx
+```
+
+This class provides : Context, Provider and Consumer for language changes observer.
+
+2. localization :
+```js
+app-settings/localized-strings
+```
+
+a. Dico.js => contains all used strings inside application in different languages localization.
+b. Localizations.js => contains all supported languages.
+c. LocalizedString.js => a localized string object : { key, language, value }. We access to a string value by (key, language).
+d. LocalizedStringUtils.js => contains utils methods for localized string :
+```js
+// check if key exist
+const isKeyExist = key => (Dico.KEYS && key ? key in Dico.KEYS : false);
+
+// get localized string by key and language
+const localizedString = (key, language) => {
+}
+```
