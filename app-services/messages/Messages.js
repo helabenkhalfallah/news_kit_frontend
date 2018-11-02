@@ -2,18 +2,33 @@
 
 // all language keys
 const KEYS = {
-  USER_ALREADY_EXIST: "USER_ALREADY_EXIST"
+  USER_SIGN_BT: "USER_SIGN_BT",
+  USER_REGISTER_BT: "USER_REGISTER_BT"
 };
 
 // all messages
-const DATA = [
-  {
-    key: KEYS.USER_ALREADY_EXIST,
-    value: "User already exist.",
-    language: "en",
-    status: 401
-  }
-];
+const DATA = {
+  en: [
+    {
+      key: KEYS.USER_SIGN_BT,
+      value: "Sign in"
+    },
+    {
+      key: KEYS.USER_REGISTER_BT,
+      value: "Register"
+    }
+  ],
+  fr: [
+    {
+      key: KEYS.USER_SIGN_BT,
+      value: "Se connecter"
+    },
+    {
+      key: KEYS.USER_REGISTER_BT,
+      value: "Créer un compte"
+    }
+  ]
+};
 
 const Messages = {
   KEYS,

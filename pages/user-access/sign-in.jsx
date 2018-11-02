@@ -16,7 +16,7 @@ const {
 const { ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { Redirect } = AppCommons;
-const { RemoteQMManager } = AppService;
+const { RemoteQMManager, Messages } = AppService;
 const { BodyTypes } = BodyProvider;
 const { Components } = UIAPI;
 const { Button, ButtonIcon, Icon } = Components;
@@ -47,13 +47,13 @@ class Signin extends React.Component {
                   theme={theme}
                   language={language}
                   buttonIntent="primary"
-                  title="Look At me here"
+                  title={Messages.KEYS.USER_SIGN_BT}
                 />
                 <ButtonIcon
                   theme={theme}
                   language={language}
                   buttonIntent="secondary"
-                  label="Look At me here"
+                  label={Messages.KEYS.USER_REGISTER_BT}
                   icon="edit"
                 />
                 <Icon

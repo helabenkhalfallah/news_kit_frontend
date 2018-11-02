@@ -1,7 +1,7 @@
 /**
  * Message Class
- * Message to display for sucess and fail
- * status
+ * Message to be displayed
+ * By key and current language
  */
 class Message {
   /**
@@ -9,13 +9,11 @@ class Message {
    * @param {*} key
    * @param {*} value
    * @param {*} language
-   * @param {*} status
    */
-  constructor(key, value, language, status) {
+  constructor(key, value, language) {
     this.key = key;
-    this.value = value;
     this.language = language;
-    this.status = status;
+    this.value = value;
   }
 
   /**
@@ -64,30 +62,14 @@ class Message {
   }
 
   /**
-   * get Message status
-   */
-  get status() {
-    return this.status;
-  }
-
-  /**
-   * set Message status
-   * @param {*} status
-   */
-  set status(status) {
-    this.status = status;
-  }
-
-  /**
    * convert Message to string
    * @return {String} Message toString()
    */
   toString() {
     return `(
       key : ${this.key}, 
-      value : ${this.value} , 
       language : ${this.language},
-      status : ${this.status}
+      value : ${this.value}
     )`;
   }
 }
