@@ -239,8 +239,11 @@ app-settings/localized-strings
 ```
 
 a. Dico.js => contains all used strings inside application in different languages localization.
+
 b. Localizations.js => contains all supported languages.
+
 c. LocalizedString.js => a localized string object : { key, language, value }. We access to a string value by (key, language).
+
 d. LocalizedStringUtils.js => contains utils methods for localized string :
 ```js
 // check if key exist
