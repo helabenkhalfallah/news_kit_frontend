@@ -2,12 +2,13 @@
   "name": "news_kit_frontend",
   "scripts": {
     "dev": "next",
+    "prod": "NODE_ENV=production next",
     "build": "next build",
     "start": "next start",
+    "test": "NODE_ENV=test jest",
     "render": "skpm-build --watch --run",
     "storybook": "start-storybook -p 9001 -c ./app-core/ui-api-lib/ui-api-storybook/.storybook",
     "build-storybook": "build-storybook",
-    "test": "NODE_ENV=test jest",
     "lint": "./node_modules/.bin/eslint ."
   },
   "prettier": {
