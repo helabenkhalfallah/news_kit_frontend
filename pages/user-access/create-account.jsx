@@ -3,14 +3,12 @@ import React from "react";
 import AppLayout from "../../app/main/AppLayout";
 import AppService from "../../app-services";
 import AppSettings from "../../app-settings";
-import CoreCommons from "../../app-core/core-commons";
+import Core from "../../app-core";
 
-const { Redirect } = CoreCommons;
-
+const { Commons } = Core;
+const { Redirect } = Commons;
 const { Routes, BodyProvider } = AppSettings;
-
 const { RemoteQMManager } = AppService;
-
 const { BodyTypes } = BodyProvider;
 
 /**

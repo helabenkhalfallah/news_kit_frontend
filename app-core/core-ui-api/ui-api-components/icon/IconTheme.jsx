@@ -1,8 +1,9 @@
 import AppSettings from "../../../../app-settings";
-import CoreUtils from "../../../core-utils";
+import Core from "../../..";
 
 // object utils
-const { ObjectUtils } = CoreUtils;
+const { Utils } = Core;
+const { ObjectUtils } = Utils;
 const { isEmpty } = ObjectUtils;
 
 // load app theme

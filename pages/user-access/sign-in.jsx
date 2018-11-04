@@ -3,14 +3,15 @@ import React from "react";
 import AppLayout from "../../app/main/AppLayout";
 import AppService from "../../app-services";
 import AppSettings from "../../app-settings";
-import CoreCommons from "../../app-core/core-commons";
+import Core from "../../app-core";
 
+const { Commons } = Core;
 const {
   Routes,
   BodyProvider
 } = AppSettings; // prettier-ignore
 
-const { Redirect } = CoreCommons;
+const { Redirect } = Commons;
 const { RemoteQMManager } = AppService;
 const { BodyTypes } = BodyProvider;
 

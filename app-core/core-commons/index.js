@@ -4,7 +4,7 @@ import CookiesManager from "./cookies/CookiesManager";
 import Redirect from "./routes/Redirect";
 import AppLogger from "./logger/AppLogger";
 
-const CoreCommons = {
+const Commons = {
   withApollo,
   initApollo,
   CookiesManager,
@@ -12,4 +12,4 @@ const CoreCommons = {
   AppLogger
 };
 
-export default CoreCommons;
+export default Commons;

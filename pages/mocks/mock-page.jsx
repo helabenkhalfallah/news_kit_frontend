@@ -2,8 +2,12 @@ import React from "react";
 
 import AppLayout from "../../app/main/AppLayout";
 import AppSettings from "../../app-settings";
-import CoreUI from "../../app-core/core-ui-api";
+import Core from "../../app-core";
 
+// load ui kit
+const { UIKit } = Core;
+
+// laod settings
 const {
   BodyProvider,
   ThemeManager,
@@ -15,7 +19,7 @@ const {
 const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { BodyTypes } = BodyProvider;
-const { Components, ButtonOptions, IconOptions } = CoreUI;
+const { Components, ButtonOptions, IconOptions } = UIKit;
 
 // components
 // eslint-disable-next-line prettier/prettier

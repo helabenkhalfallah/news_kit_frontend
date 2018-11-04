@@ -2,7 +2,7 @@ import React from "react";
 import { text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import CoreUI from "../../..";
+import UIKit from "../../..";
 import Readme from "./README.md";
 
 // import settings
@@ -11,7 +11,7 @@ const {
   ButtonIconOptions,
   OptionalSelect,
   Components
-} = CoreUI; // prettier-ignore
+} = UIKit; // prettier-ignore
 const { ButtonIcon } = Components;
 
 // button settings

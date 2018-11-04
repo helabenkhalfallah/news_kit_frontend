@@ -6,12 +6,11 @@ import PropTypes from "prop-types";
 
 import AppService from "../../../../app-services";
 import AppSettings from "../../../../app-settings";
-import CoreCommons from "../../../../app-core/core-commons";
+import Core from "../../../../app-core";
 
-const { CookiesManager, Redirect, AppLogger } = CoreCommons;
-
+const { Commons } = Core;
+const { CookiesManager, Redirect, AppLogger } = Commons;
 const { Routes } = AppSettings;
-
 const { RemoteQMManager } = AppService;
 
 // user schema
