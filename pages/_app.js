@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Head from "next/head";
 import { ApolloProvider } from "react-apollo";
 
 import AppCore from "../app-core/commons";
@@ -21,6 +22,9 @@ class NewsApp extends App {
         <ThemeProvider value={AppTheme}>
           <Container>
             <ApolloProvider client={apolloClient}>
+              <Head>
+                <title>News Kit</title>
+              </Head>
               <Component {...pageProps} />
             </ApolloProvider>
           </Container>

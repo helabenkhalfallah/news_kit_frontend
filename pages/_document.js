@@ -25,7 +25,6 @@ export default class AppDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>New Kit Page</title>
           {this.props.styleTags}
         </Head>
         <body>
