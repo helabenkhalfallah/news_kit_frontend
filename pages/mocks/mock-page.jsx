@@ -12,44 +12,90 @@ const {
   Dico
 } = AppSettings; // prettier-ignore
 
-const { ThemeConsumer } = ThemeManager;
+const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { BodyTypes } = BodyProvider;
-const { Components } = UIAPI;
+const { Components, ButtonOptions, IconOptions } = UIAPI;
+
+// components
 const { Button, ButtonIcon, Icon } = Components;
+
+// button options
+const { intentsOptions } = ButtonOptions;
+
+// eslint-disable-next-line prettier/prettier
+const {
+  primary,
+  secondary,
+  success,
+  warning
+} = intentsOptions;
+
+// icon options
+const { backgroundOptions, iconsOptions } = IconOptions;
+const { light } = backgroundOptions;
+const { clear, add } = iconsOptions;
 
 /**
  * Mock Page
  */
+const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
+  <div>
+    <Button
+      theme={theme}
+      buttonIntent={primary}
+      title={LocalizedStringUtils.localizedString(
+        Dico.KEYS.RESET_THEME_BT,
+        language
+      )}
+      onClick={() => toggleTheme(Themes.default)}
+    />
+    <Button
+      theme={theme}
+      buttonIntent={secondary}
+      title={LocalizedStringUtils.localizedString(
+        Dico.KEYS.TOGGLE_THEME_BT,
+        language
+      )}
+      onClick={() => toggleTheme(Themes.dark)}
+    />
+    <Button
+      theme={theme}
+      buttonIntent={success}
+      title={LocalizedStringUtils.localizedString(
+        Dico.KEYS.USER_SIGN_BT,
+        language
+      )}
+    />
+    <ButtonIcon
+      theme={theme}
+      buttonIntent={warning}
+      icon={add}
+      label={LocalizedStringUtils.localizedString(
+        Dico.KEYS.USER_REGISTER_BT,
+        language
+      )}
+    />
+    <Icon
+      theme={theme}
+      icon={clear}
+      intent={primary}
+      background={light}
+      size="normal"
+    />
+  </div>
+));
+
 const MockPage = () => (
   <ThemeConsumer>
-    {theme => (
+    {({ theme, toggleTheme }) => (
       <LanguageConsumer>
         {language => (
           <div>
-            <Button
+            <MockComponent
               theme={theme}
-              buttonIntent="primary"
-              title={LocalizedStringUtils.localizedString(
-                Dico.KEYS.USER_SIGN_BT,
-                language
-              )}
-            />
-            <ButtonIcon
-              theme={theme}
-              buttonIntent="secondary"
-              label={LocalizedStringUtils.localizedString(
-                Dico.KEYS.USER_REGISTER_BT,
-                language
-              )}
-              icon="edit"
-            />
-            <Icon
-              theme={theme}
-              icon="edit"
-              intent="secondary"
-              background="light"
-              size="normal"
+              language={language}
+              toggleTheme={toggleTheme}
             />
             <AppLayout type={BodyTypes.signin} />
           </div>

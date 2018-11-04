@@ -6,7 +6,8 @@ const AppTheme = Themes.default;
 
 // theme context
 const ThemeContext = React.createContext({
-  theme: Themes.default // default
+  theme: Themes.default, // default
+  toggleTheme: () => { } // prettier-ignore
 });
 
 const ThemeProvider = ThemeContext.Provider;

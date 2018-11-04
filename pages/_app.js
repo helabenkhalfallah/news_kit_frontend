@@ -15,11 +15,28 @@ const { AppLanguage, LanguageProvider } = LanguageManager;
  * App
  */
 class NewsApp extends App {
+  constructor(props) {
+    super(props);
+
+    this.toggleTheme = newTheme => {
+      this.setState({
+        theme: newTheme
+      });
+    };
+
+    // State also contains the updater function so it will
+    // be passed down into the context provider
+    this.state = {
+      theme: AppTheme,
+      toggleTheme: this.toggleTheme
+    };
+  }
+
   render() {
     const { Component, pageProps, apolloClient } = this.props;
     return (
       <LanguageProvider value={AppLanguage}>
-        <ThemeProvider value={AppTheme}>
+        <ThemeProvider value={this.state}>
           <Container>
             <ApolloProvider client={apolloClient}>
               <Head>

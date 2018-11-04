@@ -2,6 +2,8 @@
 
 // all language keys
 const KEYS = {
+  RESET_THEME_BT: "RESET_THEME_BT",
+  TOGGLE_THEME_BT: "TOGGLE_THEME_BT",
   USER_SIGN_BT: "USER_SIGN_BT",
   USER_REGISTER_BT: "USER_REGISTER_BT"
 };
@@ -9,6 +11,14 @@ const KEYS = {
 // all dico strings
 const DATA = {
   en: [
+    {
+      key: KEYS.RESET_THEME_BT,
+      value: "Reset Theme"
+    },
+    {
+      key: KEYS.TOGGLE_THEME_BT,
+      value: "Toggle Theme"
+    },
     {
       key: KEYS.USER_SIGN_BT,
       value: "Sign in"
@@ -19,6 +29,14 @@ const DATA = {
     }
   ],
   fr: [
+    {
+      key: KEYS.RESET_THEME_BT,
+      value: "Réinitialiser Theme"
+    },
+    {
+      key: KEYS.TOGGLE_THEME_BT,
+      value: "Changer Theme"
+    },
     {
       key: KEYS.USER_SIGN_BT,
       value: "Se connecter"
