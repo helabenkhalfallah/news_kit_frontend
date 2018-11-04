@@ -1,5 +1,5 @@
 import { gql } from "apollo-boost";
-import AppLogger from "../../../../app-core/commons/logger/AppLogger";
+import AppLogger from "../../../../app-core/core-commons/logger/AppLogger";
 
 /*eslint-disable*/
 export default apolloClient =>

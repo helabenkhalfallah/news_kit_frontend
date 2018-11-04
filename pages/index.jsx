@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import AppLayout from "../app/main/AppLayout";
 import AppService from "../app-services";
 import AppSettings from "../app-settings";
-import AppCommons from "../app-core/commons";
+import CoreCommons from "../app-core/core-commons";
 
-const { Redirect, AppLogger } = AppCommons;
+const { Redirect, AppLogger } = CoreCommons;
 
 const { Routes, BodyProvider } = AppSettings;
 

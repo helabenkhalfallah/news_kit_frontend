@@ -2,11 +2,11 @@ import React from "react";
 import { text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import UIAPI from "../../..";
+import CoreUI from "../../..";
 import Readme from "./README.md";
 
 // button settings
-const { ButtonOptions, OptionalSelect, Components } = UIAPI;
+const { ButtonOptions, OptionalSelect, Components } = CoreUI;
 const { Button } = Components;
 const {
   intentsOptions,

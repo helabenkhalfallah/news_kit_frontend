@@ -2,7 +2,7 @@ import React from "react";
 
 import AppLayout from "../../app/main/AppLayout";
 import AppSettings from "../../app-settings";
-import UIAPI from "../../app-core/ui-api-lib";
+import CoreUI from "../../app-core/core-ui-api";
 
 const {
   BodyProvider,
@@ -15,10 +15,16 @@ const {
 const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { BodyTypes } = BodyProvider;
-const { Components, ButtonOptions, IconOptions } = UIAPI;
+const { Components, ButtonOptions, IconOptions } = CoreUI;
 
 // components
-const { Button, ButtonIcon, Icon } = Components;
+// eslint-disable-next-line prettier/prettier
+const {
+  Button,
+  ButtonIcon,
+  Icon,
+  Select
+} = Components;
 
 // button options
 const { intentsOptions } = ButtonOptions;
@@ -83,6 +89,7 @@ const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
       background={light}
       size="normal"
     />
+    <Select />
   </div>
 ));
 

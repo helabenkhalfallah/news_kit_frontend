@@ -3,9 +3,9 @@ import React from "react";
 import AppLayout from "../../app/main/AppLayout";
 import AppService from "../../app-services";
 import AppSettings from "../../app-settings";
-import AppCommons from "../../app-core/commons";
+import CoreCommons from "../../app-core/core-commons";
 
-const { Redirect } = AppCommons;
+const { Redirect } = CoreCommons;
 
 const { Routes, BodyProvider } = AppSettings;
 

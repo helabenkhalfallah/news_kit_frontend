@@ -5,7 +5,7 @@ import IconOptions from "./ui-api-components/icon/IconOptions";
 import SideMenuOptions from "./ui-api-components/sidemenu/SideMenuOptions";
 import Components from "./ui-api-components";
 
-const UIAPI = {
+const CoreUI = {
   Components,
   ButtonOptions,
   ButtonIconOptions,
@@ -14,4 +14,4 @@ const UIAPI = {
   OptionalSelect
 };
 
-export default UIAPI;
+export default CoreUI;

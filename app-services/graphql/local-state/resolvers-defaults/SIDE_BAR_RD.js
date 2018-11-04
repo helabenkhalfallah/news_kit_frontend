@@ -2,9 +2,9 @@
  * Side Bar RD : Resolvers & Defaults
  */
 import LocalQMManager from "../LocalQMManager";
-import UIAPI from "../../../../app-core/ui-api-lib";
+import CoreUI from "../../../../app-core/core-ui-api";
 
-const { SideMenuOptions } = UIAPI;
+const { SideMenuOptions } = CoreUI;
 const { SideMenuStatut } = SideMenuOptions;
 const { SIDE_BAR_QM } = LocalQMManager;
 const { SIDE_BAR_STATUS } = SIDE_BAR_QM;

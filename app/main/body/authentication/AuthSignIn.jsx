@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 
 import AppService from "../../../../app-services";
 import AppSettings from "../../../../app-settings";
-import AppCommons from "../../../../app-core/commons";
+import CoreCommons from "../../../../app-core/core-commons";
 
-const { CookiesManager, Redirect, AppLogger } = AppCommons;
+const { CookiesManager, Redirect, AppLogger } = CoreCommons;
 
 const { Routes } = AppSettings;
 

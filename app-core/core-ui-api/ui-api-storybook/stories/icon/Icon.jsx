@@ -1,11 +1,11 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import UIAPI from "../../..";
+import CoreUI from "../../..";
 import Readme from "./README.md";
 
 // Icon settings
-const { IconOptions, OptionalSelect, Components } = UIAPI;
+const { IconOptions, OptionalSelect, Components } = CoreUI;
 const { Icon } = Components;
 const {
   iconsOptions,
