@@ -1,7 +1,6 @@
 import React from "react";
-import Components from "../ui-api-components";
+import Button from "../ui-api-components/button/Button";
 
-const { Button } = Components;
 /* eslint-disable */
 describe('Components', () => {
   describe('Button', () => {

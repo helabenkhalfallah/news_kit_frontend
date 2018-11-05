@@ -1,12 +1,10 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import UIKit from "../../..";
+import { IconOptions, OptionalSelect, Icon } from "../../../..";
 import Readme from "./README.md";
 
 // Icon settings
-const { IconOptions, OptionalSelect, Components } = UIKit;
-const { Icon } = Components;
 const {
   iconsOptions,
   intentOptions,

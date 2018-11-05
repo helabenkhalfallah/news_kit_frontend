@@ -6,7 +6,7 @@ import LocalizedStringUtils from "./localized-strings/LocalizedStringUtils";
 import Localizations from "./localized-strings/Localizations";
 import Dico from "./localized-strings/Dico";
 
-const AppSettings = {
+export {
   LanguageManager,
   LocalizedStringUtils,
   Localizations,
@@ -15,5 +15,3 @@ const AppSettings = {
   BodyProvider,
   Routes
 };
-
-export default AppSettings;

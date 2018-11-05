@@ -1,37 +1,28 @@
 import React from "react";
 
 import AppLayout from "../../app/main/AppLayout";
-import AppSettings from "../../app-settings";
-import Core from "../../app-core";
+import {
+  ButtonOptions,
+  IconOptions,
+  Button,
+  ButtonIcon,
+  Icon,
+  Select
+} from "../../app-core";
 
-// load ui kit
-const { UIKit } = Core;
-
-// laod settings
-const {
+import {
   BodyProvider,
   ThemeManager,
   LanguageManager,
   LocalizedStringUtils,
   Dico
-} = AppSettings; // prettier-ignore
+} from "../../app-settings";
 
 const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
 const { BodyTypes } = BodyProvider;
-const { Components, ButtonOptions, IconOptions } = UIKit;
-
-// components
-// eslint-disable-next-line prettier/prettier
-const {
-  Button,
-  ButtonIcon,
-  Icon,
-  Select
-} = Components;
-
-// button options
 const { intentsOptions } = ButtonOptions;
+const { localizedString } = LocalizedStringUtils;
 
 // eslint-disable-next-line prettier/prettier
 const {
@@ -54,37 +45,25 @@ const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
     <Button
       theme={theme}
       buttonIntent={primary}
-      title={LocalizedStringUtils.localizedString(
-        Dico.KEYS.RESET_THEME_BT,
-        language
-      )}
+      title={localizedString(Dico.KEYS.RESET_THEME_BT, language)}
       onClick={() => toggleTheme(Themes.default)}
     />
     <Button
       theme={theme}
       buttonIntent={secondary}
-      title={LocalizedStringUtils.localizedString(
-        Dico.KEYS.TOGGLE_THEME_BT,
-        language
-      )}
+      title={localizedString(Dico.KEYS.TOGGLE_THEME_BT, language)}
       onClick={() => toggleTheme(Themes.dark)}
     />
     <Button
       theme={theme}
       buttonIntent={success}
-      title={LocalizedStringUtils.localizedString(
-        Dico.KEYS.USER_SIGN_BT,
-        language
-      )}
+      title={localizedString(Dico.KEYS.USER_SIGN_BT, language)}
     />
     <ButtonIcon
       theme={theme}
       buttonIntent={warning}
       icon={add}
-      label={LocalizedStringUtils.localizedString(
-        Dico.KEYS.USER_REGISTER_BT,
-        language
-      )}
+      label={localizedString(Dico.KEYS.USER_REGISTER_BT, language)}
     />
     <Icon
       theme={theme}

@@ -4,9 +4,7 @@ import { Query } from "react-apollo";
 import PropTypes from "prop-types";
 
 import ErrorPage from "../commons/ErrorPage";
-import AppService from "../../app-services";
-
-const { RemoteQMManager } = AppService;
+import { USERS_LIST } from "../../app-services";
 
 // table columns name
 const usersTableHeaders = [
@@ -34,7 +32,6 @@ const usersTableHeaders = [
 ];
 
 // display list
-const { USERS_LIST } = RemoteQMManager;
 const UsersList = ({ className }) => (
   // query user
   <Query query={USERS_LIST} pollInterval={200}>

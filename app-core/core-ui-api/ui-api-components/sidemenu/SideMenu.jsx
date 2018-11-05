@@ -4,16 +4,15 @@ import PropTypes from "prop-types";
 
 import SideMenuStyle from "./SideMenuStyle";
 
-import SideMenuOptions from "./SideMenuOptions";
+import { rootClass, baseClass } from "./SideMenuOptions";
+import { SIDE_MENU_OPEN, SIDE_MENU_CLOSE } from "../../..";
 import SideMenuClosed from "./SideMenuClosed";
 import SideMenuOpened from "./SideMenuOpened";
 
-// component settings
-const { rootClass, baseClass, SideMenuStatut } = SideMenuOptions;
-
 // component
+/* eslint-disable */
 const SideMenu = ({ className, open, ...otherProps }) => {
-  const status = open ? SideMenuStatut.open : SideMenuStatut.close;
+  const status = open ? SIDE_MENU_OPEN : SIDE_MENU_CLOSE;
   const sideMenuRootClass = rootClass(cx, className, status);
   return (
     <SideMenuStyle>

@@ -4,14 +4,9 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import PropTypes from "prop-types";
 
-import AppService from "../../../../app-services";
-import AppSettings from "../../../../app-settings";
-import Core from "../../../../app-core";
-
-const { Commons } = Core;
-const { CookiesManager, Redirect, AppLogger } = Commons;
-const { Routes } = AppSettings;
-const { RemoteQMManager } = AppService;
+import { USER_SIGN_IN } from "../../../../app-services";
+import { Routes } from "../../../../app-settings";
+import { CookiesManager, Redirect, AppLogger } from "../../../../app-core";
 
 // user schema
 const UserSchema = Yup.object().shape({
@@ -22,7 +17,6 @@ const UserSchema = Yup.object().shape({
 });
 
 // user auth sign
-const { USER_SIGN_IN } = RemoteQMManager;
 const AuthSignIn = ({ client }) => (
   <Mutation
     mutation={USER_SIGN_IN}

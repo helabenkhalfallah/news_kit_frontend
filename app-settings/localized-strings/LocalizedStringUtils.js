@@ -1,10 +1,8 @@
 // localized string utils
 import Dico from "./Dico";
-import Core from "../../app-core";
+import { ArrayUtils, ObjectUtils } from "../../app-core";
 
 // object utils
-const { Utils } = Core;
-const { ArrayUtils, ObjectUtils } = Utils;
 const { find, isArray } = ArrayUtils;
 const { isObject } = ObjectUtils;
 

@@ -2,17 +2,13 @@ import React from "react";
 import { text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import UIKit from "../../..";
-import Readme from "./README.md";
-
-// import settings
-const {
+import {
   ButtonOptions,
   ButtonIconOptions,
   OptionalSelect,
-  Components
-} = UIKit; // prettier-ignore
-const { ButtonIcon } = Components;
+  ButtonIcon
+} from "../../../..";
+import Readme from "./README.md";
 
 // button settings
 const {

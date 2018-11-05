@@ -30,11 +30,10 @@ const SIDE_BAR_TOGGLE = gql`
   }
 `;
 
-const SIDE_BAR_QM = {
+// eslint-disable-next-line prettier/prettier
+export {
   SIDE_BAR_STATUS,
   SIDE_BAR_OPEN,
   SIDE_BAR_CLOSE,
   SIDE_BAR_TOGGLE
 };
-
-export default SIDE_BAR_QM;

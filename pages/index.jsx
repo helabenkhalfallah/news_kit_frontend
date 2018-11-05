@@ -2,14 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import AppLayout from "../app/main/AppLayout";
-import AppService from "../app-services";
-import AppSettings from "../app-settings";
-import Core from "../app-core";
+import { USER_IS_VALID } from "../app-services";
+import { Routes, BodyProvider } from "../app-settings";
+import { Redirect, AppLogger } from "../app-core";
 
-const { Commons } = Core;
-const { Redirect, AppLogger } = Commons;
-const { Routes, BodyProvider } = AppSettings;
-const { RemoteQMManager } = AppService;
 const { BodyTypes } = BodyProvider;
 
 /**
@@ -31,7 +27,6 @@ export default class Index extends React.Component {
    * @param {*} context
    */
   static async getInitialProps(context) {
-    const { USER_IS_VALID } = RemoteQMManager;
     const { profile } = await USER_IS_VALID(context.apolloClient);
     if (!profile.UserProfile) {
       Redirect(context, Routes.SIGN_IN_PATH);

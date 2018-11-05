@@ -1,3 +1,4 @@
+import { merge } from "lodash";
 import { ApolloClient, InMemoryCache } from "apollo-boost";
 import { createHttpLink } from "apollo-link-http";
 import { ApolloLink } from "apollo-link";
@@ -5,12 +6,17 @@ import { setContext } from "apollo-link-context";
 import { withClientState } from "apollo-link-state";
 import fetch from "isomorphic-unfetch";
 
-import AppService from "../../../app-services";
+// import resolvers and defaults
+// eslint-disable-next-line prettier/prettier
+import {
+  SIDE_BAR_DEFAULTS,
+  SIDE_BAR_RESOLVERS
+} from "../../../app-services";
 
-const { LocalRDManager } = AppService;
+// merge resolves and defaults
+const { resolvers, defaults } = merge(SIDE_BAR_DEFAULTS, SIDE_BAR_RESOLVERS);
 
 // init
-const { resolvers, defaults } = LocalRDManager;
 let apolloClient = null;
 let tokenClient = null;
 const graphqlUri = process.env.APP_GRAPHQL_PATH;

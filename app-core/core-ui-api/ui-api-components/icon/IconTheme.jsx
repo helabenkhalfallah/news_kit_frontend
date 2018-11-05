@@ -1,13 +1,10 @@
-import AppSettings from "../../../../app-settings";
-import Core from "../../..";
+import { ThemeManager } from "../../../../app-settings";
+import { ObjectUtils } from "../../..";
 
 // object utils
-const { Utils } = Core;
-const { ObjectUtils } = Utils;
 const { isEmpty } = ObjectUtils;
 
 // load app theme
-const { ThemeManager } = AppSettings;
 const { Themes } = ThemeManager;
 
 // icon default values
