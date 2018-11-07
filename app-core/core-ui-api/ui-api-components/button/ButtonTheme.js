@@ -1,8 +1,4 @@
-import { ThemeManager } from "../../../../app-settings";
-import { ObjectUtils } from "../../..";
-
-// object utils
-const { isEmpty } = ObjectUtils;
+import { isObjectEmpty, ThemeManager } from "../../..";
 
 // load app theme
 const { Themes } = ThemeManager;
@@ -59,33 +55,33 @@ const disabledOpacity = "0.4";
 
 // intent option => CSS color value
 const backgrounds = theme => ({
-  default: !isEmpty(theme) ? theme.default : Themes.default.default,
-  primary: !isEmpty(theme) ? theme.primary : Themes.default.primary,
-  secondary: !isEmpty(theme) ? theme.secondary : Themes.default.secondary,
-  success: !isEmpty(theme) ? theme.success : Themes.default.success,
-  warning: !isEmpty(theme) ? theme.warning : Themes.default.warning,
-  info: !isEmpty(theme) ? theme.info : Themes.default.info,
-  danger: !isEmpty(theme) ? theme.danger : Themes.default.danger
+  default: !isObjectEmpty(theme) ? theme.default : Themes.default.default,
+  primary: !isObjectEmpty(theme) ? theme.primary : Themes.default.primary,
+  secondary: !isObjectEmpty(theme) ? theme.secondary : Themes.default.secondary,
+  success: !isObjectEmpty(theme) ? theme.success : Themes.default.success,
+  warning: !isObjectEmpty(theme) ? theme.warning : Themes.default.warning,
+  info: !isObjectEmpty(theme) ? theme.info : Themes.default.info,
+  danger: !isObjectEmpty(theme) ? theme.danger : Themes.default.danger
 }); // prettier-ignore
 
 const borders = theme => ({
-  default: !isEmpty(theme) ? theme.borderDefault : Themes.default.borderDefault,
-  primary: !isEmpty(theme) ? theme.borderPrimary : Themes.default.borderPrimary,
-  secondary: !isEmpty(theme) ? theme.borderSecondary : Themes.default.borderSecondary,
-  success: !isEmpty(theme) ? theme.borderSuccess : Themes.default.borderSuccess,
-  warning: !isEmpty(theme) ? theme.borderWarning : Themes.default.borderWarning,
-  info: !isEmpty(theme) ? theme.borderInfo : Themes.default.borderInfo,
-  danger: !isEmpty(theme) ? theme.boarderDanger : Themes.default.boarderDanger
+  default: !isObjectEmpty(theme) ? theme.borderDefault : Themes.default.borderDefault,
+  primary: !isObjectEmpty(theme) ? theme.borderPrimary : Themes.default.borderPrimary,
+  secondary: !isObjectEmpty(theme) ? theme.borderSecondary : Themes.default.borderSecondary,
+  success: !isObjectEmpty(theme) ? theme.borderSuccess : Themes.default.borderSuccess,
+  warning: !isObjectEmpty(theme) ? theme.borderWarning : Themes.default.borderWarning,
+  info: !isObjectEmpty(theme) ? theme.borderInfo : Themes.default.borderInfo,
+  danger: !isObjectEmpty(theme) ? theme.boarderDanger : Themes.default.boarderDanger
 }); // prettier-ignore
 
 const textColors = theme => ({
-  default: !isEmpty(theme) ? theme.txtColorDefault : Themes.default.txtColorDefault,
-  primary: !isEmpty(theme) ? theme.txtColorPrimary : Themes.default.txtColorPrimary,
-  secondary: !isEmpty(theme) ? theme.txtColorSecondary : Themes.default.txtColorSecondary,
-  success: !isEmpty(theme) ? theme.txtColorSuccess : Themes.default.txtColorSuccess,
-  warning: !isEmpty(theme) ? theme.txtColorWarning : Themes.default.txtColorWarning,
-  info: !isEmpty(theme) ? theme.txtColorInfo : Themes.default.txtColorInfo,
-  danger: !isEmpty(theme) ? theme.txtColorDanger : Themes.default.txtColorDanger
+  default: !isObjectEmpty(theme) ? theme.txtColorDefault : Themes.default.txtColorDefault,
+  primary: !isObjectEmpty(theme) ? theme.txtColorPrimary : Themes.default.txtColorPrimary,
+  secondary: !isObjectEmpty(theme) ? theme.txtColorSecondary : Themes.default.txtColorSecondary,
+  success: !isObjectEmpty(theme) ? theme.txtColorSuccess : Themes.default.txtColorSuccess,
+  warning: !isObjectEmpty(theme) ? theme.txtColorWarning : Themes.default.txtColorWarning,
+  info: !isObjectEmpty(theme) ? theme.txtColorInfo : Themes.default.txtColorInfo,
+  danger: !isObjectEmpty(theme) ? theme.txtColorDanger : Themes.default.txtColorDanger
 }); // prettier-ignore
 
 // shape option => CSS shape value

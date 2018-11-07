@@ -1,5 +1,5 @@
 import React from "react";
-import Themes from "./Themes";
+import { Themes } from "../../../app-settings";
 
 // app theme
 const AppTheme = Themes.default;

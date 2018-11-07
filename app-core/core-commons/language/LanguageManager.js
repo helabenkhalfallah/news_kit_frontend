@@ -1,5 +1,5 @@
 import React from "react";
-import Localizations from "../localized-strings/Localizations";
+import { Localizations } from "../../../app-settings";
 
 // app language
 const AppLanguage = Localizations.english;

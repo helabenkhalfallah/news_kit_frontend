@@ -211,7 +211,7 @@ npm i --save-dev mocha chai sinon enzyme-to-json
 
 1. ThemeManager :
 ```js
-app-settings/theme/ThemeManager.jsx
+app-core/core-commons/theme/ThemeManager.jsx
 ```
 
 2. ThemeProvider :
@@ -224,32 +224,26 @@ pages/_app.js
 pages/user-access/sign-in.jsx
 ```
 
+4. Themes settings :
+```js
+app-settings/theme/Themes.js
+```
+
 ## Language & Localization :
 
 1. LanguageManager :
 ```js
-app-settings/language/LanguageManager.jsx
+app-core/core-commons/language/LanguageManager.jsx
 ```
 
 This class provides : Context, Provider and Consumer for language changes observer.
 
-2. localization :
+
+2. localization settings :
 ```js
-app-settings/localized-strings
+app-settings/localizations
 ```
 
 a. Dico.js => contains used strings inside application in the different supported localization.
 
 b. Localizations.js => contains supported localizations.
-
-c. LocalizedString.js => a localized string object : { key, language, value }. We access to a string value by (key, language).
-
-d. LocalizedStringUtils.js => contains utils methods for localized strings :
-```js
-// check if key exist
-const isKeyExist = key => (Dico.KEYS && key ? key in Dico.KEYS : false);
-
-// get localized string by key and language
-const localizedString = (key, language) => {
-}
-```

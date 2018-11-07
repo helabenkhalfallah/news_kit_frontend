@@ -28,9 +28,4 @@ const isArray = array => {
  */
 const find = (array, predicat) => findItem(array, predicat);
 
-const ArrayUtils = {
-  isArray,
-  find
-};
-
-export default ArrayUtils;
+export { isArray, find };

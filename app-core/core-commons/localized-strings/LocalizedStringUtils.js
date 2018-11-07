@@ -1,10 +1,6 @@
 // localized string utils
-import Dico from "./Dico";
-import { ArrayUtils, ObjectUtils } from "../../app-core";
-
-// object utils
-const { find, isArray } = ArrayUtils;
-const { isObject } = ObjectUtils;
+import { Dico } from "../../../app-settings";
+import { find, isArray, isObject } from "../..";
 
 // check if key exist
 const isKeyExist = key => (Dico.KEYS && key ? key in Dico.KEYS : false);

@@ -7,16 +7,13 @@ import {
   Button,
   ButtonIcon,
   Icon,
-  Select
-} from "../../app-core";
-
-import {
-  BodyProvider,
+  Select,
   ThemeManager,
   LanguageManager,
-  LocalizedStringUtils,
-  Dico
-} from "../../app-settings";
+  LocalizedStringUtils
+} from "../../app-core";
+
+import { BodyProvider, Dico } from "../../app-settings";
 
 const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;

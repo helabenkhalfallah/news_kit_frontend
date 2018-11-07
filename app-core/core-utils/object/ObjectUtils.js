@@ -5,7 +5,7 @@
  * it is null or has not at keys
  * @param {*} object
  */
-const isEmpty = object => !object || Object.keys(object).length === 0;
+const isObjectEmpty = object => !object || Object.keys(object).length === 0;
 
 /**
  * An argument is considered an object if
@@ -14,16 +14,11 @@ const isEmpty = object => !object || Object.keys(object).length === 0;
  * @param {*} object
  */
 const isObject = object => {
-  if (!isEmpty(object)) {
+  if (!isObjectEmpty(object)) {
     return true;
   }
   return false;
 };
 
 // Object Utils
-const ObjectUtils = {
-  isEmpty,
-  isObject
-};
-
-export default ObjectUtils;
+export { isObjectEmpty, isObject };

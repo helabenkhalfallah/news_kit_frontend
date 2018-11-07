@@ -1,17 +1,14 @@
 import Routes from "./routes/Routes";
 import BodyProvider from "./body/BodyProvider";
-import LanguageManager from "./language/LanguageManager";
-import ThemeManager from "./theme/ThemeManager";
-import LocalizedStringUtils from "./localized-strings/LocalizedStringUtils";
-import Localizations from "./localized-strings/Localizations";
-import Dico from "./localized-strings/Dico";
+import Localizations from "./localizations/Localizations";
+import Dico from "./localizations/Dico";
+import Themes from "./theme/Themes";
 
+// eslint-disable-next-line prettier/prettier
 export {
-  LanguageManager,
-  LocalizedStringUtils,
+  Themes,
   Localizations,
   Dico,
-  ThemeManager,
   BodyProvider,
   Routes
 };

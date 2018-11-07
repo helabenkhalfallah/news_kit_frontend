@@ -3,8 +3,7 @@ import App, { Container } from "next/app";
 import Head from "next/head";
 import { ApolloProvider } from "react-apollo";
 
-import { ThemeManager, LanguageManager } from "../app-settings";
-import { withApollo } from "../app-core";
+import { ThemeManager, LanguageManager, withApollo } from "../app-core";
 
 const { AppTheme, ThemeProvider } = ThemeManager;
 const { AppLanguage, LanguageProvider } = LanguageManager;
