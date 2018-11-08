@@ -27,8 +27,18 @@ import ButtonIcon from "./core-ui-api/ui-api-components/buttonicon/ButtonIcon";
 import Icon from "./core-ui-api/ui-api-components/icon/Icon";
 import Select from "./core-ui-api/ui-api-components/select/Select";
 
+// ui kit messages
+import Empty from "./core-ui-api/ui-api-messages/Empty";
+import Error from "./core-ui-api/ui-api-messages/Error";
+import NotFound from "./core-ui-api/ui-api-messages/NotFound";
+import Loading from "./core-ui-api/ui-api-messages/Loading";
+
 // core modules
 export {
+  Empty,
+  Error,
+  NotFound,
+  Loading,
   ButtonOptions,
   ButtonIconOptions,
   IconOptions,

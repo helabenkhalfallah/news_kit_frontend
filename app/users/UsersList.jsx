@@ -3,7 +3,7 @@ import ReactTable from "react-table";
 import { Query } from "react-apollo";
 import PropTypes from "prop-types";
 
-import ErrorPage from "../commons/ErrorPage";
+import { Error, Loading, Empty } from "../../app-core";
 import { USERS_LIST } from "../../app-services";
 
 // table columns name
@@ -39,17 +39,17 @@ const UsersList = ({ className }) => (
       // log query status
       // user list loading status
       if (loading) {
-        return <div>LoadingPage</div>;
+        return <Loading />;
       }
 
       // user list error status
       if (error) {
-        return <ErrorPage message={error.message} />;
+        return <Error message={error.message} />;
       }
 
       // user list emtpy status
       if (!data || !data.users) {
-        return <div>EmptyPage</div>;
+        return <Empty />;
       }
 
       // render only if data
