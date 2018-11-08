@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import AppLayout from "../../app/main/AppLayout";
 import {
@@ -14,6 +14,7 @@ import {
 } from "../../app-core";
 
 import { BodyProvider, Dico } from "../../app-settings";
+import MockDataSelect from "./mock-data-select";
 
 const { Themes, ThemeConsumer } = ThemeManager;
 const { LanguageConsumer } = LanguageManager;
@@ -35,7 +36,26 @@ const { light } = backgroundOptions;
 const { clear, add } = iconsOptions;
 
 /**
- * Mock Page
+ * Mock Select
+ */
+const MockSelectComponent = React.memo(({ theme }) => {
+  const [value, setValue] = useState(MockDataSelect[0]);
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `${value.label}`;
+  });
+  return (
+    <Select
+      theme={theme}
+      options={MockDataSelect}
+      value={value}
+      onChange={selectedOption => setValue(selectedOption)}
+    />
+  );
+});
+
+/**
+ * Mock Component
  */
 const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
   <div>
@@ -69,22 +89,25 @@ const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
       background={light}
       size="normal"
     />
-    <Select />
+    <MockSelectComponent theme={theme} />
   </div>
 ));
 
+/**
+ * Mock Page
+ */
 const MockPage = () => (
   <ThemeConsumer>
     {({ theme, toggleTheme }) => (
       <LanguageConsumer>
         {language => (
           <div>
+            <AppLayout type={BodyTypes.mock} />
             <MockComponent
               theme={theme}
               language={language}
               toggleTheme={toggleTheme}
             />
-            <AppLayout type={BodyTypes.signin} />
           </div>
         )}
       </LanguageConsumer>

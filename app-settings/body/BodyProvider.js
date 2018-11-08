@@ -1,5 +1,6 @@
 // body types
 const BodyTypes = {
+  mock: "mock",
   signin: "sign-in",
   register: "register",
   home: "home"

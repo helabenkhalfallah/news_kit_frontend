@@ -1,25 +1,41 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import cx from "classnames";
+import SelectBase from "react-select";
 
+import cx from "classnames";
 import SelectStyle from "./SelectStyle";
-import SelectOptionStyle from "./SelectOptionStyle";
-
-// select options
-const SelectOptions = ({ options }) =>
-  // eslint-disable-next-line implicit-arrow-linebreak
-  options.map(option => <SelectOptionStyle>{option}</SelectOptionStyle>);
+import SelectOptions from "./SelectOptions";
 
 // select components
-const Select = ({ options }) => {
-  if (options) {
-    return (
-      <SelectStyle>
-        <SelectOptions options={options} />
-      </SelectStyle>
-    );
-  }
-  return <div>nothing to render</div>;
+const { baseClass, rootClass } = SelectOptions;
+const Select = ({
+  options,
+  className,
+  theme,
+  disabled,
+  multi,
+  searchable,
+  clearable,
+  placeholder,
+  value,
+  onChange
+}) => {
+  const btRootClass = rootClass(cx, className, disabled);
+  return (
+    <SelectStyle theme={theme} disabled={disabled}>
+      <SelectBase
+        className={btRootClass}
+        options={options}
+        isDisabled={disabled}
+        isMulti={multi}
+        isSearchable={searchable}
+        isClearable={clearable}
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+      />
+    </SelectStyle>
+  );
 };
 
 /**
@@ -31,12 +47,30 @@ Select.displayName = "Button";
  * propType validation
  */
 Select.propTypes = {
-  options: PropTypes.array.isRequired
+  className: PropTypes.string,
+  options: PropTypes.array.isRequired,
+  theme: PropTypes.object.isRequired,
+  disabled: PropTypes.bool,
+  multi: PropTypes.bool,
+  searchable: PropTypes.bool,
+  clearable: PropTypes.bool,
+  placeholder: PropTypes.string,
+  value: PropTypes.object,
+  onChange: PropTypes.func
 };
 
 /**
  * propType default values
  */
-Select.defaultProps = {};
+Select.defaultProps = {
+  className: baseClass,
+  disabled: false,
+  multi: false,
+  searchable: false,
+  clearable: false,
+  placeholder: null,
+  value: null,
+  onChange: null
+};
 
 export default Select;
