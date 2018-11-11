@@ -54,7 +54,7 @@ const Icon = ({
 /**
  * display name
  */
-Icon.displayName = "ButtonIcon";
+Icon.displayName = "Icon";
 
 /**
  * propType validation

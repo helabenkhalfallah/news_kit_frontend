@@ -5,12 +5,22 @@ const KEYS = {
   RESET_THEME_BT: "RESET_THEME_BT",
   TOGGLE_THEME_BT: "TOGGLE_THEME_BT",
   USER_SIGN_BT: "USER_SIGN_BT",
-  USER_REGISTER_BT: "USER_REGISTER_BT"
+  USER_REGISTER_BT: "USER_REGISTER_BT",
+  SELECT_NO_OPTIONS: "SELECT_NO_OPTIONS",
+  SELECT_PLACEHOLDER: "SELECT_PLACEHOLDER"
 };
 
 // all dico strings
 const DATA = {
   en: [
+    {
+      key: KEYS.SELECT_PLACEHOLDER,
+      value: "Select an item"
+    },
+    {
+      key: KEYS.SELECT_NO_OPTIONS,
+      value: "No options to display"
+    },
     {
       key: KEYS.RESET_THEME_BT,
       value: "Reset Theme"
@@ -29,6 +39,14 @@ const DATA = {
     }
   ],
   fr: [
+    {
+      key: KEYS.SELECT_PLACEHOLDER,
+      value: "Choisir un élément"
+    },
+    {
+      key: KEYS.SELECT_NO_OPTIONS,
+      value: "Aucune options à afficher"
+    },
     {
       key: KEYS.RESET_THEME_BT,
       value: "Réinitialiser Theme"

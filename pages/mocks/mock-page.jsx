@@ -38,18 +38,19 @@ const { clear, add } = iconsOptions;
 /**
  * Mock Select
  */
-const MockSelectComponent = React.memo(({ theme }) => {
-  const [value, setValue] = useState(MockDataSelect[0]);
+const MockSelectComponent = React.memo(({ language, theme }) => {
+  const [value, setValue] = useState(MockDataSelect[0].value);
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `${value.label}`;
   });
   return (
     <Select
+      language={language}
       theme={theme}
       options={MockDataSelect}
       value={value}
-      onChange={selectedOption => setValue(selectedOption)}
+      onChange={event => setValue(event.target.value)}
     />
   );
 });
@@ -89,7 +90,7 @@ const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
       background={light}
       size="normal"
     />
-    <MockSelectComponent theme={theme} />
+    <MockSelectComponent language={language} theme={theme} />
   </div>
 ));
 

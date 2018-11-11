@@ -1,61 +1,56 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SelectBase from "react-select";
 
-import cx from "classnames";
-import SelectStyle from "./SelectStyle";
-import SelectOptions from "./SelectOptions";
+import SelectItem from "./select-item/SelectItem";
 
 // select components
-const { baseClass, rootClass } = SelectOptions;
 const Select = ({
-  options,
-  className,
+  language,
   theme,
-  disabled,
+  options,
   multi,
   searchable,
   clearable,
   placeholder,
   value,
+  disabled,
   onChange
+  // eslint-disable-next-line arrow-body-style
 }) => {
-  const btRootClass = rootClass(cx, className, disabled);
   return (
-    <SelectStyle theme={theme} disabled={disabled}>
-      <SelectBase
-        className={btRootClass}
-        options={options}
-        isDisabled={disabled}
-        isMulti={multi}
-        isSearchable={searchable}
-        isClearable={clearable}
-        onChange={onChange}
-        placeholder={placeholder}
-        value={value}
-      />
-    </SelectStyle>
+    <SelectItem
+      language={language}
+      theme={theme}
+      options={options}
+      disabled={disabled}
+      multi={multi}
+      searchable={searchable}
+      clearable={clearable}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
   );
 };
 
 /**
  * display name
  */
-Select.displayName = "Button";
+Select.displayName = "Select";
 
 /**
  * propType validation
  */
 Select.propTypes = {
-  className: PropTypes.string,
-  options: PropTypes.array.isRequired,
+  language: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
+  options: PropTypes.array,
   disabled: PropTypes.bool,
   multi: PropTypes.bool,
   searchable: PropTypes.bool,
   clearable: PropTypes.bool,
   placeholder: PropTypes.string,
-  value: PropTypes.object,
+  value: PropTypes.string,
   onChange: PropTypes.func
 };
 
@@ -63,7 +58,7 @@ Select.propTypes = {
  * propType default values
  */
 Select.defaultProps = {
-  className: baseClass,
+  options: null,
   disabled: false,
   multi: false,
   searchable: false,
