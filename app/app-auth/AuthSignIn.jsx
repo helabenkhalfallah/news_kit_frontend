@@ -4,9 +4,9 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import PropTypes from "prop-types";
 
-import { USER_SIGN_IN } from "../../../../app-services";
-import { Routes } from "../../../../app-settings";
-import { CookiesManager, Redirect, AppLogger } from "../../../../app-core";
+import { USER_SIGN_IN } from "../../app-services";
+import { Routes } from "../../app-settings";
+import { CookiesManager, Redirect, AppLogger } from "../../app-core";
 
 // user schema
 const UserSchema = Yup.object().shape({

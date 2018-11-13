@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import AppLayout from "../../app/main/AppLayout";
+import AppLayout from "../../app/app-main/AppLayout";
 import {
   ButtonOptions,
   IconOptions,

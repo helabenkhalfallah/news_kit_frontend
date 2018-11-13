@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import PropTypes from "prop-types";
 
 // components
-import Body from "./body/Body";
+import Body from "./Body";
 
 const AppLayout = ({ type }) => (
   <div>

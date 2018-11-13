@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import AppLayout from "../app/main/AppLayout";
+import AppLayout from "../app/app-main/AppLayout";
 import { USER_IS_VALID } from "../app-services";
 import { Routes, BodyProvider } from "../app-settings";
 import { Redirect, AppLogger } from "../app-core";
