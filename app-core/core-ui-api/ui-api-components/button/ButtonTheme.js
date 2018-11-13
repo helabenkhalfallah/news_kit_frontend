@@ -199,7 +199,7 @@ const textMBSizes = {
 };
 
 // button theme
-const ButtonTheme = {
+export {
   shadow,
   shadowHover,
   defaultRadius,
@@ -246,5 +246,3 @@ const ButtonTheme = {
   defaulTxtMaxHeight,
   disabledOpacity
 };
-
-export default ButtonTheme;

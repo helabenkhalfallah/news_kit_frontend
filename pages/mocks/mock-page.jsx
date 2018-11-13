@@ -27,13 +27,14 @@ const {
   primary,
   secondary,
   success,
-  warning
+  warning,
+  info
 } = intentsOptions;
 
 // icon options
 const { backgroundOptions, iconsOptions } = IconOptions;
 const { light } = backgroundOptions;
-const { clear, add } = iconsOptions;
+const { clear, edit, add } = iconsOptions;
 
 /**
  * Mock Select
@@ -81,6 +82,12 @@ const MockComponent = React.memo(({ theme, toggleTheme, language }) => (
       theme={theme}
       buttonIntent={warning}
       icon={add}
+      label={localizedString(Dico.KEYS.USER_REGISTER_BT, language)}
+    />
+    <ButtonIcon
+      theme={theme}
+      buttonIntent={info}
+      icon={edit}
       label={localizedString(Dico.KEYS.USER_REGISTER_BT, language)}
     />
     <Icon

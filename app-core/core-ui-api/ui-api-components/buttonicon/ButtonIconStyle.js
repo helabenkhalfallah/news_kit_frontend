@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import ButtonStyle from "../button/ButtonStyle";
-import ButtonTheme from "../button/ButtonTheme";
-import ButtonIconTheme from "./ButtonIconTheme";
 
-// button settings
-const {
+// button theme
+import {
   defaultBgColor,
   defaulTxtColor,
   backgrounds,
@@ -12,10 +10,10 @@ const {
   btMaxWidth,
   defaultTxtMarginLeft,
   defaultTxtMarginRight
-} = ButtonTheme; // prettier-ignore
+} from "../button/ButtonTheme";
 
-// button icon settings
-const {
+// button icon theme
+import {
   defaultIconWidth,
   defaultIconHeight,
   defaultIconMarginRight,
@@ -34,12 +32,12 @@ const {
   iconMLLSizes,
   iconMLRSizes,
   textWSizes
-} = ButtonIconTheme;
+} from "./ButtonIconTheme";
 
 /* eslint-disable */
 // button icon style
 // extends button style
-const ButtonIconStyle = styled(ButtonStyle)`
+const ButtonIconStyle = styled(props => <ButtonStyle {...props} />)`
   .ui-api-kit-button--bstyle--fill {
     fill: ${props => (props.intent ? textColors(props.theme)[props.intent] : defaulTxtColor)};
   }

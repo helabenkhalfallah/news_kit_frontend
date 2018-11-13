@@ -160,7 +160,7 @@ const loaderHSizes = {
 };
 
 // button icon theme
-const ButtonIconTheme = {
+export {
   defaultDirection,
   defaultIconWidth,
   defaultIconHeight,
@@ -182,5 +182,3 @@ const ButtonIconTheme = {
   loaderWSizes,
   loaderHSizes
 };
-
-export default ButtonIconTheme;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import IconTheme from "./IconTheme";
 
-const {
+// icon theme
+import {
   defaultIconWidth,
   defaultIconHeight,
   defaultBackground,
@@ -11,7 +11,7 @@ const {
   intents,
   iconWSizes,
   iconHSizes
-} = IconTheme; // prettier-ignore
+} from "./IconTheme"; // prettier-ignore
 
 const Icon = styled.div`
   color: transparent;

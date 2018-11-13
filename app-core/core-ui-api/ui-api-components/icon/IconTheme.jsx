@@ -52,7 +52,7 @@ const iconHSizes = {
 };
 
 // icon theme
-const IconTheme = {
+export {
   defaultIconWidth,
   defaultIconHeight,
   defaultBackground,
@@ -63,5 +63,3 @@ const IconTheme = {
   iconWSizes,
   iconHSizes
 };
-
-export default IconTheme;

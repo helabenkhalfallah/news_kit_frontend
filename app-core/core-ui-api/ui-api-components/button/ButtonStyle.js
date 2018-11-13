@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import ButtonTheme from "./ButtonTheme";
 
-const {
+// button main theme
+import {
   shadow,
   shadowHover,
   defaultRadius,
@@ -47,7 +47,7 @@ const {
   btMaxHeight,
   defaulTxtLigneHeight,
   defaulTxtMaxHeight
-} = ButtonTheme;
+} from "./ButtonTheme";
 
 const Button = styled.div`
   color: ${defaulTxtColor};
@@ -149,5 +149,3 @@ const ButtonStyle = styled(Button)`
 `;
 
 export default ButtonStyle;
-
-/* max-height = line-height (1.2) * lines max number (3) */
