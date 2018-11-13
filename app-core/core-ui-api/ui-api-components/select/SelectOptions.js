@@ -8,6 +8,7 @@ const selectorListClass = (cx, className) => cx(`${className}__list`);
 
 const headerTxtClass = (cx, className) => cx(`${className}__header__text`);
 
+// eslint-disable-next-line prettier/prettier
 const headerIconContainerClass = (cx, className) => cx(`${className}__header__icon__ct`);
 const headerIconClass = (cx, className) => cx(`${className}__header__icon`);
 

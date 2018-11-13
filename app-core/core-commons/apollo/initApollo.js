@@ -31,7 +31,13 @@ if (!process.browser) {
  * @param {*} initialState
  * @param {*} token
  */
-function create(initialState, { getToken }) {
+function create(
+  initialState,
+  {
+    // eslint-disable-next-line no-unused-vars
+    getToken
+  }
+) {
   // default graphql uri
   const httpLink = createHttpLink({
     uri: graphqlUri,
