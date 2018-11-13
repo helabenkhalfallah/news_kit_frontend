@@ -6,7 +6,7 @@ module.exports = {
     [
       "jest-junit", {
         "outputDirectory": "./app-ci-reports",
-        "outputName": "./jest/results.xml",
+        "outputName": "./jest-results.xml",
       }
     ]
   ]

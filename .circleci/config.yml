@@ -33,8 +33,16 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      # run tests!
-      - run: npm test
+      # CI steps
+      - run:
+          name: "JavaScript Linter"
+          command: yarn lint --format junit -o app-ci-reports/js-lint-results.xml
+
+      - run:
+          name: "JavaScript Test Suite"
+          environment:
+            JEST_JUNIT_OUTPUT: app-ci-reports/jest-results.xml
+          command: yarn test
 
       - store_test_results:
           path: app-ci-reports
