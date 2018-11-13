@@ -43,6 +43,7 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT: app-ci-reports/jest-results.xml
           command: yarn test
+          when : always
 
       - store_test_results:
           path: app-ci-reports
