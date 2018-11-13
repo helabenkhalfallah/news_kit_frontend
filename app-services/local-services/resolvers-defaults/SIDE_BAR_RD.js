@@ -1,8 +1,8 @@
 /**
  * Side Bar RD : Resolvers & Defaults
  */
-import { SIDE_BAR_STATUS } from "../../..";
-import { SIDE_MENU_OPEN, SIDE_MENU_CLOSE } from "../../../../app-core";
+import { SIDE_BAR_STATUS } from "../..";
+import { SIDE_MENU_OPEN, SIDE_MENU_CLOSE } from "../../../app-core";
 
 // type name
 const typeName = "sideBar";
