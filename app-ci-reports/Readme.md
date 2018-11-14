@@ -1,1 +1,1 @@
-CI-reports
+CI-reports jest, lint, sonar
