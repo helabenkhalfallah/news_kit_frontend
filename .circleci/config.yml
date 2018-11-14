@@ -35,6 +35,10 @@ jobs:
         
       # CI steps
       - run:
+          name: "SonarQube Docker"
+          command: docker --version
+          
+      - run:
           name: "JavaScript Linter"
           command: yarn lint --format junit -o app-ci-reports/js-lint-results.xml
           when: always
