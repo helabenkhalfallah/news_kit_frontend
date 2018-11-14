@@ -35,9 +35,22 @@ jobs:
         
       # CI steps
       - run:
-          name: "SonarQube Docker"
-          command: docker --version
-          
+          name: "SonarQube Pull Docker Image"
+          command: docker pull sonarqube
+
+      - run:
+          name: "SonarQube Install And Launch Docker Image"
+          command: docker run -d --name sonarqube \
+                  -p 9000:9000 -p 9092:9092 \
+                  -e SONARQUBE_JDBC_USERNAME=NEWS_KIT_SONAR \
+                  -e SONARQUBE_JDBC_PASSWORD=NEWS_KIT_SONAR_1984_28 \
+                  -e SONARQUBE_JDBC_URL=jdbc:postgresql://localhost/sonar \
+                  sonarqube
+
+      - run:
+          name: "SonarQube Host Information"
+          command: hostname -I
+
       - run:
           name: "JavaScript Linter"
           command: yarn lint --format junit -o app-ci-reports/js-lint-results.xml
