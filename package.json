@@ -9,7 +9,7 @@
     "render": "skpm-build --watch --run",
     "storybook": "start-storybook -p 9001 -c ./app-core/ui-api-lib/ui-api-storybook/.storybook",
     "build-storybook": "build-storybook",
-    "lint": "./node_modules/.bin/eslint ."
+    "lint": "./node_modules/.bin/eslint --format junit -o app-ci-reports/js-lint-results.xml ."
   },
   "prettier": {
     "arrowParens": "avoid"
